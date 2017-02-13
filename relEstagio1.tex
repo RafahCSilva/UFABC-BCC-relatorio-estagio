@@ -310,7 +310,7 @@ Ao final é desenvolvido um \textit{Front-end} definitivo para o sistema, junto 
 
 %%--Descrever as atividades realizadas no estágio--%%
 
-Esta seção tem por objetivo detalhar as atividades desenvolvidas durante o estágio supervisionado. Inicialmente são apresentadas as atividades de aprendizagem e em seguida a de desenvolvimento.
+Esta seção tem por objetivo detalhar as atividades desenvolvidas durante o estágio supervisionado. Inicialmente são apresentadas as atividades de aprendizagem e em seguida a de desenvolvimento, aplicando todo o conhecimento aprendido.
 
 
 \subsection{APRESENTAÇÃO DAS REGRAS DE NEGÓCIO}
@@ -318,21 +318,84 @@ Esta seção tem por objetivo detalhar as atividades desenvolvidas durante o est
 %A administração de uma empresa é formada por diversos processos administrativos, que é um conjunto de atividades interrelacionadas e interdependentes que transformam os insumos provenientes do ambiente em produtos e serviços dotados de valor que atenda às necessidades dos clientes. 
 
 A administração de uma empresa é formada por diversos processos administrativos, que podem serem descritas em um conjunto de atividades que podem ser independentes e/ou relacionados entre si, e que tem o papel de transformar todos os insumos advindos do trabalho em produtos e serviços que atendem as necessidades dos clientes e que são dotados de valor.
-E para apoiar cada processo pode ser empregado diversas ferramentas tecnológicas. Porém em todas as empresas tendem a se evoluírem ao passar do tempo, assim suas regras de negócio e seus processos evoluem juntos, e as suas ferramentas devem ser adaptadas ao novo modelo. 
+E para apoiar cada processo pode ser empregadas diversas ferramentas tecnológicas. Porém em todas as empresas tendem a se evoluírem ao passar do tempo, assim suas regras de negócio e seus processos evoluem juntos, e as suas ferramentas devem ser adaptadas ao novo modelo. 
 
-Em um dado momento na Cadaris, um software que apoia um dos seus principais processos administrativos, o de processo comercial, deixou de satisfazer as novas regras de negócio da empresa. Após inúmeras reclamações e \textit{feedbacks} da Cadaris ao proprietário do \textit{software} não serem corretamente atendidas, assim sendo, foi decidido pelo desenvolvimento de um novo sistema exclusivo que possa suportar os novos moldes da empresa, afim de substituir esta ferramente defasada.
+Em um dado momento na Cadaris, um software que apoia um dos seus principais processos administrativos, o de Propostas Comerciais, deixou de satisfazer as novas regras de negócio da empresa. Após inúmeras reclamações e \textit{feedbacks} da Cadaris ao proprietário do \textit{software} não serem corretamente atendidas, assim sendo, foi decidido pelo desenvolvimento de um novo sistema exclusivo que possa suportar os novos moldes da empresa, afim de substituir esta ferramente defasada.
 
 Portanto, desenvolvimento deste novo sistema foi o principal projeto realizado por este estágio. Iniciando pela sua concepção e formalização, com o apoio de documentações como diagramas e modelos de processos.
+
+O processo de Propostas Comerciais é realizado utilizando um sistema contratado desde 2013, este é instalado localmente em um servidor nas dependências da empresa, para somente acesso local dos funcionários. 
+O sistema foi desenvolvido em \textit{ASP}\footnote{ASP, sigla para \textit{Active Server Pages}, também conhecido como ASP Clássico hoje em dia, é uma estrutura de bibliotecas básicas (e não uma linguagem) para processamento de linguagens de script no lado servidor para geração de conteúdo dinâmico na Web.} com integração ao banco de dados \textit{Microsoft SQL Server}\footnote{Sistema gerenciador de Banco de dados relacional desenvolvido pela Microsoft.}. 
+E este apresenta muitos problemas, pois não se adequá aos novos padrões de desenvolvimento WEB, assim prejudicando, e muito, a experiência do usuário, por alguns motivos que será espanados a seguir.
+
+Uma proposta comercial é iniciado com o contato do cliente para o setor de atendimento da Cadaris. Na qual, o atendente iniciará o cadastro de um \textit{job}\footnote{Trabalho, em inglês, trata-se do projeto a ser desenvolvido pela agência.}, preenchendo os dados necessários, em seguida é confeccionado o \textit{briefing}\footnote{O \textit{briefing} é um documento onde constam as informações do cliente, com seus requisitos e também a descrição do público-alvo e dos objetivos do cliente.} e um cronograma estimado sobre a produção deste \textit{job}. E ao fim, o atendimento requisita um orçamento para o departamento responsável pelo financeiro da empresa. 
+
+Um funcionário do financeiro é encarregado de elaborar uma estimativa de custo para a realização deste \textit{job}. A estimativa é composta por dois tipos de custos: Internos e de Operacionalização. A estimativa de Custos Internos é montada com base em horas por tipo de serviço (Planejamento, Atendimento, Redação, Arte, Tráfego e Estratégia). A estimativa de Custos de Operacionalização refere-se à contratação de serviços de terceiros.
+
+Logo após, é gerado um documento PDF\footnote{PDF (Portable Document Format) é um formato de arquivo, desenvolvido pela Adobe Systems, para representar documentos de maneira independente do aplicativo.} com esta estimativa e outros dados importantes a respeito do orçamento. Na qual é enviado para a diretoria comercial aprovar e assim retornar para o atendimento. Caso contrário, será devolvido para o financeiro, para realizar as alterações exigidas pela diretoria.
+
+Para concluir a etapa de Proposta Comercial, o atendimento retorna ao cliente o orçamento, para este ser aprovado por ele, afim de dar inicio à produção do \textit{job}. Caso contrário, é solicitado alterações retornando para o \textit{briefing}, ou então o \textit{job} é arquivado se haver desistência do cliente em contratar a agência.
+
+Podemos ver na Figura a seguir modelo de processo da Proposta Comercial.
+
+\textbf{[[ img: modelo de processo Proposta Comercial (pagina em paisagem) ]]}
+
+
+A etapa de Produção do \textit{job} é realizado pelo setor de produção da Cadaris, utilizando técnicas e outras ferramentas especificas para o serviço desejado, como o \textit{Trello}\footnote{Ferramenta de gerenciamento de projetos em listas extremamente versátil, utilizando o método de \textit{Kanban} para indicar o andamento dos fluxos de produção.} para o gerenciamento do processo de produção.
+Após as conclusão do \textit{job} e a entregar do produto/serviço finalizado para o cliente, o \textit{job} é encaminhado o faturamento. 
+
+E também há outras rotinas administrativas que este projeto pretende abranger, já que são realizadas de modo nada automático, com o auxilio de planilhas eletrônicas: 
+
+{\singlespacing
+\begin{itemize}
+  \item Contas à receber;
+  \item Contas à pagar;
+  \item Controle RH:
+  \begin{itemize}
+    \item Folha de pagamento;
+    \item Salário;
+    \item Férias;
+    \item Faltas/Atrasos;
+    \item Folgas;
+    \item Horas Extras;
+    \item Vale Refeição;
+    \item Vale Transporte;
+  \end{itemize}
+  \item Controle de Contratos;
+  \item Cotação de Fornecedores;
+  \item Relatórios:
+  \begin{itemize}
+    \item Relatório de Comissão;
+    \item Relatório de Classificação de Receita;
+    \item Relatório de Classificação de Despesa;
+    \item Relatório Financeiro (Fluxo de Caixa);
+  \end{itemize}
+\end{itemize}
+}
+
+
+\subsubsection{PROBLEMAS ATUAIS E O NOVO SISTEMA}
+
+Muitos problemas são enfrentados pelos funcionários, que tem que utilizar este sistema contratado para compor a Proposta Comercial. Resultando em empecilhos para a boa usabilidade e atrapalhando a performance do funcionário.
+
+Primeiramente, o sistema tenta ser generalista para suportar inúmeras áreas da empresa e agências com regras de negócio distintas. Assim, muitos de seus módulos se tornam ineficientes para atuar nos novos modelos de negócio, com muitos campos redundantes e sem operações automatizas. E um dos problemas mais comuns é que elementos importantes tem sua relação baseada na inserção manual de códigos identificadores, para realizar a vinculação de um objeto a outro. Assim de um ponto de vista da experiência do usuário, atrapalha a usabilidade do sistema e facilita um erro humano.
+
+Para o preenchimento do \textit{Briefing}
+
+
+
+
+Resumir ideia geral...
 
 
 
 
 \noindent
-- Explicar como eh o Comercial atual (VBD) \\
+- Explicar como eh o Comercial atual (VBD) OK \\
 - dependeria de outros recursos (func client forn) q usa planilhas e códigos loucos  \\
 - automatizar tarefas/rotinas administrativas (ferias, horas, dissidio) \\
-- producao (trello) \\
-- finaceira (contas receber/pagar) \\
+- producao (trello) OK \\
+- finaceira (contas receber/pagar) OK \\
 - integracao total dos dados, seguranca, divisao de usuarios e responsabilidades (hierarquia) \\
 
 
