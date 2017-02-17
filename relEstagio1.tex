@@ -47,6 +47,42 @@
 \newcommand{\defOrientador}{Orientador: Prof. Dr. Daniel Morgato Martin}
 \newcommand{\defLocaldata}{Santo André, 2017}
 
+%%%%% \subsubsubsection
+\usepackage{titlesec}
+\usepackage{hyperref}
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+
+
 \begin{document}
 
 %%--[ELEMENTOS PRÉ-TEXTUAIS]--%%
@@ -433,13 +469,11 @@ Para então iniciar a implementação deste sistema ERP.
 
 
 
-\subsection{IMPLEMENTAÇÃO}
-
-
+\subsection{DESENVOLVIMENTO DO SISTEMA} 
 
   \subsubsection{CADASTROS}
   
-  \noindent TODO: \\
+  \noindent TODO p/ estagio 1: \\
   Funcionários \\
   - CRUD \\
   - Histórico do funcionário (admissão, promoção, ajuste VR/VT, férias)\\
@@ -460,7 +494,7 @@ Para então iniciar a implementação deste sistema ERP.
 
   
   \subsubsection{PROPOSTA COMERCIAL}
-  \noindent TODO: \\
+  \noindent TODO p/ estagio 2: \\
   - Listagem \\
   - tipos de Create \\
   - Briefing \\
@@ -472,44 +506,44 @@ Para então iniciar a implementação deste sistema ERP.
   - Aprovação do Cliente \\
   - Produção
   
-  
-  
+    
   \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
+  \noindent TODO p/ estagio 3: \\
+  - Listagem \\
+  - tipos de Create \\
+  - Briefing \\
+  - Cronograma \\
+  - Orçamento \\
+  - cond pgto \\
+  - PDFs \\
+  - Aprovação da Diretoria \\
+  - Aprovação do Cliente \\
+  - Produção
 
 
 \subsection{INTERFACE E EXPERIÊNCIA DE USUÁRIO}
-
-  \noindent
+  \noindent TODO p/ estagio 3: \\
   Front-end
+
 
 \subsection{HOMOLOGAÇÃO, E AJUSTE FINAIS}
 
 \subsection{OUTRAS ÁREAS DA EMPRESA}
 
-
-
 \subsubsection{Resultados}
 \subsubsection{Conclusão}
-
-
 
 \subsection{DIAGNÓSTICO DOS PRINCIPAIS PROBLEMAS OBSERVADOS E SUGESTÕES DE MELHORIA}
 
 
-%Os sistemas em PHP são de longa data e poderiam ser desenvolvidas novas versões com mais funcionalidades e layout responsivo. Existem famosos CMS em PHP que poderiam trazer benefícios aos sistemas, como o Wordpress, ou então a utilização de algum framework, como o Zend.
 
-%O sistema de Bolsa de Estudos PROMAIS era muito antigo e desenvolvido em Microsoft Access, ou seja, muito defasado e impróprio para a utilização em uma empresa. A solução foi o desenvolvimento de um novo sistema desde o início com o Microsoft Visual Studio, C\#, AngularJS, SQL Server e orientação à objetos. Algumas implementações ainda podem ser realizadas como perfis de usuários e permissões, especificando que alguns usuários possam editar e outros apenas visualizar as informações.
-
-%O Sistema de Gestão de Atividade teve um grande avanço entre as duas primeiras versões. Novas funcionalidades foram inseridas devido às novas ferramentas e tem grande potencial. Melhorias podem ser inseridas, como: novos filtros, edição de comentários, gráficos dinâmicos, sistema de notificações locais e por e-mail, perfis de usuários com permissões por setor e individual.
-
-
-
+\clearpage
 \section{FUNDAMENTAÇÃO TEÓRICA}
 
 %%-- Descrever as disciplinas utilizadas e dar exemplos--%%
 
 
-As disciplinas cursadas na Universidade Federal do ABC contribuíram de várias formas, direta ou indiretamente, nas atividades realizadas no período de estágio. A Tabela~[ref:] apresenta as disciplinas cursadas pelo aluno e que foram necessárias para o desenvolvimento das atividades.
+As disciplinas cursadas na Universidade Federal do ABC contribuíram de várias formas, direta ou indiretamente, nas atividades realizadas no período de estágio. A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno e que foram necessárias para o desenvolvimento das atividades. Nas subseções seguintes é descrito também as ferramentas utilizadas.
 
 %   LISTA DE DISCIPLINAS E EMENTA
 %  Algoritmo e estrutura de dados
@@ -573,9 +607,10 @@ As disciplinas cursadas na Universidade Federal do ABC contribuíram de várias 
 
 
 
-\begin{table}[!htb]
+\begin{table}[!h] %[!htb]
 \centering
-\caption{Disciplinas desenvolvidas durante o estágio com os suas respectivas abordagens.}
+\caption{Disciplinas praticadas durante o estágio com os suas respectivas abordagens.}
+\label{tab:ementas}
 
 \begin{tabular}{|c|l|}
   \hline
@@ -685,6 +720,92 @@ As disciplinas cursadas na Universidade Federal do ABC contribuíram de várias 
 \end{table}
 
 
+
+\subsection{ENGENHARIA DE SOFTWARE}
+Garantir que um \textit{software} seja bem sucedido é necessário seguir especificação descritas pela Engenharia de Software, para assim melhor atender as necessidades dos usuários e prevenir futuras falhas.
+
+Como descrito por Pressman~[ref:Pressman], ter o planejamento completo do projeto antes da própria implementação é de extrema importância. Com um bom planejamento, o sistema reduzirá drasticamente o impacto de suas falhas, enquanto o \textit{software} estiver em larga utilização.
+
+Inúmeras especificação foram abordadas em aulas e agora o discente as colocou em prática ao desenvolver este sistema. Desde as reuniões iniciais na empresa, as técnicas aprendidas em aula foram aplicadas, com o apoio de diagramas e modelos para documentar o \textit{software} a ser implementado.
+
+
+\subsection{DESENVOLVIMENTO WEB}
+% https://pt.wikipedia.org/wiki/W3C
+% https://pt.wikipedia.org/wiki/Aplica%C3%A7%C3%A3o_web
+% https://pt.wikipedia.org/wiki/Front-end_e_back-end
+Como um dos principais requisitos é do sistema ser \textit{online}, criar um \textit{WebApp} pode ser considerado complexo, pois utilizam diferentes tecnologias para criar uma aplicação semelhante ao de \textit{desktop}, porém em um navegador de internet. Esta aplicação é executada em um servidor, que receberá requisições do cliente e retornará respostas a ele conforme as ações desejadas. Já no navegador, haverá a exibição das informações necessárias e suportará as interações do usuário. E todos estes fundamentos foram apresentados durante a disciplina de Programação para Web.
+
+Assim podemos separar uma \textit{WebApp} em duas camadas: \textit{Back-end} e \textit{Front-end}. Na qual o \textit{Front-end} é o responsável por interagir com o usuário, afim de coletar os nados necessários e transmiti-los ao \textit{Back-end}, para que estes dados possam ser processados, afim de retornar uma resposta.
+
+Nas subseções a seguir, será exposto as tecnologias utilizadas.
+ 
+
+\subsubsection{BACK-END}
+Do lado do servidor, sua principal função eh receber requisições e devolver respostas. Bem como tambem ter acessoa o banco de dados e realizar todos o processamento de dados necessários.
+
+\subsubsubsection{PHP}
+% https://pt.wikipedia.org/wiki/PHP
+O PHP\footnote{PHP é um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}, originalmente \textit{Personal Home Page}.} é uma linguagem interpretada capaz de gerar uma página web a ser visualizada no lado do cliente. Suas principais características são sua velocidade e robustez, orientada a objetos, independente de plataforma e tipagem dinâmica. Nela há varias extensões que possibilita o PHP se conectar com outras ferramentas, como: Bancos de Dados, \textit{socket}, geração de PDF, OpenSLL e outros.
+
+
+
+
+\subsubsubsection{LARAVEL}
+% https://en.wikipedia.org/wiki/Laravel
+Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web, utilizando o padrão MVC\footnote{Sigla para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas com suas respectivas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como: 
+
+{\singlespacing
+\begin{itemize}
+  \item Sua sintaxe simples e concisa;
+  \item Um sistema modular com gerenciador de dependências dedicado;
+  \item Várias formas de acesso a banco de dados relacionais
+  \item Vários utilitários indispensáveis no auxílio ao desenvolvimento e manutenção de sistemas:
+  \item \textit{Eloquent ORM} para mapeamento objeto-relacional;
+  \item \textit{Query Builder} é um conjunto de classes e métodos capaz de criar consultas em forma de programação;
+  \item Roteamento de links;
+  \item Controladores \textit{Restful};
+  \item Carregamento automático de classes sob demanda;
+  \item Compositores de \textit{View}, como o \textit{Blade} para compor \textit{view} e fornecer estruturas de controle, utilizando o cache para melhor desempenho;
+  \item \textit{Database Migration} para versionar a estrutura do banco de dados, facilitando o desenvolvimento e a manutenção do sistema;
+  \item \textit{Database seeding} para popular o banco de dado com dados a serem utilizados em testes.
+  \item Paginação automática de listagens de dados;
+  \item \textit{Form request} para validação da entrada de dados vindo do cliente;
+  \item \textit{Artisan CLI} é uma interface de linha de comandos para automatizar tarefas, como a migração do banco de dados ou criação de componentes do Laravel, ajudando a melhor gerir o \textit{framework};
+  \item Código fonte do Laravel está hospedado no GitHub;
+  \item Licença MIT.
+\end{itemize}
+}
+
+
+
+\subsubsection{FRONT-END}
+
+\subsubsubsection{HTML}
+% https://pt.wikipedia.org/wiki/HTML
+
+\subsubsubsection{JAVASCRIPT}
+% https://pt.wikipedia.org/wiki/JavaScript
+
+\subsubsubsection{CSS}
+% https://pt.wikipedia.org/wiki/Cascading_Style_Sheets
+
+
+\subsection{BANCO DE DADOS}
+\subsubsection{DER}
+\subsubsection{MYSQL}
+% https://pt.wikipedia.org/wiki/MySQL
+
+\subsection{SISTEMAS DE INFORMAÇÃO}
+
+\subsection{INTERAÇÃO HUMANO-COMPUTADOR}
+
+\subsection{FERRAMENTAS}
+\subsubsection{GIT}
+\subsubsection{PHPSTORM}
+
+
+
+
 \subsection{PLANEJAMENTO DE PROJETOS}
 
 
@@ -699,7 +820,7 @@ Segundo os pontos citados na Engenharia de Software e nos livros de Somerville \
 
 Em \textbf{Programação para Web} foram desenvolvidas aplicações para web e em \textbf{Programação para Dispositivos Móveis} foram vistos conceitos semelhantes ao HTML. O HTML5 é uma linguagem que foi desenvolvida para exibir conteúdos em páginas web. A diferença para algumas outras linguagens de programação é que o HTML5 não necessita ser compilado, ele é apenas interpretado pelo navegador. A programação é realizada através de tags (<tag>) que podem possuir atributos e elementos filhos, desde que estejam dentro da tag de fechamento, que é representada por uma barra (</tag>). A Figura 3.1 demonstra a estrutura de um arquivo HTML com algumas tags novas que foram introduzidas na versão 5, como header, nav, section, article, aside e footer. Novos elementos foram introduzidos para dar semântica à linguagem, ou seja, ao ler um código é possível ter noção do conteúdo que será apresentado de acordo com as tags utilizadas, nas versões anteriores, todo o conteúdo possuía o mesmo nível de informação.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=0.6\textwidth]{figura31}
 \caption{Estrutura do HTML com novas tags introduzidas na versão 5.}
@@ -716,7 +837,7 @@ O HTML5 é responsável pela exibição de conteúdo, sendo assim, não é capaz
 
 A linguagem de programação Javascript permite que haja interação entre o conteúdo HTML5 e o usuário, tornando a conteúdo da aplicação dinâmico. O DOM é uma multiplataforma que representa como as marcações em HTML, XHTML e XML são organizadas e lidas pelo navegador. Uma vez indexadas, estas marcações se transformam em elementos de uma árvore que você pode manipular via API, ou seja, o Javascript é capaz de manipular essas informações. Após o HTML ser carregado e interpretado pelo navegador, ele mesmo não tem poder para alterá-lo, mas o Javascript pode inserir, alterar ou remover nós em tempo de execução (Figura 3.2) \textit{[17]}.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figura32}
 \caption{Estrutura de uma árvore DOM.}
@@ -727,7 +848,7 @@ A Figura 3.3 apresenta um exemplo de manipulação de uma árvore DOM com o Java
 Se esse código fosse desenvolvido diretamente pelo HTML5, seria o mesmo que:
 <body><div class=”container” style=”margin-top: 30px”></div></body>
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figura33}
 \caption{Exemplo de manipulação de DOM com Javascript.}
@@ -740,7 +861,7 @@ O AngularJS \textit{[4]} foi o grande encarregado por essa função de manipular
 A Figura 3.4 é uma implementação básica em AngularJS \textit{[4]} para a criação de um novo nó com o conteúdo desejado. O primeiro bloco é o código HTML em que a tag “li” possui uma instrução “ng-repeat” do AngularJS \textit{[4]} para adicionar o conteúdo “text” da lista “opts” enquanto houver filhos. O código abaixo é o Javascript responsável por alimentar o JSON e adicionar o valor “x” ao clicar no botão “Add”. Á direita está o resultado final da aplicação de exemplo.
 Esse mesmo código em Javascript puro seria um pouco mais complexo, mas nesse caso foi necessário acrescentar um novo valor no JSON e a aplicação se encarrega de acrescentar um novo nó automaticamente.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figura34}
 \caption{Exemplo de criação de nó com AngularJS.}
@@ -754,7 +875,7 @@ O CSS3 é uma linguagem de folha de estilo utilizada para definir a apresentaç�
 
 A Figura 3.5 apresenta duas maneiras de como inserir personalizações CSS a um elemento: por classe e inline. A classe pode ser atribuída a vários elementos e assim todos terão apresentação em comum. Ao alterar uma classe, todos os elementos serão afetados e terão sua apresentação modificada. Os atributos da classe podem ser escritos no mesmo arquivo ou em um arquivo externo e importado. O método inline é adicionado com o “style”, é atribuído apenas ao elemento em questão e, caso haja alguma classe no elemento, sobrepõe os atributos coincidentes da classe.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figura35}
 \caption{Métodos de utilização do CSS \url{http://bit.ly/1G00zSp}.}
@@ -769,27 +890,11 @@ Todo o conteúdo até o momento está do lado do cliente em JSON, não foi envia
 A Figura 3.6 é um exemplo de conexão básica com o banco de dados na linguagem C\#
 em que a conexão é declarada, em seguida são adicionados os parâmetros da conexão, a conexão é aberta, uma mensagem é exibida, a conexão é fechada e outra mensagem é exibida.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figura36}
 \caption{Exemplo de conexão básica com o bando de dados em C\#.}
 \end{figure}
-
-
-
-\subsubsection{EXPRESSÕES REGULARES}
-
-Foram utilizadas expressões regulares, conteúdo de \textbf{Linguagens Formais e Autômata},
-no Sistema de Bolsa de Estudos PROMAIS para verificar se os valores inseridos pelos usuários estavam de acordo com as informações necessárias, por exemplo: número de telefone não pode aceitar caracteres ou caracteres especiais, mas pode aceitar hífen, parênteses e espaço. Sendo assim, a expressão regular que representa uma maneira correta para telefone é exibida na Figura 3.7.
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=0.7\textwidth]{figura37}
-\caption{Expressão Regular para telefone.}
-\end{figure}
-
-Não há uma única expressão regular para alguns casos. Esse é um caso que depende da forma que o desenvolvedor decide para um melhor desempenho na sua aplicação. O exemplo apresentado permite receber telefones, obrigatoriamente, com DDD, mas sem obrigação dos parênteses. É permitido colocar espaço entre o DDD e o número ou preenchê-lo completamente sem espaço. No meio do telefone é aceito o sinal de hífen, ponto ou espaço. São aceitos telefones com oito ou nove números no total.
-
 
 
 \subsection{BANCO DE DADOS}
@@ -798,11 +903,12 @@ Os bancos de dados de todas as aplicações foram desenvolvidos em SQL Server da
 
 Com banco de dados é possível criar consultas específicas para retornar qualquer tipo de informação necessária pelo usuário. Tabelas podem ser relacionadas através das chaves primárias e estrangeiras. As chaves primárias representam uma identificação única para a informação e a chave estrangeira é a representação de uma informação de outra tabela. A Figura 3.8 apresenta o fluxo de uma consulta e os elementos possíveis, como: colunas a serem exibidas, as tabelas a serem consultadas, as condições de filtros, agrupamentos e filtros após os resultados.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=0.7\textwidth]{figura38}
 \caption{Modelo de consulta em banco de dados.}
 \end{figure}
+
 A modelagem dos bancos desenvolvidos pode ser vista em Figura 2.6 e Figura 2.14.
 Nelas é possível notar que estão nas formas normais, existem relacionamentos “um para um”,
 “um para n” e “n para n”.
@@ -810,6 +916,8 @@ Nelas é possível notar que estão nas formas normais, existem relacionamentos 
 Antes do desenvolvimento prático, foram feitas reuniões e modelagens conceituais para que fosse possível chegar ao modelo ideal sem que houvesse modificações durante o desenvolvimento das aplicações.
 
 
+
+\clearpage
 \section{CONSIDERAÇÕES FINAIS}
 %%-- Conclusão do relatório, enfatizar os resultados a contribuição para a formação, dificuldades e futuras melhoras --%%
 
@@ -844,6 +952,7 @@ Os projetos desenvolvidos pelo aluno possuem tecnologias e ferramentas recentes 
 O AngularJS demonstrou ser uma ferramenta com pequena curva aprendizado para tarefas mais comuns em um sistema. Ele deve ser mantido e aperfeiçoado nos sistemas atuais ecotado para o desenvolvimento de novos sistemas.
 
 
+\clearpage
 \section{REFERÊNCIAS BIBLIOGRAFICAS}
 %%-- Fontes utilizadas no relatório --%%
 
