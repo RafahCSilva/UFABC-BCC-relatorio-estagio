@@ -32,6 +32,9 @@
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
+%\usepackage{biblatex}
+%\bibliography{relEstagio1}
+
 \graphicspath{{figuras/}}
 
 \renewcommand{\baselinestretch}{1.5}
@@ -222,8 +225,8 @@ Meus agradecimentos são voltados à agência Cadaris, principalmente a Diretora
 \begin{titlepage}
 
 \begin{center}
-  \begin{singlespace}
     \tableofcontents
+  \begin{singlespace}
   \end{singlespace}
 \end{center}
 
@@ -246,7 +249,7 @@ Este relatório tem por objetivo descrever as atividades e os produtos obtidos d
 
 \subsection{CARACTERÍSTICAS DO ESTÁGIO}
 
-A modalidade deste estágio é em \textit{Home Office}\footnote{Escritório em casa, em uma tradução livre do inglês, trabalho que é realizado em espaço alternativo ao escritório de uma empresa.}, que também pode ser definido com um trabalho remoto ou teletrabalho, para a Cadaris Comunicação \textit{[ref:Cadaris]}. A jornada de trabalho é de segunda à sexta-feira, desempenhando 6 horas diárias, totalizando 30 horas semanais, com a gratificação de uma bolsa de R\$ 1.100,00 por mês.
+A modalidade deste estágio é em \textit{Home Office}\footnote{Escritório em casa, em uma tradução livre do inglês, trabalho que é realizado em espaço alternativo ao escritório de uma empresa.}, que também pode ser definido com um trabalho remoto ou teletrabalho, para a Cadaris Comunicação~\cite{cadaris}. A jornada de trabalho é de segunda à sexta-feira, desempenhando 6 horas diárias, totalizando 30 horas semanais, com a gratificação de uma bolsa de R\$ 1.100,00 por mês.
 
 Por se tratar de um \textit{Home Office}, proporcionou ao discente um horário flexível de trabalho fazendo com que ele tenha autonomia para conciliar seu trabalho com as suas outras atividades. A comunicação com a empresa foi mantida através de e-mails e ligações via telefone e \textit{Skype}.
 
@@ -357,7 +360,7 @@ Em um dado momento na Cadaris, um software que apoia um dos seus principais proc
 
 Portanto, o desenvolvimento deste novo sistema foi a principal responsabilidade dada neste estágio. Iniciando pela sua concepção e formalização, com o apoio de documentações como diagramas e modelos de processos.
 
-O processo de Propostas Comerciais é realizado utilizando um sistema contratado desde 2013, este é instalado localmente em um servidor nas dependências da empresa, para somente acesso local dos funcionários. O sistema foi desenvolvido em \textit{ASP}\footnote{ASP, sigla para \textit{Active Server Pages}, também conhecido atualmente como ASP Clássico, é uma estrutura de bibliotecas básicas (e não uma linguagem) para processamento de linguagens de script no lado servidor para geração de conteúdo dinâmico na Web.} com integração ao banco de dados \textit{Microsoft SQL Server}\footnote{Sistema gerenciador de Banco de dados relacional desenvolvido pela Microsoft.}. E este apresenta muitos problemas, pois não se adapta aos novos padrões de desenvolvimento WEB, assim prejudicando, e muito, a experiência do usuário, por motivos que serão espanados a seguir.
+O processo de Propostas Comerciais é realizado utilizando um sistema contratado desde 2013, este é instalado localmente em um servidor nas dependências da empresa, para somente acesso local dos funcionários. O sistema foi desenvolvido em \textit{ASP}\footnote{ASP, abreviação para \textit{Active Server Pages}, também conhecido atualmente como ASP Clássico, é uma estrutura de bibliotecas básicas (e não uma linguagem) para processamento de linguagens de script no lado servidor para geração de conteúdo dinâmico na Web.} com integração ao banco de dados \textit{Microsoft SQL Server}\footnote{Sistema gerenciador de Banco de dados relacional desenvolvido pela Microsoft.}. E este apresenta muitos problemas, pois não se adapta aos novos padrões de desenvolvimento WEB, assim prejudicando, e muito, a experiência do usuário, por motivos que serão espanados a seguir.
 
 Uma proposta comercial é iniciada com o contato do cliente para o setor de atendimento da Cadaris, no qual, o atendente irá realizar o cadastro de um \textit{job}\footnote{Trabalho, em inglês, trata-se do projeto a ser desenvolvido pela agência.}, preenchendo os dados necessários, em seguida é confeccionado o \textit{briefing}\footnote{O \textit{briefing} é um documento onde constam as informações do cliente com seus requisitos, a descrição do público-alvo e dos objetivos do cliente.} com um cronograma estimado sobre a produção deste \textit{job}. E por fim, o atendimento requisita um orçamento para o departamento responsável pelo financeiro da empresa. 
 
@@ -369,7 +372,14 @@ Para concluir a etapa de Proposta Comercial, o atendimento retorna ao cliente co
 
 Pode-se ver na Figura a seguir, o modelo de processo da Proposta Comercial.
 
-\textbf{[[ img: modelo de processo Proposta Comercial (pagina em paisagem) ]]}
+%\textbf{[[ img: modelo de processo Proposta Comercial (pagina em paisagem) ]]}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{ModeloProcesso_Comercial_PeB}
+  \caption{Modelo de Processo da Proposta Comercial}
+  \label{fig:modProcess}
+\end{figure}
+
 
 A etapa de Produção do \textit{job} é realizado pelo setor de produção da Cadaris, utilizando técnicas e outras ferramentas especificas para o serviço desejado, como o \textit{Trello}\footnote{Ferramenta de gerenciamento de projetos em listas extremamente versátil, utilizando o método de \textit{Kanban} para indicar o andamento dos fluxos de produção.} para o gerenciamento do processo de produção. Concluido a produção do \textit{job}, o produto/serviço é entregue ao cliente. E para finalizar, o \textit{job} é encaminhado para o faturamento. 
 
@@ -412,7 +422,7 @@ O sistema atual tenta ser generalista para suportar inúmeras áreas da empresa 
 
 Para o preenchimento do \textit{Briefing}, além de um campo para a escrita livre, são necessários formulários especializados para os tipos de \textit{jobs} que a agência realiza, facilitando e padronizando a confecção destes \textit{Briefings}. O Cronograma é elaborado manualmente, então se faz necessário a incorporação de alguma ferramenta de simples utilização para a elaboração do cronograma estimado, pelo atendente, para a realização do \textit{job}.
 
-Para a transferência do \textit{job} cadastrado de um departamento para outro, durante a passagem das etapas, no sistema atual é necessário realizar um \textit{PIT}\footnote{Sigla para Pedido Interno de Trabalho, é um documento com todas as informações necessárias para solicitar a realização de algum trabalho.}, que é livre para enviar para qualquer pessoa. Mas, visto que a Proposta Comercial da Cadaris segue uma ordem pré-estabelecida de etapas e departamentos envolvidos, então a adoção de um sistema mais especializado é uma ótima solução para agilizar o processo e impedir possíveis erros.
+Para a transferência do \textit{job} cadastrado de um departamento para outro, durante a passagem das etapas, no sistema atual é necessário realizar um \textit{PIT}\footnote{Abreviação para Pedido Interno de Trabalho, é um documento com todas as informações necessárias para solicitar a realização de algum trabalho.}, que é livre para enviar para qualquer pessoa. Mas, visto que a Proposta Comercial da Cadaris segue uma ordem pré-estabelecida de etapas e departamentos envolvidos, então a adoção de um sistema mais especializado é uma ótima solução para agilizar o processo e impedir possíveis erros.
 
 Já para a elaboração da estimativa de custo, em vários quesitos o sistema não atende corretamente ao modelo de negócio da Cadaris. Uma estimativa de custo contempla Custos Internos e Custos de Operacionalização que por sua vez é composto por listas de itens com seus respectivos valores, e para a elaboração desta lista de custos, além de campos desnecessários, há a falta de certas funcionalidades, tais como: maior personalização de taxamentos, arredondamento de valor, subcategorias de Tipo de Serviço no Custo Interno, valores padrão para cada Tipo de Serviço e outras funcionalidades. 
 
@@ -424,7 +434,7 @@ Durante todas estas etapas, é também utilizado no \textit{Trello} um \textit{c
 
 Para o gerenciamento de outros recursos, como: Funcionários, Departamentos, Clientes e Fornecedores, são utilizados planilhas eletrônicas. Sendo todo os processos relativos a estes recursos feito de modo não automatizado e sem uma centralização dos dados que são relacionados entre si.
 
-Resumindo, a proposta geral deste projeto é o desenvolvimento de um sistema ERP\footnote{Sigla em inglês para \textit{Enterprise Resource Planning}, ou seja, Planejamento dos Recursos da Empresa.}, que deve cuidar de todo o trabalho administrativo e operacional feito na Cadaris, e também automatizar todas estas tarefas antes feitas manualmente. Como por exemplo: faturamento, balanço contábil, fluxo de caixa, administração de pessoal, contas a receber, o dissídio, cálculo de férias e o ponto dos funcionários, e outros.
+Resumindo, a proposta geral deste projeto é o desenvolvimento de um sistema ERP\footnote{Abreviação em inglês para \textit{Enterprise Resource Planning}, ou seja, Planejamento dos Recursos da Empresa.}, que deve cuidar de todo o trabalho administrativo e operacional feito na Cadaris, e também automatizar todas estas tarefas antes feitas manualmente. Como por exemplo: faturamento, balanço contábil, fluxo de caixa, administração de pessoal, contas a receber, o dissídio, cálculo de férias e o ponto dos funcionários, e outros.
 
 Há também um módulo especializado em atender a Proposta Comercial e todos os outros processos envolvidos nele.
 
@@ -452,17 +462,14 @@ Como pode ser visto nas seções a diante, a UFABC oferece, por meio de discipli
 O mercado de trabalho necessita e busca sempre por praticidade, seguindo tendências de desenvolvimento e utilizando o que há de mais novo e eficiente no mercado. Atualmente, há diversos métodos e padrões de projetos que garantem eficiência de uma implementação. Além de inúmeras linguagens de programação, na qual nelas a massiva adoção de \textit{frameworks} para diversos fins.
 
 Um \textit{framework} é um conjunto (ou biblioteca) de classes que se relacionam entre si para disponibilizar ao desenvolvedor funcionalidade especificas. Basicamente um \textit{kit} de ferramentas devidamente implementada, testadas e prontas para o uso. Poupando assim, tempo e trabalho do desenvolvedor de implementar operações básicas como acesso a banco de dados, sistema de templates, mapeamento de rotas, autenticação de usuário e validação de dados.
-%  http://www.phpit.com.br/artigos/o-que-e-um-framework.phpit
 
 Com todos os requisitos discutidos anteriormente, escolher corretamente como será formada a arquitetura do sistema foi de total importância. Escolher uma linguagem de programação e com ela um de seus \textit{frameworks} disponíveis, determinará os requisitos mínimos para sua execução, como os custos para desenvolvê-lo e mantê-lo, e viabilizará todos os recursos requisitados. E também é relevante saber seus limites e a possibilidade de utilizar outras bibliotecas para apoiar a necessidade, assim então garantir o sucesso da implementação deste sistema web.
 
 De início foi escolhido a linguagem \textit{PHP}, que será melhor explicada nas seções seguintes, como a linguagem para o \textit{Back-end}, onde será executada em um servidor, afim de servir páginas dinâmicas de \textit{HTML} ao cliente em um navegador de internet. A escolha desta linguagem dar-se pelo fato do discente já ter familiaridade com o desenvolvimento web utilizando \textit{PHP}.
 
-A tarefa seguinte era a pesquisa e escolha de um \textit{framework} para apoiar o desenvolvimento. Após a leitura de blogs e artigos na internet sobre os melhores \textit{frameworks PHP}~[ref:top10]. Após pequenos testes e exames de projetos exemplos que utilizam o \textit{framework}, foi decidido pelo aluno que o \textit{framework} será o \textbf{LARAVEL}. Eleito como o mais popular por diversos sites, como o [ref:sitepoint], o Laravel foi lançado em 2011, mas apesar de ser relativamente novo, tem um enorme ecossistema, com uma ótima documentação e conteúdo didático na internet.
-%http://cienciacomputacao.com.br/desenvolvimento/10-melhores-frameworks-php-para-projetos-web/
-%https://www.sitepoint.com/best-php-framework-2015-sitepoint-survey-results/
+A tarefa seguinte era a pesquisa e escolha de um \textit{framework} para apoiar o desenvolvimento. Após a leitura de blogs e artigos na internet sobre os melhores \textit{frameworks PHP}~\cite{top10}. Após pequenos testes e exames de projetos exemplos que utilizam o \textit{framework}, foi decidido pelo aluno que o \textit{framework} será o \textbf{LARAVEL}. Eleito como o mais popular por diversos sites, como o Sitepoint~\cite{sitepoint}, o Laravel foi lançado em 2011, mas apesar de ser relativamente novo, tem um enorme ecossistema, com uma ótima documentação e conteúdo didático na internet.
 
-Para o aprender a utilizar o Laravel, o aluno estudou através de vídeo-aulas gratuitas disponíveis na plataforma \textit{LARACASTS}~[ref:laracasts] e sempre consultando a documentação oficial~[ref:Laravel.docs]. Obtendo assim aptidão para criar aplicações web utilizando este \textit{framework}, conhecendo suas funcionalidades e recursos disponíveis.
+Para o aprender a utilizar o Laravel, o aluno estudou através de vídeo-aulas gratuitas disponíveis na plataforma \textit{LARACASTS}~\cite{laracast} e sempre consultando a documentação oficial~\cite{laraveldocs} Obtendo assim aptidão para criar aplicações web utilizando este \textit{framework}, conhecendo suas funcionalidades e recursos disponíveis.
 
 Para então iniciar a implementação deste sistema ERP.
 
@@ -721,199 +728,106 @@ As disciplinas cursadas na Universidade Federal do ABC contribuíram de várias 
 
 
 
-\subsection{ENGENHARIA DE SOFTWARE}
-Garantir que um \textit{software} seja bem sucedido é necessário seguir especificação descritas pela Engenharia de Software, para assim melhor atender as necessidades dos usuários e prevenir futuras falhas.
+\subsection{ENGENHARIA DE SOFTWARE E SISTEMAS DE INFORMAÇÃO}
+Para garantir que um \textit{software} seja bem sucedido é necessário seguir algumas especificações descritas pela Engenharia de Software, desta foram melhor atenderá as necessidades dos usuários e prevenirá futuras falhas.
 
-Como descrito por Pressman~[ref:Pressman], ter o planejamento completo do projeto antes da própria implementação é de extrema importância. Com um bom planejamento, o sistema reduzirá drasticamente o impacto de suas falhas, enquanto o \textit{software} estiver em larga utilização.
+Como descrito por Pressman~\cite{pressman}, ter o planejamento completo do projeto antes da própria implementação é de extrema importância. Com um bom planejamento, o sistema reduzirá drasticamente o impacto de suas falhas, enquanto o \textit{software} estiver em larga utilização.
 
-Inúmeras especificação foram abordadas em aulas e agora o discente as colocou em prática ao desenvolver este sistema. Desde as reuniões iniciais na empresa, as técnicas aprendidas em aula foram aplicadas, com o apoio de diagramas e modelos para documentar o \textit{software} a ser implementado.
+Inúmeras especificação foram abordadas na disciplina \textbf{Engenharia de software} e agora o discente as colocou em prática ao desenvolver este sistema. Desde as reuniões iniciais na empresa, as técnicas aprendidas em aula foram aplicadas, com o apoio de diagramas e modelos para documentar o \textit{software} a ser implementado.
+
+Conceitos importantes, sobre a aplicação de um \textit{software} para o apoiar a regra de negócio de uma empresa, foram discutidos na disciplina \textbf{Sistemas de informação} e largamente aplicados neste projeto. Desta maneira, idealizar e projetar uma ferramenta capaz de sanar as dificuldades atuais, substituir outras ferramentas defasadas e obter a centralização de todos os dados, se tornaram os objetivos primordiais para o desenvolvimento deste sistema ERP.
 
 
 \subsection{DESENVOLVIMENTO WEB}
-% https://pt.wikipedia.org/wiki/W3C
-% https://pt.wikipedia.org/wiki/Aplica%C3%A7%C3%A3o_web
-% https://pt.wikipedia.org/wiki/Front-end_e_back-end
-Como um dos principais requisitos é do sistema ser \textit{online}, criar um \textit{WebApp} pode ser considerado complexo, pois utilizam diferentes tecnologias para criar uma aplicação semelhante ao de \textit{desktop}, porém em um navegador de internet. Esta aplicação é executada em um servidor, que receberá requisições do cliente e retornará respostas a ele conforme as ações desejadas. Já no navegador, haverá a exibição das informações necessárias e suportará as interações do usuário. E todos estes fundamentos foram apresentados durante a disciplina de Programação para Web.
+Como um dos principais requisitos do sistema é estar \textit{online}, criar um \textit{WebApp} pode ser considerado complexo, pois utilizam diferentes tecnologias para criar uma aplicação semelhante ao de \textit{desktop}, porém em um navegador de internet. Esta aplicação é executada em um servidor, que receberá requisições do cliente e retornará respostas a ele conforme as ações desejadas. Já no navegador, haverá a exibição das informações necessárias e suportará as interações do usuário. 
 
-Assim podemos separar uma \textit{WebApp} em duas camadas: \textit{Back-end} e \textit{Front-end}. Na qual o \textit{Front-end} é o responsável por interagir com o usuário, afim de coletar os nados necessários e transmiti-los ao \textit{Back-end}, para que estes dados possam ser processados, afim de retornar uma resposta.
+Podemos então separar uma \textit{WebApp} em duas camadas: \textit{Back-end} e \textit{Front-end}. Na qual o \textit{Front-end} é o responsável por interagir com o usuário, afim de coletar os nados necessários e transmiti-los ao \textit{Back-end}, para que estes dados possam ser processados, afim de retornar uma resposta.
+
+Todos os fundamentos necessários foram apresentados durante a disciplina de \textbf{Programação para Web}. Como também outros fundamentos discutidos nas disciplinas de \textbf{Processamento da Informação}, \textbf{Programação Orientada a Objetos}, \textbf{Lógica Básica}, \textbf{Algoritmos e Estrutura de Dados} e \textbf{Análise de Algoritmos}. A disciplina de \textbf{Segurança de Dados} também contribuiu para conceitos importantes sobre a segurança de um sistema, que foram aplicados no desenvolvimento deste projeto.
+
 
 Nas subseções a seguir, será exposto as tecnologias utilizadas.
  
 
 \subsubsection{BACK-END}
-Do lado do servidor, sua principal função eh receber requisições e devolver respostas. Bem como tambem ter acessoa o banco de dados e realizar todos o processamento de dados necessários.
+Do lado do servidor, sua principal função é receber requisições e devolver respostas. Também ter acesso ao banco de dados e realizar todo o processamento dos dados necessários.
 
 \subsubsubsection{PHP}
-% https://pt.wikipedia.org/wiki/PHP
-O PHP\footnote{PHP é um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}, originalmente \textit{Personal Home Page}.} é uma linguagem interpretada capaz de gerar uma página web a ser visualizada no lado do cliente. Suas principais características são sua velocidade e robustez, orientada a objetos, independente de plataforma e tipagem dinâmica. Nela há varias extensões que possibilita o PHP se conectar com outras ferramentas, como: Bancos de Dados, \textit{socket}, geração de PDF, OpenSLL e outros.
+O PHP\footnote{PHP é um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}, originalmente \textit{Personal Home Page}.} é uma linguagem interpretada capaz de gerar uma página web a ser visualizada no lado do cliente. Suas principais características são sua velocidade e robustez, orientada a objetos, independente de plataforma e tipagem dinâmica. 
 
-
+Há várias extensões que possibilita o PHP se conectar com outras ferramentas, como: inúmeros Bancos de Dados, \textit{socket}, geração de PDF, OpenSLL e outros. Por isto ela foi considerada a melhor escolha para ser utilizada no \textit{Back-end}, principalmente por ser gratuita sua utilização, barateando assim o desenvolvimento e execução do sistema.
 
 
 \subsubsubsection{LARAVEL}
-% https://en.wikipedia.org/wiki/Laravel
-Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web, utilizando o padrão MVC\footnote{Sigla para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas com suas respectivas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como: 
+Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web, utilizando o padrão MVC\footnote{Abreviação para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas, cada uma com suas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como: 
 
 {\singlespacing
 \begin{itemize}
   \item Sua sintaxe simples e concisa;
   \item Um sistema modular com gerenciador de dependências dedicado;
-  \item Várias formas de acesso a banco de dados relacionais
-  \item Vários utilitários indispensáveis no auxílio ao desenvolvimento e manutenção de sistemas:
+  \item Várias formas de acesso a banco de dados relacionais;
+  \item Vários utilitários indispensáveis no auxílio ao desenvolvimento e manutenção de sistemas;
   \item \textit{Eloquent ORM} para mapeamento objeto-relacional;
-  \item \textit{Query Builder} é um conjunto de classes e métodos capaz de criar consultas em forma de programação;
+  \item \textit{Query Builder} é um conjunto de classes e métodos capaz de criar consultas em banco de dados em forma de programação;
   \item Roteamento de links;
   \item Controladores \textit{Restful};
   \item Carregamento automático de classes sob demanda;
-  \item Compositores de \textit{View}, como o \textit{Blade} para compor \textit{view} e fornecer estruturas de controle, utilizando o cache para melhor desempenho;
+  \item Compositores de \textit{View}, como o \textit{Blade}, para compor a visão e fornecer estruturas de controle e utiliza o cache para melhor desempenho;
   \item \textit{Database Migration} para versionar a estrutura do banco de dados, facilitando o desenvolvimento e a manutenção do sistema;
   \item \textit{Database seeding} para popular o banco de dado com dados a serem utilizados em testes.
-  \item Paginação automática de listagens de dados;
+  \item Paginação automática nas listagens de dados;
   \item \textit{Form request} para validação da entrada de dados vindo do cliente;
-  \item \textit{Artisan CLI} é uma interface de linha de comandos para automatizar tarefas, como a migração do banco de dados ou criação de componentes do Laravel, ajudando a melhor gerir o \textit{framework};
+  \item \textit{Artisan CLI} é uma interface de linha de comandos para automatizar tarefas, como a migração do banco de dados ou criação de componentes do Laravel, ajudando a melhor gerir o projeto no \textit{framework};
   \item Código fonte do Laravel está hospedado no GitHub;
   \item Licença MIT.
 \end{itemize}
 }
 
+\subsubsubsection{BANCO DE DADOS}
+
+Banco de dado é o conjunto organizado de dados que se relacionam entre si, representando alguma informação importante a ser armazenada.
+
+Os Banco de Dados são operados por um SGBD\footnote{Abreviação para Sistema Gerenciador de Banco de Dados.}, este gerenciador disponibilizam um interface para que clientes possam incluir, alterar ou consultar dados previamente armazenados. Em bancos de dados relacionais, esta interface é constituída  por um \textit{driver} do SGBD que executam comandos na linguagem SQL\footnote{Abreviação de \textit{Structured Query Language}, ou me português, Linguagem de Consulta Estruturada}
+
+O SGBD utilizado no sistema foi o MySQL e a disciplina \textbf{Banco de Dados} instruiu como desenvolver a uma estrutura sólida e coerente conforme as formas normais.
+
+Para se conectar ao MySQl, o Laravel torna a interação com o banco de dados extremamente simples, utilizando o \textit{fluent query builder} e o Eloquent ORM como interfaces para o desenvolvedor ter acesso ao banco de dados.
+
+% TODO: exemplo de consulta com Laravel - Eloquent ORM
+
 
 
 \subsubsection{FRONT-END}
+O \textit{Front-end} é o lado do cliente, na qual fornece uma interface amigável para o usuário, afim de exibir dados e coletar informações vindas da interação do usuário com o sistema.
+
+Em relação a interface do usuário foi necessário a aplicação de conceitos discutidos na disciplina \textbf{Interação Humano-Computador}, na qual aborda os conceitos fundamentais para criar um interface com melhor acessibilidade e usabilidade nas suas funcionalidades, para assim obter uma melhor experiência de uso pelo usuário.
+
+Para desenvolver esta interface, são utilizadas diversas ferramentas, e as principais serão apresentados a seguir.
 
 \subsubsubsection{HTML}
-% https://pt.wikipedia.org/wiki/HTML
+O HTML\footnote{Abreviação para \textit{Hyper Text Markup Language}, ou seja, Linguagem de Marcação de Hipertexto em português.} é uma linguagem de marcação base da estrutura da interface de uma página na internet. A última versão é o HTML5 e foi publicada em 28 de outubro de 2014, toda a especificação do HTML é padronizado pelo W3C~\cite{w3c}.
 
-\subsubsubsection{JAVASCRIPT}
-% https://pt.wikipedia.org/wiki/JavaScript
+Na codificação de um documento HTML possui marcadores, chamadas \textit{tags}, entre os caracteres < e >. Um elemento do HTML é formado por uma \textit{tag} com seus atributos e valores, e como filho pode-se haver outros elementos ou textos. Esta estrutura será interpretada pelo navegador, afim de compor elementos a serem renderizados e exibidos ao usuário.
+
+% TODO: exemplos de estruturas...
+
 
 \subsubsubsection{CSS}
-% https://pt.wikipedia.org/wiki/Cascading_Style_Sheets
+O CSS\footnote{Abreviação de \textit{Cascading Style Sheets}.} é uma linguagem de folhas de estilo, que serve para definir a aparência dos elementos no HTML a serem renderizados na interface, como: cor, altura, largura, fonte de textos, sombras e etc.
+
+% TODO: BootStrap3
+
+% TODO: exemplos de Sintaxe e Seletores...
 
 
-\subsection{BANCO DE DADOS}
-\subsubsection{DER}
-\subsubsection{MYSQL}
-% https://pt.wikipedia.org/wiki/MySQL
+\subsubsubsection{JAVASCRIPT}
+O JavaScript é uma linguagem interpretada pelo navegador, afim de executar \textit{scripts} do lado do cliente ao invés de somente do servidor, possibilitando controlar elementos da página dinamicamente, com execução e comunicação assíncrona. É uma linguagem orientada a objetos baseada em protótipos, tipagem fraca e dinâmica, funções de primeira classe e possui suporte a programação funcional.
 
-\subsection{SISTEMAS DE INFORMAÇÃO}
+Por meio do AJAX\footnote{Abreviação para \textit{asynchronous JavaScript and XML}, em português, Javascript e XML Assíncrono.}, o JavaScript pode se comunicar com o servidor de modo assíncrono, podendo  enviar dados do cliente e obter dados do servidor. Mas normalmente utiliza-se JSON ao invés de XML para transportar os dados em AJAX.
 
-\subsection{INTERAÇÃO HUMANO-COMPUTADOR}
+O JSON\footnote{Acrônimo para \textit{JavaScript Object Notation, ou em português, Notação de Objeto de JavaScript}.} é um formato mais leve que o XML para trocas de dados. Amplamente utilizado em sistemas que fluxo de dados entre o cliente e o servidor é vital para o sistema.
 
-\subsection{FERRAMENTAS}
-\subsubsection{GIT}
-\subsubsection{PHPSTORM}
-
-
-
-
-\subsection{PLANEJAMENTO DE PROJETOS}
-
-
-Segundo os pontos citados na Engenharia de Software e nos livros de Somerville \textit{[15]} e Pressman \textit{[16]}, não basta apenas programar e desenvolver projetos, é necessário ter um planejamento completo antes de iniciar a programação em si, além de possuir desenvolvedores competentes na equipe. Todo sistema está sujeito a falhas, mas quando há bom planejamento, incluindo os imprevistos, dificilmente terá grandes problemas durante o período de utilização, nada que o comprometa seriamente. Tais fatos foram notados ao desenvolver os sistemas de Bolsa de Estudos PROMAIS e Sistema de Gestão de Atividades. O primeiro foi totalmente planejado, desde a estrutura das classes como quais ferramentas seriam utilizadas e o projeto foi desenvolvido do começo ao fim como o previsto. O segundo projeto havia sido planejado, mas durante o desenvolvimento foi notada muita repetição de códigos e a necessidade de uma ferramenta que tornasse a aplicação mais dinâmica e suprisse esse obstáculo, e assim foi pesquisado e encontrado o AngularJS \textit{[4]}.
-
-
-
-
-\subsection{DESENVOLVIMENTO WEB}
-
-\subsubsection{HTML}
-
-Em \textbf{Programação para Web} foram desenvolvidas aplicações para web e em \textbf{Programação para Dispositivos Móveis} foram vistos conceitos semelhantes ao HTML. O HTML5 é uma linguagem que foi desenvolvida para exibir conteúdos em páginas web. A diferença para algumas outras linguagens de programação é que o HTML5 não necessita ser compilado, ele é apenas interpretado pelo navegador. A programação é realizada através de tags (<tag>) que podem possuir atributos e elementos filhos, desde que estejam dentro da tag de fechamento, que é representada por uma barra (</tag>). A Figura 3.1 demonstra a estrutura de um arquivo HTML com algumas tags novas que foram introduzidas na versão 5, como header, nav, section, article, aside e footer. Novos elementos foram introduzidos para dar semântica à linguagem, ou seja, ao ler um código é possível ter noção do conteúdo que será apresentado de acordo com as tags utilizadas, nas versões anteriores, todo o conteúdo possuía o mesmo nível de informação.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.6\textwidth]{figura31}
-\caption{Estrutura do HTML com novas tags introduzidas na versão 5.}
-\end{figure}
-
-Com base na Figura 3.1, é demonstrada a herança de tags. As tags que são apresentadas dentro de uma tag de abertura e fechamento, são consideradas filhas, como h1, form e nav que são filhas da tag header.
-
-O HTML5 é responsável pela exibição de conteúdo, sendo assim, não é capaz de criar novos elementos, conectar com um banco de dados ou com algum servidor, por exemplo. Essas outras atividades são realizadas por outras linguagens de programação que caminham em conjunto com o HTML5.
-
-
-
-\subsubsection{JAVASCRIPT}
-
-
-A linguagem de programação Javascript permite que haja interação entre o conteúdo HTML5 e o usuário, tornando a conteúdo da aplicação dinâmico. O DOM é uma multiplataforma que representa como as marcações em HTML, XHTML e XML são organizadas e lidas pelo navegador. Uma vez indexadas, estas marcações se transformam em elementos de uma árvore que você pode manipular via API, ou seja, o Javascript é capaz de manipular essas informações. Após o HTML ser carregado e interpretado pelo navegador, ele mesmo não tem poder para alterá-lo, mas o Javascript pode inserir, alterar ou remover nós em tempo de execução (Figura 3.2) \textit{[17]}.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{figura32}
-\caption{Estrutura de uma árvore DOM.}
-\end{figure}
-
-A Figura 3.3 apresenta um exemplo de manipulação de uma árvore DOM com o Javascript. A primeira linha cria uma tag do tipo “div” e salva na variável “el”. A segunda linha acrescenta a variável “el” ao elemento “body”. A terceira linha acrescenta uma classe CSS
-“container” ao elemento “el”. A quarta linha adiciona uma margem superior de 30px ao elemento.
-Se esse código fosse desenvolvido diretamente pelo HTML5, seria o mesmo que:
-<body><div class=”container” style=”margin-top: 30px”></div></body>
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{figura33}
-\caption{Exemplo de manipulação de DOM com Javascript.}
-\end{figure}
-
-
-\subsubsection{ANGULARJS}
-
-O AngularJS \textit{[4]} foi o grande encarregado por essa função de manipular o DOM nos sistemas de Bolsa de Estudos PROMAIS e o de Gestão de Atividades. A única necessidade do desenvolvedor é se preocupar com o JSON gerado e o AngularJS \textit{[4]} o interpreta e cria o DOM de acordo com as informações que recebe.
-A Figura 3.4 é uma implementação básica em AngularJS \textit{[4]} para a criação de um novo nó com o conteúdo desejado. O primeiro bloco é o código HTML em que a tag “li” possui uma instrução “ng-repeat” do AngularJS \textit{[4]} para adicionar o conteúdo “text” da lista “opts” enquanto houver filhos. O código abaixo é o Javascript responsável por alimentar o JSON e adicionar o valor “x” ao clicar no botão “Add”. Á direita está o resultado final da aplicação de exemplo.
-Esse mesmo código em Javascript puro seria um pouco mais complexo, mas nesse caso foi necessário acrescentar um novo valor no JSON e a aplicação se encarrega de acrescentar um novo nó automaticamente.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{figura34}
-\caption{Exemplo de criação de nó com AngularJS.}
-\end{figure}
-
-\subsubsection{CSS}
-
-O HTML5 possui atributos para personalizar as tags adicionadas, porém é um método depreciado e pouco eficiente com o surgimento do CSS3.
-
-O CSS3 é uma linguagem de folha de estilo utilizada para definir a apresentação de documentos escritos em uma linguagem de marcação, como HTML5 e tem como papel principal separar o conteúdo de um documento e o seu formato.
-
-A Figura 3.5 apresenta duas maneiras de como inserir personalizações CSS a um elemento: por classe e inline. A classe pode ser atribuída a vários elementos e assim todos terão apresentação em comum. Ao alterar uma classe, todos os elementos serão afetados e terão sua apresentação modificada. Os atributos da classe podem ser escritos no mesmo arquivo ou em um arquivo externo e importado. O método inline é adicionado com o “style”, é atribuído apenas ao elemento em questão e, caso haja alguma classe no elemento, sobrepõe os atributos coincidentes da classe.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{figura35}
-\caption{Métodos de utilização do CSS \url{http://bit.ly/1G00zSp}.}
-\end{figure}
-
-
-\subsection{LÓGICA DE PROGRAMAÇÃO}
-\subsubsection{CONEXÃO COM BANCO DE DADOS}
-
-Todo o conteúdo até o momento está do lado do cliente em JSON, não foi enviado nada para o servidor e não foi feita nenhuma persistência de informações, portanto as informações são perdidas ao fechar a aplicação. Para a conexão com o banco de dados foi utilizada a linguagem C\# da Microsoft, ela é uma linguagem orientada à objetos, fortemente tipada, foi baseada no C++ e possui similaridades com Java, linguagem desenvolvida em \textbf{Processamento da Informação, Programação Orientada a Objetos} e conceitos vistos em \textbf{Lógica Básica, Algoritmos e Estrutura de Dados e Análise de Algoritmos}.
-
-A Figura 3.6 é um exemplo de conexão básica com o banco de dados na linguagem C\#
-em que a conexão é declarada, em seguida são adicionados os parâmetros da conexão, a conexão é aberta, uma mensagem é exibida, a conexão é fechada e outra mensagem é exibida.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{figura36}
-\caption{Exemplo de conexão básica com o bando de dados em C\#.}
-\end{figure}
-
-
-\subsection{BANCO DE DADOS}
-
-Os bancos de dados de todas as aplicações foram desenvolvidos em SQL Server da Microsoft e a disciplina \textbf{Banco de Dados} instruiu os primeiros passos para desenvolver uma estrutura sólida e coerente, de acordo com as formas normais. A disciplina de\textbf{Segurança de Dados} também contribuiu para que as informações fossem transferidas de forma criptografada e segura de usuários não autorizados.
-
-Com banco de dados é possível criar consultas específicas para retornar qualquer tipo de informação necessária pelo usuário. Tabelas podem ser relacionadas através das chaves primárias e estrangeiras. As chaves primárias representam uma identificação única para a informação e a chave estrangeira é a representação de uma informação de outra tabela. A Figura 3.8 apresenta o fluxo de uma consulta e os elementos possíveis, como: colunas a serem exibidas, as tabelas a serem consultadas, as condições de filtros, agrupamentos e filtros após os resultados.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.7\textwidth]{figura38}
-\caption{Modelo de consulta em banco de dados.}
-\end{figure}
-
-A modelagem dos bancos desenvolvidos pode ser vista em Figura 2.6 e Figura 2.14.
-Nelas é possível notar que estão nas formas normais, existem relacionamentos “um para um”,
-“um para n” e “n para n”.
-
-Antes do desenvolvimento prático, foram feitas reuniões e modelagens conceituais para que fosse possível chegar ao modelo ideal sem que houvesse modificações durante o desenvolvimento das aplicações.
+Também foi utilizada a mais popular biblioteca de funções JavaScript, chamada jQuery, que ajuda simplificando: a interação com o HTML, a seleção de elementos na DOM, criar animações, manipular eventos, realizar chamadas AJAX e a criação e utilização de \textit{plugins}. Permitindo criar uma camada de abstração que simplifica o desenvolvimento de aplicações web.
 
 
 
@@ -927,75 +841,36 @@ Este capítulo tem por objetivo descrever as contribuições que o estágio prop
 
 \subsection{CONTRIBUIÇÕES PARA A FORMAÇÃO}
 
-O estágio exigiu conhecimento e aplicação de várias disciplinas como Processamento da Informação, Programação para Web, Programação Orientada a Objetos, Banco de Dados, Lógica Básica, Computadores, Ética e Sociedade, Linguagens Formais e Autômata, Segurança de Dados, Programação para Dispositivos Móveis, Análise de Algoritmos e Engenharia de Software. O estágio exigiu o conhecimento para criar lógicas que solucionassem problemas,
-operadores lógicos, expressões regulares, consultas em banco de dados, desenvolvimento em camadas (MVC) e planejamento.
+O estágio exigiu conhecimento e aplicação de várias disciplinas como: Algoritmo e estrutura de dados, Análise de algoritmos, Banco de dados, Bases Computacionais da Ciência, Engenharia de software, Interação Humano-Computador, Lógica básica, Processamento da informação, Programação orientada a objetos, Programação para Dispositivos Móveis, Programação para Web, Segurança de Dados e Sistemas de Informação.
+O estágio exigiu o conhecimento para criar lógicas que solucionassem problemas, operadores lógicos, consultas em banco de dados, desenvolvimento de sistema de informação, desenvolvimento em camadas (MVC).
 
 As ferramentas ensinadas ao aluno durante os cursos de formação facilitaram as atividades e exigiram uma curva de aprendizado menor nos assuntos em que foi necessário aprofundamento, considerando que o aprendizado em um ambiente acadêmico acontece em um cenário ideal e pequeno em relação ao mercado de trabalho.
 
-O período total foi suficiente para perceber a diferença entre a teoria e a prática. Na teoria todo o assunto é passado ao aluno, os conceitos, maneiras de resoluções de problemas, os exercícios e projetos são grandes desafios e são os que põem a prova tudo o que foi aprendido nas aulas, porém, quando o aluno se depara com a realidade do mercado de trabalho, nota a diferença da dimensão de tudo o que foi visto antes e que nas aulas, apesar de parecer um projeto grande, é apenas um pequeno exemplo que pode acontecer na realidade. Essa distância entre a teoria e a prática é o que amadurece e faz com que o estagiário aplique tudo o que foi aprendido, contribuindo no crescimento profissional.
+O período total foi suficiente para perceber a diferença entre a teoria e a prática. 
+Na teoria todo o assunto é passado ao aluno, os conceitos, maneiras de resoluções de problemas, os exercícios e projetos são grandes desafios e são os que põem a prova tudo o que foi aprendido nas aulas. 
+Porém, quando o aluno se depara com a realidade do mercado de trabalho, nota a diferença da dimensão de tudo o que foi visto antes e que nas aulas, apesar de parecer um projeto grande, é apenas um pequeno exemplo que pode acontecer na realidade.
+Essa distância entre a teoria e a prática é o que amadurece e faz com que o estagiário aplique tudo o que foi aprendido, contribuindo no crescimento profissional.
 
 
 \subsection{DIFICULDADES ENCONTRADAS}
 
 O desenvolvimento de aplicações no ambiente de produção exige muita disciplina do profissional. O código deve ser bem estruturado, pois será mantido por uma equipe. Deve haver um planejamento do projeto antes de iniciar qualquer programação para evitar erros e trabalhos desnecessários. O profissional necessita pesquisar muito sobre como realizar a tarefa, qual seria a melhor solução, quais seriam as melhores ferramentas, conversar com outros desenvolvedores para adquirir experiência e criar uma solução ideal para o problema.
 
-Algumas ferramentas utilizadas no decorrer do estágio não foram ensinadas nos cursos de formação do aluno, dificultando inicialmente o desenvolvimento dos projetos. Porém, tal fato implicou em um maior empenho e dedicação em estudos e pesquisas, gerando ótimos resultados nos projetos e amadurecendo o aluno profissionalmente.
+Algumas ferramentas utilizadas no decorrer do estágio não foram ensinadas nos cursos de formação do aluno, como os \textit{frameworks}, dificultando inicialmente o desenvolvimento dos projetos. Porém, tal fato implicou em um maior empenho e dedicação em estudos e pesquisas, gerando ótimos resultados nos projetos e amadurecendo o aluno profissionalmente.
 
 
 \subsection{SUGESTÕES DE TRABALHOS FUTUROS}
 
-As disciplinas ministradas aos alunos devem possuir uma reciclagem periodicamente,
-pois a área de tecnologia possui novidades constantemente. Além da reciclagem nos assuntos de cada disciplina, também é preciso verificar a necessidade de novas disciplinas que possam abranger as novidades de hardware e/ou software.
+As disciplinas ministradas aos alunos devem possuir uma reciclagem periodicamente, pois a área de tecnologia possui novidades constantemente. Além da reciclagem nos assuntos de cada disciplina, também é preciso verificar a necessidade de novas disciplinas que possam abranger as novidades de hardware e/ou software.
 
 Os projetos desenvolvidos pelo aluno possuem tecnologias e ferramentas recentes e esse caminho deve ser mantido. Foram utilizadas ferramentas de código aberto, que facilita a atualização por parte dos desenvolvedores e da comunidade que participa com constantes contribuições. Outras ferramentas e recursos podem ser agregados aos sistemas para facilitar a experiência do usuário, mas com cuidado para que não haja exageros e conflitos com as ferramentas atuais.
 
-O AngularJS demonstrou ser uma ferramenta com pequena curva aprendizado para tarefas mais comuns em um sistema. Ele deve ser mantido e aperfeiçoado nos sistemas atuais ecotado para o desenvolvimento de novos sistemas.
+O Laravel demonstrou ser uma ferramenta com ama curva aprendizado menor que as outras do mercado, porém o Laravel desemprenha um grande papel no sistema, assim manter e aperfeiçoar o projeto para futuras melhorias será necessário.
 
 
 \clearpage
-\section{REFERÊNCIAS BIBLIOGRAFICAS}
-%%-- Fontes utilizadas no relatório --%%
-
-%%-- Indica-se o uso da bilioteca bibTEX--%%
-
-
-[1] Tripletech, \url{http://www.tripletech.com.br/}, acessado em 03/08/2015 às 06h50
-
-[2] Faculdade de Direito de São Bernardo do Campo, http://www.direitosbc.br/, acessado em 03/08/2015 às 07h00.
-
-[3] Faculdade de Direito de São Bernardo do Campo - Bolsas de Estudos,
-
-\url{http://www.direitosbc.br/a-faculdade-servicos-bolsa-de-estudo.aspx}, acessado em 04/08/2015 às 07h25.
-
-[4] AngularJS by Google, \url{https://angularjs.org/}, acessado em 04/08/2015 às 07h40.
-
-[5] JSON, \url{http://json.org/}, acessado em 04/08/2015 às 07h45.
-
-[6] Bootstrap, \url{http://getbootstrap.com/}, acessado em 04/08/2015 às 08h15.
-
-[7] Runrun.it, \url{http://runrun.it/}, acessado em 04/08/2015 às 13h20.
-
-[8] Angular Material Design by Google,\url{ https://material.angularjs.org/latest/\#/}, acessado em 05/08/2015 às 13h50.
-
-[9] Google, \url{http://google.com.br/}, acessado em 05/08/2015 às 13h55.
-
-[10] Android 5.0 Lollipop,
-
-\url{https://www.android.com/intl/pt-BR_br/versions/lollipop-5-0/},
-acessado em 06/08/2015 às 07h35.
-
-[11] Especificações Material Design by Google, https://www.google.com/design/spec/ material design/introduction.html, acessado em 06/08/2015 às 07h40.
-
-[12] Google Inbox, \url{http://inbox.google.com.br/}, acessado em 06/08/2015 às 07h45.
-
-[13] Google Music, \url{http://music.google.com.br/}, acessado em 06/08/2015 às 07h46.
-
-[14] Google Keep, \url{http://keep.google.com.br/}, acessado em 06/08/2015 às 07h47.
-
-[15] Sommerville, I. Engenharia de Software. 8.ed. - São Paulo : Addison-Wesley, 2007.
-
-[16] Pressman, Roger S. Engenharia de Software. 6.ed. - Rio de Janeiro: McGraw-Hill, 2006
-
-[17] O que é DOM, \url{http://tableless.com.br/tenha-o-dom/}, Acessado em 06/08/2015 às 13h35
+%\section{REFERÊNCIAS BIBLIOGRAFICAS}
+\bibliographystyle{abbrv}
+\bibliography{relEstagio1}
 
 \end{document}
