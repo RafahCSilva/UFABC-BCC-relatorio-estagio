@@ -721,21 +721,36 @@ Como descrito por Pressman~\cite{pressman}, ter o planejamento completo do proje
 
 Diversas especificações foram abordadas na disciplina \textbf{Engenharia de software}, e o discente as colocou em prática ao desenvolver este sistema. Até nas reuniões iniciais na empresa as técnicas aprendidas em aula foram aplicadas com o apoio de diagramas e modelos para documentar o \textit{software} a ser implementado.
 
-Conceitos importantes, sobre a aplicação de um \textit{software} para o apoio da regra de negócio de uma empresa, foram discutidos na disciplina \textbf{Sistemas de informação} e também aplicados neste projeto. Desta forma, idealizar e projetar uma ferramenta capaz de sanar as dificuldades atuais, substituir outras ferramentas defasadas e obter a centralização de todos os dados, se tornaram os objetivos primordiais para o desenvolvimento deste sistema ERP.
+Conceitos importantes, sobre a aplicação de um \textit{software} para o apoio da regra de negócio de uma empresa, foram discutidos na disciplina \textbf{Sistemas de informação}, com embasamento no livros de Stair~\cite{SI_principios} e Turban~\cite{SI_turban}. Desta forma, aplicar estes conceitos para idealizar e projetar uma ferramenta capaz de sanar as dificuldades atuais, substituir outras ferramentas defasadas e obter a centralização de todos os dados, se tornaram os objetivos primordiais para o desenvolvimento deste sistema.
 
 \subsection{DESENVOLVIMENTO WEB}
 Como um dos principais requisitos do sistema é estar \textit{online}, criar um \textit{WebApp} pode ser considerado complexo, pois utilizam diferentes tecnologias para criar uma aplicação semelhante ao de \textit{desktop}, porém em um navegador de internet. Esta aplicação é executada em um servidor que receberá requisições do cliente e retornará respostas a ele conforme as ações desejadas. Enquanto no navegador, haverá a exibição das informações necessárias, além de suportar as interações do usuário. 
 
 Pode-se então separar uma \textit{WebApp} em duas camadas: \textit{Back-end} e \textit{Front-end}. Em que o \textit{Front-end} é o responsável por interagir com o usuário, a fim de coletar os nados necessários e transmiti-los ao \textit{Back-end}, para que estes dados possam ser processados para retornar uma resposta.
 
-Todos os fundamentos necessários foram apresentados durante a disciplina de \textbf{Programação para Web}. Como também outros fundamentos discutidos nas disciplinas de \textbf{Processamento da Informação}, \textbf{Programação Orientada a Objetos}, \textbf{Lógica Básica}, \textbf{Algoritmos e Estrutura de Dados} e \textbf{Análise de Algoritmos}. 
+Na disciplina \textbf{Programação para Web}, que já cursada pelo discente, foram apresentados todos os fundamentos e conceitos de aplicações Web~\cite{pWeb_sebesta}, modelagem de aplicações Web interativas em modelo MVC, e outras técnicas. Nesta disciplinas foi utilizado a plataforma JAVA\footnote{JAVA} para o desenvolvimento, porém para este sistema foi escolhido a plataforma PHP. Assim houve a necessidade de buscar outras referências bibliográficas, tais como: Orientação a Objetos no PHP~\cite{PHP_Novatec_poo}; Comunicação do PHP com o Banco de Dados~\cite{PHP_Novatec_dev}~\cite{PHP_Novatec_appWeb}~\cite{PHP_mysql}; e interação cliente-servidor utilizando AJAX~\cite{PHP_Novatec_ajax}.
 
-A disciplina de \textbf{Segurança de Dados} também contribuiu para os conceitos referentes à segurança de um sistema que foram necessários para o desenvolvimento deste projeto.
+Outros fundamentos importantes são discutidos em outras disciplinas, já antes cursados pelo discente, que foram de grande valia para o desenvolvimento deste sistema. 
+
+Na disciplina \textbf{Processamento da Informação} é apresentado os principais conceitos envolvendo programação~\cite{BCC1}~\cite{BCC2}, como: introdução à algoritmos, variáveis e tipos de dados, operadores aritméticos, lógicos e precedência, funções, estruturas de controle e repetição, vetores e matrizes, entre outros.
+
+Na disciplina \textbf{Programação Orientada a Objetos} aborda conceitos básicos sobre: classes, objetos, mensagens, encapsulamento, herança e polimorfismo. Como também análise e projeto orientados a objetos, e padrões de projeto de software~\cite{POO_deitel}.
+
+Na disciplina \textbf{Algoritmos e Estrutura de Dados} é apresentado a  manipulações de estruturas de dados lineares e em árvores, busca e ordenação de seus elementos, manipulação de arquivos~\cite{AED_cormen1}.
+
+Na disciplina \textbf{Análise de Algoritmos} é discutido conceitos básicos sobre recorrências e medidas de complexidade, e também é apresentado técnicas para a resolução de problemas~\cite{AED_cormen1}~\cite{AED_cormen2}.
+
+Na disciplina \textbf{Banco de Dados} é apresentado conceitos sobre a arquitetura de um Sistema de Banco de Dados, modelagem de dados relacionais, linguagem de definição e manipulação de dados e SQL~\cite{BD}.
+
+A disciplina de \textbf{Segurança de Dados} também contribuiu para os conceitos referentes à segurança de um sistema~\cite{SegDados}, que foram necessários para o desenvolvimento deste projeto.
 
 Nas subseções seguintes, será descrito as tecnologias utilizadas.
 
 \subsubsection{BACK-END}
 Do lado do servidor, sua principal função é receber requisições e devolver respostas. Além de ter acesso ao banco de dados e realizar todo o processamento dos dados necessários.
+
+Para desenvolver o \textit{Back-end} foi necessário o estudo da arquitetura das tecnologias utilizadas no servidor, os livros~\cite{PHP_Novatec_poo}~\cite{PHP_Novatec_dev}~\cite{PHP_Novatec_appWeb}~\cite{PHP_mysql}~\cite{PHP_Novatec_ajax} cumpriu o papel de instruir o discente a estas tecnologias, visto que a utilização da linguagem PHP não foi abordada na grade curricular do Bacharel em Ciências da Computação na UFABC.
+
 
 \subsubsubsection{PHP}
 O PHP\footnote{PHP é um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}, originalmente \textit{Personal Home Page}.} é uma linguagem interpretada capaz de gerar uma página web a ser visualizada no lado do cliente. Suas principais características são sua velocidade e robustez, orientada a objetos, independente de plataforma e tipagem dinâmica. 
@@ -745,7 +760,7 @@ Há várias extensões que possibilita o PHP se conectar com outras ferramentas,
 
 
 \subsubsubsection{LARAVEL}
-Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web, utilizando o padrão MVC\footnote{Abreviação para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas, cada uma com suas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como: 
+Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web~\cite{laravel5}~\cite{laravel_kiliccdaugi}, utilizando o padrão MVC\footnote{Abreviação para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas, cada uma com suas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como: 
 
 {\singlespacing
 \begin{itemize}
@@ -787,13 +802,13 @@ Para se conectar ao MySQl, o Laravel torna a interação com o banco de dados si
 \subsubsection{FRONT-END}
 O \textit{Front-end} é o lado do cliente, no qual fornece uma interface amigável para o usuário, a fim de exibir dados e coletar informações vindas da interação do usuário com o sistema.
 
-Em relação à interface do usuário foi necessário a aplicação de conceitos discutidos na disciplina \textbf{Interação Humano-Computador} que foi abordado os conceitos fundamentais para criar uma interface com melhor acessibilidade e usabilidade nas suas funcionalidades, para garantir uma melhor experiência de uso pelo usuário.
+Em relação à interface do usuário foi necessário a aplicação de conceitos discutidos na disciplina \textbf{Interação Humano-Computador}, que aborda os fundamentos para criar uma interface com melhor acessibilidade e usabilidade nas suas funcionalidades, para garantir uma melhor experiência de uso pelo usuário~\cite{IHC_benyon}~\cite{IHC_preece}.
 
 Para desenvolver esta interface, são utilizadas diversas ferramentas, e as principais serão apresentados a seguir.
 
 
 \subsubsubsection{HTML}
-O HTML\footnote{Abreviação para \textit{Hyper Text Markup Language}, ou seja, Linguagem de Marcação de Hipertexto em português.} é uma linguagem de marcação base da estrutura da interface de uma página na internet. A última versão é o HTML5 e foi publicada em 28 de outubro de 2014, toda a especificação do HTML é padronizado pelo W3C~\cite{w3c}.
+O HTML\footnote{Abreviação para \textit{Hyper Text Markup Language}, ou seja, Linguagem de Marcação de Hipertexto em português.} é uma linguagem de marcação base da estrutura da interface de uma página na internet~\cite{Novatec_css_html}~\cite{PHP_Novatec_dev}. A última versão é o HTML5 e foi publicada em 28 de outubro de 2014, toda a especificação do HTML é padronizado pelo W3C~\cite{w3c}.
 Na codificação de um documento, o HTML possui marcadores, chamadas \textit{tags}, entre os caracteres \texttt{<} e \texttt{>}. Um elemento do HTML é formado por uma \textit{tag} com seus atributos e valores, e como descendente pode-se haver outros elementos ou textos. Esta estrutura será interpretada pelo navegador para compor elementos a serem renderizados e exibidos ao usuário.
 
 
@@ -801,7 +816,7 @@ Na codificação de um documento, o HTML possui marcadores, chamadas \textit{tag
 
 
 \subsubsubsection{CSS}
-O CSS\footnote{Abreviação de \textit{Cascading Style Sheets}.} é uma linguagem de folhas de estilo que serve para definir a aparência dos elementos no HTML a serem renderizados na interface, como: cor, altura, largura, fonte de textos, sombras e etc.
+O CSS\footnote{Abreviação de \textit{Cascading Style Sheets}.} é uma linguagem de folhas de estilo que serve para definir a aparência dos elementos no HTML a serem renderizados na interface~\cite{Novatec_css_html}, como: cor, altura, largura, fonte de textos, sombras e etc.
 
 % TODO: exemplos de Sintaxe e Seletores...
 
@@ -809,9 +824,9 @@ O CSS\footnote{Abreviação de \textit{Cascading Style Sheets}.} é uma linguage
 
 
 \subsubsubsection{JAVASCRIPT}
-O JavaScript é uma linguagem interpretada pelo navegador para executar \textit{scripts} do lado do cliente ao invés de somente do servidor, possibilitando controlar elementos da página dinamicamente, com execução e comunicação assíncrona. É uma linguagem orientada a objetos baseada em protótipos, tipagem fraca e dinâmica, funções de primeira classe e possui suporte a programação funcional.
+O JavaScript é uma linguagem interpretada pelo navegador para executar \textit{scripts} do lado do cliente ao invés de somente do servidor, possibilitando controlar elementos da página dinamicamente, com execução e comunicação assíncrona. É uma linguagem orientada a objetos baseada em protótipos, tipagem fraca e dinâmica, funções de primeira classe e possui suporte a programação funcional~\cite{PHP_Novatec_dev}.
 
-Por meio do AJAX\footnote{Abreviação para \textit{asynchronous JavaScript and XML}, em português, Javascript e XML Assíncrono.}, o JavaScript pode se comunicar com o servidor de modo assíncrono, podendo  enviar dados do cliente e obter dados do servidor. Mas normalmente, utiliza-se JSON ao invés de XML para transportar os dados em AJAX.
+Por meio do AJAX\footnote{Abreviação para \textit{Asynchronous JavaScript and XML}, em português, Javascript e XML Assíncrono.}, o JavaScript pode se comunicar com o servidor de modo assíncrono, podendo  enviar dados do cliente e obter dados do servidor~\cite{PHP_Novatec_ajax}. Mas normalmente, utiliza-se JSON ao invés de XML para transportar os dados em AJAX.
 
 O JSON\footnote{Acrônimo para \textit{JavaScript Object Notation, ou em português, Notação de Objeto de JavaScript}.} é um formato mais leve que o XML para trocas de dados. Amplamente utilizado em sistemas que fluxo de dados entre o cliente e o servidor é vital para o sistema.
 
