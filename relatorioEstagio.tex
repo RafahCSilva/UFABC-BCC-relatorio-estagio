@@ -44,7 +44,7 @@
 %% DEFINEs dos textos constantes da capa
 \newcommand{\defUFABC}{UNIVERSIDADE FEDERAL DO ABC}
 \newcommand{\defBCC}{BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
-\newcommand{\defRelatorio}{RELATÓRIO DO ESTÁGIO SUPERVISIONADO I} %%ESTÁGIO SUPERVISIONADO
+\newcommand{\defRelatorio}{RELATÓRIO DO ESTÁGIO SUPERVISIONADO II} %%ESTÁGIO SUPERVISIONADO
 \newcommand{\defTitulo}{ESTÁGIO EM DESENVOLVIMENTO DE SISTEMA PARA USO INTERNO NA AGÊNCIA CADARIS}
 \newcommand{\defRafael}{RAFAEL CARDOSO DA SILVA}
 \newcommand{\defOrientador}{Orientador: Prof. Dr. Daniel Morgato Martin}
@@ -470,15 +470,33 @@ A tarefa seguinte era a pesquisa e escolha de um \textit{framework} para apoiar 
 
 Para o aprender a utilizar o Laravel, o aluno estudou através de vídeo-aulas gratuitas disponíveis na plataforma \textit{LARACASTS}~\cite{laracast} e sempre consultando a documentação oficial~\cite{laraveldocs} Obtendo assim aptidão para criar aplicações web utilizando este \textit{framework}, conhecendo suas funcionalidades e recursos disponíveis.
 
-Para então iniciar a implementação deste sistema ERP.
+Para então iniciar a implementação deste sistema ERP, relatadas nas próximas subseções.
 
 
+\subsection{DESENVOLVIMENTO DO SISTEMA}
 
-%\subsection{DESENVOLVIMENTO DO SISTEMA}
+Após numerosas reuniões, com a Diretora Comercial e de Planejamento da Agência Cadaris e outros funcionários do departamento financeiro, para apresentar e detalhar as necessitadas da empresa foi então iniciada a implementação do sistema. 
 
-%  \subsubsection{CADASTROS}
+Como relatado anteriormente, o novo sistema visa dar total suporte ao processo de Propostas Comerciais, e também a administração Financeira da empresa, gerando Relatórios e controlando o Fluxo de Caixa. Mas inicialmente, foi necessário o desenvolvimento dos cadastros de todos os recursos da empresa, que se relacionarão com outras funcionalidades.
 
-%  \noindent TODO p/ estagio 1: \\
+
+\subsubsection{CADASTROS}
+Todo o gerenciamento de recursos da Cadaris eram feitas por planilhas eletrônicas, causando uma descentralização dos dados que se relacionam entre si, sem automatização de processos administrativos. Dificultando assim o trabalho dos funcionários.
+
+Então, o primeiro desafio para o desenvolvimento deste sistema foi o levantamento de todos os recursos e seus atributos a serem armazenados. O Módulo de Cadastros devem concentrar todo os dados necessários para relacionamentos que virão em seguida no desenvolvimento.
+
+O primeiro cadastro a ser desenvolvido foi o Gerenciamento de Funcionários. Neste devem contemplar as informações pessoais e sua vida profissional dentro da Cadaris. 
+
+Dentre suas informações pessoais esta seu: nome completo, sexo, e-mail, estado civil, CPF, RG, data de nascimento, nome do pai, nome da mãe, endereço atual, telefones de contato, dependentes, e informações bancarias.
+
+Já nas informações profissional esta seu: teste MBTI\footnote{O teste MBTI, que significa Myers-Briggs Type Indicator (Classificação Tipológica Myers-Briggs), é um teste para classificar as características de uma pessoa. Foi desenvolvido por Katharine Cook Briggs e sua filha Isabel Briggs Myers.}, inativo, regime, horário de expediente, tempo de casa, cargo e nível, salário, Vale Refeição, Vale Transporte, Seguro de Vida e todos o histórico do funcionário.
+
+O histórico do funcionário armazena os acontecimentos profissionais ordenados cronologicamente, e tais eventos são: contratação, mérito, dissídio, promoção, reajuste do vale refeição, reajuste do vale transporte, modificação do seguro de vida, aquisição de período aquisitivo e gozo de férias.
+
+Algumas tarefas administrativas foram implementadas sobre este módulo, como a adição em lote de eventos no histórico dos funcionários, para quando houver férias coletivas por exemplo, calculo do valor de dissídio, e controle de pontos do banco de horas para gestão de faltas e horas extras. E ainda a visualização de alguns relatórios como: a férias acumulada e a faixa salarial de cada funcionário.
+
+
+  \noindent TODO p/ estagio 1: \\
 %  Funcionários \\
 %  - CRUD \\
 %  - Histórico do funcionário (admissão, promoção, ajuste VR/VT, férias)\\
@@ -487,44 +505,42 @@ Para então iniciar a implementação deste sistema ERP.
 %  - Relatório de faixa Salarial \\
 %  - Relatório de férias \\
 %  - Controle de Pontos (Atraso, Faltas(com Atestado), Folgas(Abonadas), Horas Extras) \\
-%  Departamentos \\
-%  Usuários \\
-%  Clientes \\
-%  - Empresa \\
-%  - Departamento \\
-%  - Centros de Custos \\
-%  Fornecedores \\
-%  - Empresa \\
-%  - Centros de Custos
+  Departamentos \\
+  Usuários \\
+  Clientes \\
+  - Empresa \\
+  - Departamento \\
+  - Centros de Custos \\
+  Fornecedores \\
+  - Empresa \\
+  - Centros de Custos
 
 
-%  \subsubsection{PROPOSTA COMERCIAL}
-%  \noindent TODO p/ estagio 2: \\
-%  - Listagem \\
-%  - tipos de Create \\
-%  - Briefing \\
-%  - Cronograma \\
-%  - Orçamento \\
-%  - cond pgto \\
-%  - PDFs \\
-%  - Aprovação da Diretoria \\
-%  - Aprovação do Cliente \\
-%  - Produção
+  \subsubsection{COMERCIAL}
+  \noindent TODO p/ estagio 2: \\
+  - Listagem \\
+  - tipos de Create \\
+  - Briefing \\
+  - Cronograma \\
+  - Orçamento \\
+  - cond pgto \\
+  - PDFs \\
+  - Aprovação da Diretoria \\
+  - Aprovação do Cliente \\
+  - Produção
 
-
-%  \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
-%  \noindent TODO p/ estagio 3: \\
-%  - Listagem \\
-%  - tipos de Create \\
-%  - Briefing \\
-%  - Cronograma \\
-%  - Orçamento \\
-%  - cond pgto \\
-%  - PDFs \\
-%  - Aprovação da Diretoria \\
-%  - Aprovação do Cliente \\
-%  - Produção
-
+  \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
+  \noindent TODO p/ estagio 3: \\
+  - Listagem \\
+  - tipos de Create \\
+  - Briefing \\
+  - Cronograma \\
+  - Orçamento \\
+  - cond pgto \\
+  - PDFs \\
+  - Aprovação da Diretoria \\
+  - Aprovação do Cliente \\
+  - Produção
 
 %\subsection{INTERFACE E EXPERIÊNCIA DE USUÁRIO}
 %  \noindent TODO p/ estagio 3: \\
