@@ -33,7 +33,7 @@
 \numberwithin{table}{section}
 
 %\usepackage{biblatex}
-%\bibliography{relEstagio1}
+%\bibliography{relatorioEstagio}
 
 \graphicspath{{figuras/}}
 
@@ -164,7 +164,7 @@ Meus agradecimentos são voltados à agência Cadaris, principalmente a Diretora
 ~\\\vspace{18cm}
 \begin{raggedleft}
 
-\begin{epigraph} 
+\begin{epigraph}
   {Aprendizado é isso: de repente, você compreende alguma coisa que sempre entendeu, mas de uma nova maneira.}
   {Doris May Lessing}
 \end{epigraph}
@@ -183,7 +183,7 @@ Meus agradecimentos são voltados à agência Cadaris, principalmente a Diretora
 
 O presente relatório descreve as atividades realizadas durante o período de Estágio Curricular Obrigatório do Curso Superior de Bacharelado em Ciências da Computação oferecido pela UFABC - Universidade Federal do ABC. O objetivo geral do estágio consistiu no desenvolvimento completo de um sistema ERP (Planejamento dos Recursos da Empresa), da Proposta Comercial e de outros processos administrativos, para a empresa Cadaris Comunicação.
 
-A justificativa para o projeto é que o sistema atual contratado pela organização é ineficiente, desta forma, há necessidade do desenvolvimento de um novo sistema exclusivo que possa suportar os novos moldes da empresa, a fim de substituir esta ferramenta defasada. O novo sistema será desenvolvido em PHP em conjunto com o \textit{framework} Laravel. 
+A justificativa para o projeto é que o sistema atual contratado pela organização é ineficiente, desta forma, há necessidade do desenvolvimento de um novo sistema exclusivo que possa suportar os novos moldes da empresa, a fim de substituir esta ferramenta defasada. O novo sistema será desenvolvido em PHP em conjunto com o \textit{framework} Laravel.
 
 Iniciou-se o estágio com reuniões periódicas com a intenção de apresentar todas as regras de negócio da empresa e projetar o novo sistema para apoiar os processos administrativos. Após isto, houve o estudo necessário para a implementação do sistema. E por fim, o desenvolvimento de uma melhor interface com o propósito de favorecer a experiência do usuário.
 
@@ -199,7 +199,7 @@ Iniciou-se o estágio com reuniões periódicas com a intenção de apresentar t
 
 This report describes how the developed activities during the period of Internship Required of the Computer Science Bachelor Course offered by UFABC - Federal University of ABC. The general objective of the internship consisted in the complete development of a ERP system (Enterprise Resource Planning), of the Commercial Proposal and other administrative processes, for the company Cadaris Comunicação.
 
-The justification for the project is that the actual system hired by the organization is inefficient, thereby, there is a need of a new exclusive system that can be supported by the new molds of the company in order to replace this outdated tool. The new system will be developed in PHP in conjunction with the Laravel framework. 
+The justification for the project is that the actual system hired by the organization is inefficient, thereby, there is a need of a new exclusive system that can be supported by the new molds of the company in order to replace this outdated tool. The new system will be developed in PHP in conjunction with the Laravel framework.
 
 It started the intership with periodic meetings with the intention of presenting all the company's business rules and design the new system to support the administrative processes. After this, there was the necessary study for the implementation of the system. And in conclusion, the development of a better interface with the purpose of improving the user experience
 
@@ -238,7 +238,7 @@ It started the intership with periodic meetings with the intention of presenting
 
 \section{INTRODUÇÃO}
 
-O estágio é uma atividade fundamental para a formação do aluno que está matriculado em um curso de nível superior, já que o discente tem a possibilidade de fazer uma aliança entre os conhecimentos adquiridos durante o período de graduação com a experiência vivencial no ambiente corporativo. 
+O estágio é uma atividade fundamental para a formação do aluno que está matriculado em um curso de nível superior, já que o discente tem a possibilidade de fazer uma aliança entre os conhecimentos adquiridos durante o período de graduação com a experiência vivencial no ambiente corporativo.
 
 Além de agregar a responsabilidade de ter uma profissão, o estágio permite que o aluno desenvolva habilidades que são essenciais no mercado de trabalho, tais como liderança, trabalhar em equipe, resiliência, entre outros, através de situações e desafios que possam vir ocorrer dentro da organização e de suas responsabilidades.
 
@@ -353,7 +353,7 @@ Esta seção tem como objetivo detalhar as atividades desenvolvidas durante o es
 
 \subsection{APRESENTAÇÃO DAS REGRAS DE NEGÓCIO}
 
-A administração de uma empresa é formada por diversos processos administrativos, que podem ser descritos em um conjunto de atividades que podem ser independentes e/ou relacionadas entre si, e que tem o papel de transformar todos os insumos advindos do trabalho em produtos e serviços que atendem as necessidades dos clientes e que são dotados de valor. Em apoio a cada processo são empregados diversas ferramentas tecnológicas. Entretanto, todas as empresas tendem a se evoluírem com o tempo, assim suas regras de negócio e seus processos evoluem juntos, e as suas ferramentas devem ser adaptadas ao novo modelo. 
+A administração de uma empresa é formada por diversos processos administrativos, que podem ser descritos em um conjunto de atividades que podem ser independentes e/ou relacionadas entre si, e que tem o papel de transformar todos os insumos advindos do trabalho em produtos e serviços que atendem as necessidades dos clientes e que são dotados de valor. Em apoio a cada processo são empregados diversas ferramentas tecnológicas. Entretanto, todas as empresas tendem a se evoluírem com o tempo, assim suas regras de negócio e seus processos evoluem juntos, e as suas ferramentas devem ser adaptadas ao novo modelo.
 
 Em um dado momento na Cadaris, um software que apoia um dos seus principais processos administrativos, especificamente o de Propostas Comerciais, deixou de satisfazer as novas regras de negócio da empresa. Após inúmeras reclamações e \textit{feedbacks} da Cadaris ao proprietário do \textit{software} não serem corretamente atendidas. Então, foi decidido pelo desenvolvimento de um novo sistema exclusivo que possa suportar os novos moldes da empresa, a fim de substituir esta ferramenta defasada.
 
@@ -361,11 +361,11 @@ Portanto, o desenvolvimento deste novo sistema foi a principal responsabilidade 
 
 O processo de Propostas Comerciais é realizado utilizando um sistema contratado desde 2013, este é instalado localmente em um servidor nas dependências da empresa, para somente acesso local dos funcionários. O sistema foi desenvolvido em \textit{ASP}\footnote{ASP, abreviação para \textit{Active Server Pages}, também conhecido atualmente como ASP Clássico, é uma estrutura de bibliotecas básicas (e não uma linguagem) para processamento de linguagens de script no lado servidor para geração de conteúdo dinâmico na Web.} com integração ao banco de dados \textit{Microsoft SQL Server}\footnote{Sistema gerenciador de Banco de dados relacional desenvolvido pela Microsoft.}. E este apresenta muitos problemas, pois não se adapta aos novos padrões de desenvolvimento WEB, assim prejudicando, e muito, a experiência do usuário, por motivos que serão espanados a seguir.
 
-Uma proposta comercial é iniciada com o contato do cliente para o setor de atendimento da Cadaris, no qual, o atendente irá realizar o cadastro de um \textit{job}\footnote{Trabalho, em inglês, trata-se do projeto a ser desenvolvido pela agência.}, preenchendo os dados necessários, em seguida é confeccionado o \textit{briefing}\footnote{O \textit{briefing} é um documento onde constam as informações do cliente com seus requisitos, a descrição do público-alvo e dos objetivos do cliente.} com um cronograma estimado sobre a produção deste \textit{job}. E por fim, o atendimento requisita um orçamento para o departamento responsável pelo financeiro da empresa. 
+Uma proposta comercial é iniciada com o contato do cliente para o setor de atendimento da Cadaris, no qual, o atendente irá realizar o cadastro de um \textit{job}\footnote{Trabalho, em inglês, trata-se do projeto a ser desenvolvido pela agência.}, preenchendo os dados necessários, em seguida é confeccionado o \textit{briefing}\footnote{O \textit{briefing} é um documento onde constam as informações do cliente com seus requisitos, a descrição do público-alvo e dos objetivos do cliente.} com um cronograma estimado sobre a produção deste \textit{job}. E por fim, o atendimento requisita um orçamento para o departamento responsável pelo financeiro da empresa.
 
 Um funcionário do financeiro é encarregado de elaborar uma estimativa de custo para a realização deste \textit{job}. A estimativa é composta por dois tipos de custos: Internos e de Operacionalização. A estimativa de Custos Internos é montada com base em horas por tipo de serviço (Planejamento, Atendimento, Redação, Arte, Tráfego e Estratégia). A estimativa de Custos de Operacionalização refere-se à contratação de serviços de terceiros. Também é especificado o prazo e as condições de pagamento.
 
-Logo após, é gerado um documento PDF\footnote{PDF (Portable Document Format) é um formato de arquivo, desenvolvido pela Adobe Systems, para representar documentos de maneira independente do aplicativo.} com esta estimativa e outros dados importantes à respeito do orçamento em que é enviado para a diretoria comercial aprovar e assim retornar para o atendimento. Caso contrário, será devolvido para o financeiro para realizar as alterações exigidas pela diretoria. 
+Logo após, é gerado um documento PDF\footnote{PDF (Portable Document Format) é um formato de arquivo, desenvolvido pela Adobe Systems, para representar documentos de maneira independente do aplicativo.} com esta estimativa e outros dados importantes à respeito do orçamento em que é enviado para a diretoria comercial aprovar e assim retornar para o atendimento. Caso contrário, será devolvido para o financeiro para realizar as alterações exigidas pela diretoria.
 
 Para concluir a etapa de Proposta Comercial, o atendimento retorna ao cliente com o orçamento, para este ser aprovado por ele, a fim de dar início à produção do \textit{job}. Caso contrário, é solicitado alterações retornando para o \textit{briefing}, ou então o \textit{job} é arquivado se haver desistência do cliente em contratar a agência.
 
@@ -380,9 +380,9 @@ Pode-se ver na Figura a seguir, o modelo de processo da Proposta Comercial.
 \end{figure}
 
 
-A etapa de Produção do \textit{job} é realizado pelo setor de produção da Cadaris, utilizando técnicas e outras ferramentas especificas para o serviço desejado, como o \textit{Trello}\footnote{Ferramenta de gerenciamento de projetos em listas extremamente versátil, utilizando o método de \textit{Kanban} para indicar o andamento dos fluxos de produção.} para o gerenciamento do processo de produção. Concluido a produção do \textit{job}, o produto/serviço é entregue ao cliente. E para finalizar, o \textit{job} é encaminhado para o faturamento. 
+A etapa de Produção do \textit{job} é realizado pelo setor de produção da Cadaris, utilizando técnicas e outras ferramentas especificas para o serviço desejado, como o \textit{Trello}\footnote{Ferramenta de gerenciamento de projetos em listas extremamente versátil, utilizando o método de \textit{Kanban} para indicar o andamento dos fluxos de produção.} para o gerenciamento do processo de produção. Concluido a produção do \textit{job}, o produto/serviço é entregue ao cliente. E para finalizar, o \textit{job} é encaminhado para o faturamento.
 
-Também há outras rotinas administrativas que este projeto pretende abranger, já que são realizadas em um processo não automatizado, com o auxílio de planilhas eletrônicas: 
+Também há outras rotinas administrativas que este projeto pretende abranger, já que são realizadas em um processo não automatizado, com o auxílio de planilhas eletrônicas:
 
 
 {\singlespacing
@@ -423,7 +423,7 @@ Para o preenchimento do \textit{Briefing}, além de um campo para a escrita livr
 
 Para a transferência do \textit{job} cadastrado de um departamento para outro, durante a passagem das etapas, no sistema atual é necessário realizar um \textit{PIT}\footnote{Abreviação para Pedido Interno de Trabalho, é um documento com todas as informações necessárias para solicitar a realização de algum trabalho.}, que é livre para enviar para qualquer pessoa. Mas, visto que a Proposta Comercial da Cadaris segue uma ordem pré-estabelecida de etapas e departamentos envolvidos, então a adoção de um sistema mais especializado é uma ótima solução para agilizar o processo e impedir possíveis erros.
 
-Já para a elaboração da estimativa de custo, em vários quesitos o sistema não atende corretamente ao modelo de negócio da Cadaris. Uma estimativa de custo contempla Custos Internos e Custos de Operacionalização que por sua vez é composto por listas de itens com seus respectivos valores, e para a elaboração desta lista de custos, além de campos desnecessários, há a falta de certas funcionalidades, tais como: maior personalização de taxamentos, arredondamento de valor, subcategorias de Tipo de Serviço no Custo Interno, valores padrão para cada Tipo de Serviço e outras funcionalidades. 
+Já para a elaboração da estimativa de custo, em vários quesitos o sistema não atende corretamente ao modelo de negócio da Cadaris. Uma estimativa de custo contempla Custos Internos e Custos de Operacionalização que por sua vez é composto por listas de itens com seus respectivos valores, e para a elaboração desta lista de custos, além de campos desnecessários, há a falta de certas funcionalidades, tais como: maior personalização de taxamentos, arredondamento de valor, subcategorias de Tipo de Serviço no Custo Interno, valores padrão para cada Tipo de Serviço e outras funcionalidades.
 
 O mais crítico do sistema é que essa estimativa de custo não é diretamente relacionada ao \textit{job}. Então, torna-se necessário preencher campos distintos com a mesma informação, pois o sistema não obtém esta informação do \textit{job} que deveria estar associado a ele. Algumas informações também importantes acabam sendo armazenadas em campos de observações por não ter campos próprios para aquela informação. E para finalizar, a estimativa não carrega as condições de pagamentos dos clientes, já que são distintas para cada um.
 
@@ -456,7 +456,7 @@ Outros requisitos importantes são: o sistema deve ser de fácil acesso; possibi
 
 Nesta subseção é relatada como ocorreu o estudo para a escolha de todas as tecnologias a serem empregadas no desenvolvimento deste sistema WEB, na qual muitas delas o aluno ainda não havia tido contato.
 
-Como pode ser visto nas seções a diante, a UFABC oferece, por meio de disciplinas, todo o embasamento necessário para o desenvolvimento de um sistema, como: teoria da computação; concepção de um sistema de informação; modelamento de banco de dados; conceitos de interface gráfica; paradigmas de programação; programação para web e dispositivos móveis. 
+Como pode ser visto nas seções a diante, a UFABC oferece, por meio de disciplinas, todo o embasamento necessário para o desenvolvimento de um sistema, como: teoria da computação; concepção de um sistema de informação; modelamento de banco de dados; conceitos de interface gráfica; paradigmas de programação; programação para web e dispositivos móveis.
 
 O mercado de trabalho necessita e busca sempre por praticidade, seguindo tendências de desenvolvimento e utilizando o que há de mais novo e eficiente no mercado. Atualmente, há diversos métodos e padrões de projetos que garantem eficiência de uma implementação. Além de inúmeras linguagens de programação, na qual nelas a massiva adoção de \textit{frameworks} para diversos fins.
 
@@ -474,10 +474,10 @@ Para então iniciar a implementação deste sistema ERP.
 
 
 
-%\subsection{DESENVOLVIMENTO DO SISTEMA} 
+%\subsection{DESENVOLVIMENTO DO SISTEMA}
 
 %  \subsubsection{CADASTROS}
-  
+
 %  \noindent TODO p/ estagio 1: \\
 %  Funcionários \\
 %  - CRUD \\
@@ -495,9 +495,9 @@ Para então iniciar a implementação deste sistema ERP.
 %  - Centros de Custos \\
 %  Fornecedores \\
 %  - Empresa \\
-%  - Centros de Custos 
+%  - Centros de Custos
 
-  
+
 %  \subsubsection{PROPOSTA COMERCIAL}
 %  \noindent TODO p/ estagio 2: \\
 %  - Listagem \\
@@ -510,8 +510,8 @@ Para então iniciar a implementação deste sistema ERP.
 %  - Aprovação da Diretoria \\
 %  - Aprovação do Cliente \\
 %  - Produção
-  
-    
+
+
 %  \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
 %  \noindent TODO p/ estagio 3: \\
 %  - Listagem \\
@@ -547,7 +547,7 @@ Para então iniciar a implementação deste sistema ERP.
 
 %%-- Descrever as disciplinas utilizadas e dar exemplos--%%
 
-Para a formação integral do discente é necessário que o conhecimento abordado nas disciplinas que foram cursadas se alinhe com a vivência prática do estágio, isto porque, necessita ser um processo de aprendizagem e profissionalização mútua do meio acadêmico e ambiente corporativo. 
+Para a formação integral do discente é necessário que o conhecimento abordado nas disciplinas que foram cursadas se alinhe com a vivência prática do estágio, isto porque, necessita ser um processo de aprendizagem e profissionalização mútua do meio acadêmico e ambiente corporativo.
 
 A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Universidade Federal do ABC e que foram necessárias para o desenvolvimento das atividades do estágio. Nas subseções seguintes é descrito também quais foram as ferramentas utilizadas.
 
@@ -557,54 +557,54 @@ A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Unive
 %    Listas
 %    Pilhas
 %    Ordenação
-%  
+%
 %  Análise de algoritmos
 %    Custo de operações
-%  
+%
 %  Banco de dados
 %    Banco de dados relacional
 %    Diagrama Entidade-Relacionamento
 %    Diagrama de classes
 %    Consultas SQL
-%  
+%
 %  Bases Computacionais da Ciência
 %    Planilhas
-%  
+%
 %  Engenharia de software
 %    Planejamento
 %    Modelo Entidade-Relacionamento
 %    Padrão MVC
-%  
+%
 %  Interação Humano-Computador
 %    Usabilidade
 %    Padrões para interfaces
 %    Técnicas de design
 %    Ciclo de vida da engenharia de usabilidade
 %    Métodos para avaliação da usabilidade
-%  
+%
 %  Lógica básica
 %    Operadores Lógicos
-%  
+%
 %  Processamento da informação
 %    Lógica de programação
-%  
+%
 %  Programação orientada a objetos
 %    Paradigma orientado a objetos
-%  
+%
 %  Programação para Dispositivos Móveis
 %    HTML
 %    Responsividade
-%  
+%
 %  Programação para Web
 %    HTML
 %    CSS
 %    Javascript
 %    Modelo MVC
-%  
+%
 %  Segurança de Dados
 %    Criptografia
 %    Autenticação
-%  
+%
 %  Sistemas de Informação
 %    Desenvolvimento de sistemas de informação
 %    Fundamentos de sistemas
@@ -620,97 +620,97 @@ A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Unive
 
 \begin{tabular}{|c|l|}
   \hline
-  
-  Algoritmo e Estrutura de Dados                       
+
+  Algoritmo e Estrutura de Dados
   &
   \begin{tabular}[c]{@{}l@{}}
     Filas \\
     Listas \\
     Pilhas \\
     Ordenação
-  \end{tabular} \\ 
+  \end{tabular} \\
   \hline
-  
-  Análise de Algoritmos                       
+
+  Análise de Algoritmos
   &
-  Custo de operações \\ 
+  Custo de operações \\
   \hline
-  
-  Banco de dados                       
+
+  Banco de dados
   &
   \begin{tabular}[c]{@{}l@{}}
     Banco de Dados Relacional \\
     Diagrama Entidade-Relacionamento \\
     Diagrama de Classes \\
     Consultas SQL
-  \end{tabular} \\ 
+  \end{tabular} \\
   \hline
-  
-  Engenharia de Software                       
+
+  Engenharia de Software
   &
   \begin{tabular}[c]{@{}l@{}}
     Planejamento \\
     Modelo Entidade-Relacionamento \\
     Padrão MVC
-  \end{tabular} \\ 
-  \hline 
-  
-  Interação Humano-Computador                       
+  \end{tabular} \\
+  \hline
+
+  Interação Humano-Computador
   &
   \begin{tabular}[c]{@{}l@{}}
     Usabilidade \\
     Técnicas de Design para Interfaces \\
     Ciclo de Vida da Eng. de Usabilidade \\
     Métodos para Avaliação da Usabilidade
-  \end{tabular} \\ 
-  \hline 
-  
-  Lógica Básica                   
+  \end{tabular} \\
+  \hline
+
+  Lógica Básica
   &
-  Operadores Lógicos \\ 
-  \hline 
-  
-  Processamento da informação                       
+  Operadores Lógicos \\
+  \hline
+
+  Processamento da informação
   &
-  Lógica de programação \\ 
-  \hline 
-  
-  Programação Orientada a Objetos                       
+  Lógica de programação \\
+  \hline
+
+  Programação Orientada a Objetos
   &
-  Paradigma Orientado a Objetos \\ 
-  \hline 
-  
-  Programação para Dispositivos Móveis  
+  Paradigma Orientado a Objetos \\
+  \hline
+
+  Programação para Dispositivos Móveis
   &
   Responsividade  \\
-  \hline 
-  
-  Programação para Web                       
+  \hline
+
+  Programação para Web
   &
   \begin{tabular}[c]{@{}l@{}}
     HTML \\
     CSS \\
     Javascript \\
     Modelo MVC
-  \end{tabular} \\ 
+  \end{tabular} \\
   \hline
-  
-  Segurança de Dados                       
+
+  Segurança de Dados
   &
   \begin{tabular}[c]{@{}l@{}}
     Criptografia \\
     Autenticação
-  \end{tabular} \\ 
+  \end{tabular} \\
   \hline
-  
-  Sistemas de Informação                       
+
+  Sistemas de Informação
   &
   \begin{tabular}[c]{@{}l@{}}
     Fundamentos de SI \\
     Aplicações Empresariais e ERP
-  \end{tabular} \\ 
+  \end{tabular} \\
   \hline
-  
+
 \end{tabular}
 \end{table}
 
@@ -726,13 +726,13 @@ Diversas especificações foram abordadas na disciplina \textbf{Engenharia de so
 Conceitos importantes, sobre a aplicação de um \textit{software} para o apoio da regra de negócio de uma empresa, foram discutidos na disciplina \textbf{Sistemas de informação}, com embasamento no livros de Stair~\cite{SI_principios} e Turban~\cite{SI_turban}. Desta forma, aplicar estes conceitos para idealizar e projetar uma ferramenta capaz de sanar as dificuldades atuais, substituir outras ferramentas defasadas e obter a centralização de todos os dados, se tornaram os objetivos primordiais para o desenvolvimento deste sistema.
 
 \subsection{DESENVOLVIMENTO WEB}
-Como um dos principais requisitos do sistema é estar \textit{online}, criar um \textit{WebApp} pode ser considerado complexo, pois utilizam diferentes tecnologias para criar uma aplicação semelhante ao de \textit{desktop}, porém em um navegador de internet. Esta aplicação é executada em um servidor que receberá requisições do cliente e retornará respostas a ele conforme as ações desejadas. Enquanto no navegador, haverá a exibição das informações necessárias, além de suportar as interações do usuário. 
+Como um dos principais requisitos do sistema é estar \textit{online}, criar um \textit{WebApp} pode ser considerado complexo, pois utilizam diferentes tecnologias para criar uma aplicação semelhante ao de \textit{desktop}, porém em um navegador de internet. Esta aplicação é executada em um servidor que receberá requisições do cliente e retornará respostas a ele conforme as ações desejadas. Enquanto no navegador, haverá a exibição das informações necessárias, além de suportar as interações do usuário.
 
 Pode-se então separar uma \textit{WebApp} em duas camadas: \textit{Back-end} e \textit{Front-end}. Em que o \textit{Front-end} é o responsável por interagir com o usuário, a fim de coletar os nados necessários e transmiti-los ao \textit{Back-end}, para que estes dados possam ser processados para retornar uma resposta.
 
 Na disciplina \textbf{Programação para Web}, que já cursada pelo discente, foram apresentados todos os fundamentos e conceitos de aplicações Web~\cite{pWeb_sebesta}, modelagem de aplicações Web interativas em modelo MVC, e outras técnicas. Nesta disciplinas foi utilizado a Plataforma Java\footnote{Plataforma Java é o nome dado ao ambiente que permite desenvolver aplicativos utilizando a linguagem de programação Java, que é uma linguagem de programação interpretada orientada a objetos e executada por uma máquina virtual.} para o desenvolvimento, porém para este sistema foi escolhido a plataforma PHP. Assim houve a necessidade de buscar outras referências bibliográficas, tais como: Orientação a Objetos no PHP~\cite{PHP_Novatec_poo}; Comunicação do PHP com o Banco de Dados~\cite{PHP_Novatec_dev}~\cite{PHP_Novatec_appWeb}~\cite{PHP_mysql}; e interação cliente-servidor utilizando AJAX~\cite{PHP_Novatec_ajax}.
 
-Outros fundamentos importantes são discutidos em outras disciplinas, já antes cursados pelo discente, que foram de grande valia para o desenvolvimento deste sistema. 
+Outros fundamentos importantes são discutidos em outras disciplinas, já antes cursados pelo discente, que foram de grande valia para o desenvolvimento deste sistema.
 
 Na disciplina \textbf{Processamento da Informação} é apresentado os principais conceitos envolvendo programação~\cite{BCC1}~\cite{BCC2}, como: introdução à algoritmos, variáveis e tipos de dados, operadores aritméticos, lógicos e precedência, funções, estruturas de controle e repetição, vetores e matrizes, entre outros.
 
@@ -755,14 +755,14 @@ Para desenvolver o \textit{Back-end} foi necessário o estudo da arquitetura das
 
 
 \subsubsubsection{PHP}
-O PHP\footnote{PHP é um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}, originalmente \textit{Personal Home Page}.} é uma linguagem interpretada capaz de gerar uma página web a ser visualizada no lado do cliente. Suas principais características são sua velocidade e robustez, orientada a objetos, independente de plataforma e tipagem dinâmica. 
+O PHP\footnote{PHP é um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}, originalmente \textit{Personal Home Page}.} é uma linguagem interpretada capaz de gerar uma página web a ser visualizada no lado do cliente. Suas principais características são sua velocidade e robustez, orientada a objetos, independente de plataforma e tipagem dinâmica.
 
 Há várias extensões que possibilita o PHP se conectar com outras ferramentas, como: inúmeros Bancos de Dados, \textit{socket}, geração de PDF, OpenSLL e outros. Por isto, foi considerada a melhor escolha para ser utilizada no \textit{Back-end}, principalmente por ser gratuita sua utilização, diminuindo assim, os custos para o desenvolvimento e execução do sistema.
 
 
 
 \subsubsubsection{LARAVEL}
-Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web~\cite{laravel5}~\cite{laravel_kiliccdaugi}, utilizando o padrão MVC\footnote{Abreviação para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas, cada uma com suas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como: 
+Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvolvimento de sistemas web~\cite{laravel5}~\cite{laravel_kiliccdaugi}, utilizando o padrão MVC\footnote{Abreviação para \textit{Model-view-controller}, em português modelo-visão-controlador, é um padrão de arquitetura de software que separa em camadas, cada uma com suas responsabilidades.}. O Laravel possui recursos e características que sobressaem dos demais \textit{framework}, como:
 
 {\singlespacing
 \begin{itemize}
@@ -788,7 +788,7 @@ Laravel é um \textit{framework} PHP livre e \textit{open-source} para o desenvo
 
 \subsubsubsection{BANCO DE DADOS}
 
-Banco de dado é o conjunto organizado de dados que se relacionam entre si, desta forma, permite que informações importantes sejam armazenadas. 
+Banco de dado é o conjunto organizado de dados que se relacionam entre si, desta forma, permite que informações importantes sejam armazenadas.
 
 Os Banco de Dados são operados por um SGBD\footnote{Abreviação para Sistema Gerenciador de Banco de Dados.}, este gerenciador disponibiliza uma interface para que os clientes possam incluir, alterar ou consultar dados previamente armazenados. Em bancos de dados relacionais, esta interface é constituída por um driver do SGBD que executam comandos na linguagem SQL\footnote{Abreviação de \textit{Structured Query Language}, ou me português, Linguagem de Consulta Estruturada}
 
@@ -822,7 +822,7 @@ O CSS\footnote{Abreviação de \textit{Cascading Style Sheets}.} é uma linguage
 
 % TODO: exemplos de Sintaxe e Seletores...
 
-% TODO: BootStrap3 
+% TODO: BootStrap3
 
 
 \subsubsubsection{JAVASCRIPT}
@@ -878,6 +878,6 @@ O Laravel demonstrou ser uma ferramenta com uma curva de aprendizado menor que a
 \addcontentsline{toc}{section}{REFERÊNCIAS BIBLIOGRÁFICAS}
 \renewcommand\refname{REFERÊNCIAS BIBLIOGRÁFICAS}
 \bibliographystyle{abbrv}
-\bibliography{relEstagio1}
+\bibliography{relatorioEstagio}
 
 \end{document}
