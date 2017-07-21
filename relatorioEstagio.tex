@@ -481,19 +481,49 @@ Como relatado anteriormente, o novo sistema visa dar total suporte ao processo d
 
 
 \subsubsection{CADASTROS}
-Todo o gerenciamento de recursos da Cadaris eram feitas por planilhas eletrônicas, causando uma descentralização dos dados que se relacionam entre si, sem automatização de processos administrativos. Dificultando assim o trabalho dos funcionários.
+Todo o gerenciamento de recursos da Cadaris eram feitas por planilhas eletrônicas, causando uma descentralização dos dados que se relacionam entre si, sem automatização de processos administrativos. Dificultando assim o trabalho dos funcionários e possibilitando erros.
 
-Então, o primeiro desafio para o desenvolvimento deste sistema foi o levantamento de todos os recursos e seus atributos a serem armazenados. O Módulo de Cadastros devem concentrar todo os dados necessários para relacionamentos que virão em seguida no desenvolvimento.
+Então, o primeiro desafio para o desenvolvimento deste sistema foi o levantamento de todos os recursos, separando-os em entidades e entendendo seus relacionamentos e atributos a serem armazenados. O Módulo de Cadastros devem concentrar todo os dados necessários para as funcionalidades desenvolvidas a diante.
 
-O primeiro cadastro a ser desenvolvido foi o Gerenciamento de Funcionários. Neste devem contemplar as informações pessoais e sua vida profissional dentro da Cadaris. 
+A seguir é apresentado cada entidade e seus relacionamentos com os demais recursos do sistema. em todos há a funcionalidade de listar todos os itens, e também pesquisar por palavras, por valores em campos específicos e ordenar a lista de resultados com paginação. E é possível também criar um item, visualiza-lo, edita-lo e deleta-lo.
+
+
+\subsubsubsection{FUNCIONÁRIOS}
+
+O primeiro cadastro a ser desenvolvido foi o gerenciamento de Funcionários. Neste deve contemplar a informação pessoal de cada funcionário e sua vida profissional dentro da Cadaris. 
 
 Dentre suas informações pessoais esta seu: nome completo, sexo, e-mail, estado civil, CPF, RG, data de nascimento, nome do pai, nome da mãe, endereço atual, telefones de contato, dependentes, e informações bancarias.
 
-Já nas informações profissional esta seu: teste MBTI\footnote{O teste MBTI, que significa Myers-Briggs Type Indicator (Classificação Tipológica Myers-Briggs), é um teste para classificar as características de uma pessoa. Foi desenvolvido por Katharine Cook Briggs e sua filha Isabel Briggs Myers.}, inativo, regime, horário de expediente, tempo de casa, cargo e nível, salário, Vale Refeição, Vale Transporte, Seguro de Vida e todos o histórico do funcionário.
+Já nas informações profissional esta seu: teste MBTI\footnote{O teste MBTI, que significa Myers-Briggs Type Indicator (Classificação Tipológica Myers-Briggs), é um teste para classificar as características de uma pessoa.}, inativo, regime, horário de expediente, tempo de casa, cargo e nível, salário, Vale Refeição, Vale Transporte, Seguro de Vida e todos o histórico do funcionário.
 
 O histórico do funcionário armazena os acontecimentos profissionais ordenados cronologicamente, e tais eventos são: contratação, mérito, dissídio, promoção, reajuste do vale refeição, reajuste do vale transporte, modificação do seguro de vida, aquisição de período aquisitivo e gozo de férias.
 
 Algumas tarefas administrativas foram implementadas sobre este módulo, como a adição em lote de eventos no histórico dos funcionários, para quando houver férias coletivas por exemplo, calculo do valor de dissídio, e controle de pontos do banco de horas para gestão de faltas e horas extras. E ainda a visualização de alguns relatórios como: a férias acumulada e a faixa salarial de cada funcionário.
+
+
+\subsubsubsection{DEPARTAMENTOS}
+
+Todas empresas são subdivididas em departamentos, com suas próprias funções e organogramas, assim cada departamento desenvolve atividades e se inter-relaciona com outros departamentos.
+
+Na Cadaris não é diferente, nela há departamentos que desempenham atividades especificas com profissionais especializados. Nela há os seguintes departamentos: Administração, Arte, Atendimento, Financeiro, Planejamento e Redação. E por meio do formulário do Cadastro do Funcionário é possível indicar qual Departamento o funcionário pertence.
+
+E no sistema cada Funcionário está relacionado a um Departamento, pois será necessário para relacionar uma funcionalidade  do sistema para os funcionários de um departamento. Por exemplo, no Módulo Comercial cada Departamento desempenha uma função em cada etapa da elaboração de uma Proposta Comercial.
+
+
+\subsubsubsection{USUÁRIOS}
+
+Um dos itens mais importante de qualquer sistema são os seus usuários. O sistema foi todo pensado e projetado para melhor suportar as necessidades dos funcionários, que o utilizará para apoiar as suas atividades. Então o sistema deve prover interações com os usuários. Cada Usuário é um Funcionários, assim ao cadastrar um Funcionário é possível cadastrar junto um Usuário para ele. E por meio do e-mail corporativo o funcionário recebe as instruções de acesso.
+
+Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o Acesso do funcionário as funcionalidades do sistema por meio de um \textit{Login}. E também restringir o acesso a certas funcionalidades que não são da competência do tipo de funcionário em questão. Por meio de um seletor no formulário dos dados do usuário é possível escolher a sua alçada. E no sistema há verificações de Permissões enraizadas nas funcionalidades, provendo total segurança para um funcionário não acessar dados que não são permitidos serem visualiza-los por ele.
+
+
+\subsubsubsection{CLIENTES}
+
+\subsubsubsection{FORNECEDORES}
+
+\subsubsubsection{PLANO DE CONTAS}
+
+\subsubsubsection{CENTROS DE CUSTO}
 
 
   \noindent TODO p/ estagio 1: \\
