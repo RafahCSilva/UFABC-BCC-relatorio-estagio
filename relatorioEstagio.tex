@@ -187,6 +187,7 @@ A justificativa para o projeto é que o sistema atual contratado pela organizaç
 
 Iniciou-se o estágio com reuniões periódicas com a intenção de apresentar todas as regras de negócio da empresa e projetar o novo sistema para apoiar os processos administrativos. Após isto, houve o estudo necessário para a implementação do sistema. E por fim, o desenvolvimento de uma melhor interface com o propósito de favorecer a experiência do usuário.
 
+%TODO: update Resumo
 \end{titlepage}
 
 %%--ABSTRACT--%%
@@ -203,6 +204,7 @@ The justification for the project is that the actual system hired by the organiz
 
 It started the intership with periodic meetings with the intention of presenting all the company's business rules and design the new system to support the administrative processes. After this, there was the necessary study for the implementation of the system. And in conclusion, the development of a better interface with the purpose of improving the user experience
 
+%TODO: update ABSTRACT
 \end{titlepage}
 
 
@@ -492,7 +494,7 @@ A seguir é apresentado cada entidade e seus relacionamentos com os demais recur
 
 O primeiro cadastro a ser desenvolvido foi o gerenciamento de Funcionários. Neste deve contemplar a informação pessoal de cada funcionário e sua vida profissional dentro da Cadaris. 
 
-Dentre suas informações pessoais esta seu: nome completo, sexo, e-mail, estado civil, CPF, RG, data de nascimento, nome do pai, nome da mãe, endereço atual, telefones de contato, dependentes, e informações bancarias.
+Dentre suas informações pessoais esta seu: nome completo, sexo, e-mail, estado civil, CPF, RG, data de nascimento, nome do pai, nome da mãe, endereço atual, telefones de contato, dependentes, e informações bancárias.
 
 Já nas informações profissional esta seu: teste MBTI\footnote{O teste MBTI, que significa Myers-Briggs Type Indicator (Classificação Tipológica Myers-Briggs), é um teste para classificar as características de uma pessoa.}, inativo, regime, horário de expediente, tempo de casa, cargo e nível, salário, Vale Refeição, Vale Transporte, Seguro de Vida e todos o histórico do funcionário.
 
@@ -514,10 +516,42 @@ E no sistema cada Funcionário está relacionado a um Departamento, pois será n
 
 Um dos itens mais importante de qualquer sistema são os seus usuários. O sistema foi todo pensado e projetado para melhor suportar as necessidades dos funcionários, que o utilizará para apoiar as suas atividades. Então o sistema deve prover interações com os usuários. Cada Usuário é um Funcionários, assim ao cadastrar um Funcionário é possível cadastrar junto um Usuário para ele. E por meio do e-mail corporativo o funcionário recebe as instruções de acesso.
 
-Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o Acesso do funcionário as funcionalidades do sistema por meio de um \textit{Login}. E também restringir o acesso a certas funcionalidades que não são da competência do tipo de funcionário em questão. Por meio de um seletor no formulário dos dados do usuário é possível escolher a sua alçada. E no sistema há verificações de Permissões enraizadas nas funcionalidades, provendo total segurança para um funcionário não acessar dados que não são permitidos serem visualiza-los por ele.
+Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o acesso do funcionário as funcionalidades do sistema por meio de um \textit{Login}. E também restringir o acesso a certas funcionalidades que não são da competência do tipo de funcionário em questão. Por meio de um seletor no formulário dos dados do usuário é possível escolher a sua alçada. E no sistema há verificações de Permissões enraizadas nas funcionalidades, provendo total segurança para um funcionário não acessar dados que não são permitidos serem visualizados ou editados por ele.
 
 
 \subsubsubsection{CLIENTES}
+
+Clientes são de grande importância para qualquer empresa, conhece-los é crucial para agregar mais valor ao seus produtos e serviços que são comercializados, para assim criar uma relação duradoura que melhor atenda os objetivos de ambos os lados. A Cadaris é uma agência de comunicação e tratar bem o Cliente é essencial, e todos artifícios para melhor compreende-los se faz necessário. 
+
+Na Cadaris seus Clientes são organizados numa forma de árvore hierárquica. Na qual o primeiro nível é o conjunto de Empresas, no segundo nível os Departamentos da Empresa e no terceiro, e último, nível trata-se dos Centros de Custos daquele Departamento. E dado esta estrutura complexa e por anteriormente a empresa utilizar planilhas para armazenar cadastros, criou-se a conveniência de atribuir códigos para indicar a hierarquia dos itens, como no exemplo a seguir:
+
+\vspace{-1cm}
+\begin{singlespace}
+	\begin{description}
+		\item[$\bullet$~~~10] Empresa A
+		\begin{description}
+			\item[$\bullet$~~~10.01] Departamento A1
+			\begin{description}
+				\item[$\bullet$~~~10.03.01] Centro de Custo A1-a
+				\item[$\bullet$~~~10.03.02] Centro de Custo A1-b
+				\item[$\bullet$~~~10.03.03] Centro de Custo A1-c
+			\end{description}
+			\item[$\bullet$~~~10.02] Departamento A2
+			\item[$\bullet$~~~10.03] Departamento A3
+		\end{description}
+		\item[$\bullet$~~~20] Empresa B
+		\item[$\bullet$~~~30] Empresa C
+	\end{description}
+\end{singlespace}
+
+Assim no Cadastro dos Clientes devem preservar esta estrutura e também os códigos atribuídos a cada item, afim de manter a conveniência criada pelos Funcionários. Então em cada item é cadastrado um nome e seu código a ser exibido. 
+
+Na Empresa do Cliente é cadastrados todas suas unidades, e nestas Unidades há os seguintes dados: Nome Fantasia, Razão Social, CNPJ, Inscrição Estadual, Inscrição Municipal, Condição de Pagamento (utilizada no módulo Comercial), Informação Bancária e Endereço Completo.
+
+No Departamento da Empresa é cadastrado a Lista de Contatos, na qual cada item é composto por: Nome, Telefone, Celular e E-mail.
+
+E dentro de cada Departamento é cadastrado o Centro de Custo, sem dados adicionais. Deste modo, possibilita cada \textit{Job} da Cadaris estar associado a um Centro de Custo do seu Cliente, e com os dados herdado dos itens superiores ajudarão a formar a Proposta Comercial, que será entregue para o Cliente e executada pela Cadaris, como será relatado na seção~\hyperref[sec:2.3.2]{2.3.2 - Comercial}.
+
 
 \subsubsubsection{FORNECEDORES}
 
@@ -547,6 +581,7 @@ Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o Acesso
 
 
   \subsubsection{COMERCIAL}
+  \label{sec:2.3.2}
   \noindent TODO p/ estagio 2: \\
   - Listagem \\
   - tipos de Create \\
