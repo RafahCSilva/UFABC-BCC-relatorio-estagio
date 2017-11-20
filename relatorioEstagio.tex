@@ -354,6 +354,7 @@ Esta seção tem como objetivo detalhar as atividades desenvolvidas durante o es
 
 
 \subsection{APRESENTAÇÃO DAS REGRAS DE NEGÓCIO}
+\label{sec:2.1}
 
 A administração de uma empresa é formada por diversos processos administrativos, que podem ser descritos em um conjunto de atividades que podem ser independentes e/ou relacionadas entre si, e que tem o papel de transformar todos os insumos advindos do trabalho em produtos e serviços que atendem as necessidades dos clientes e que são dotados de valor. Em apoio a cada processo são empregados diversas ferramentas tecnológicas. Entretanto, todas as empresas tendem a se evoluírem com o tempo, assim suas regras de negócio e seus processos evoluem juntos, e as suas ferramentas devem ser adaptadas ao novo modelo.
 
@@ -416,6 +417,7 @@ Também há outras rotinas administrativas que este projeto pretende abranger, j
 
 
 \subsubsection{PROBLEMAS ATUAIS E O PROJETO DE UM NOVO SISTEMA}
+\label{sec:2.1.1}
 
 Para compor a Proposta Comercial, este sistema contratado apresenta muitos problemas pelo qual os funcionários devem enfrentar. Resultando em empecilhos para a boa usabilidade e atrapalhando a performance do funcionário. Nesta seção será apontado defeitos do sistema atual e melhorias de recursos necessárias que o novo sistema deverá ter.
 
@@ -514,9 +516,11 @@ E no sistema cada Funcionário está relacionado a um Departamento, pois será n
 
 \subsubsubsection{USUÁRIOS}
 
-Um dos itens mais importante de qualquer sistema são os seus usuários. O sistema foi todo pensado e projetado para melhor suportar as necessidades dos funcionários, que o utilizará para apoiar as suas atividades. Então o sistema deve prover interações com os usuários. Cada Usuário é um Funcionários, assim ao cadastrar um Funcionário é possível cadastrar junto um Usuário para ele. E por meio do e-mail corporativo o funcionário recebe as instruções de acesso.
+Um dos itens mais importante de qualquer sistema são os seus usuários. O sistema foi todo pensado e projetado para melhor suportar as necessidades dos funcionários, que o utilizará para apoiar as suas atividades. Cada Usuário é necessariamente um Funcionário, assim ao cadastrar um novo Funcionário é possível cadastrar junto um Usuário para ele. E por meio do e-mail corporativo o funcionário recebe as instruções de acesso.
 
-Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o acesso do funcionário as funcionalidades do sistema por meio de um \textit{Login}. E também restringir o acesso a certas funcionalidades que não são da competência do tipo de funcionário em questão. Por meio de um seletor no formulário dos dados do usuário é possível escolher a sua alçada. E no sistema há verificações de Permissões enraizadas nas funcionalidades, provendo total segurança para um funcionário não acessar dados que não são permitidos serem visualizados ou editados por ele.
+Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o acesso do funcionário as funcionalidades do sistema por meio de um \textit{Login}. E também restringir o acesso a certas funcionalidades que não são da competência do tipo de funcionário em questão. Por meio de um seletor no formulário dos dados do usuário é possível escolher a sua alçada. Foram definidos os seguintes papéis para ser atribuído a cada Usuário: Administradors, Diretor, Funcionário do Financeiro, Funcionário do Planejamento, Funcionário doa Produção e Funcionário do RH.
+
+Ao longo sistema há verificações de Permissões enraizadas nas funcionalidades, provendo total segurança para um funcionário não acessar dados que não são permitidos serem visualizados ou editados por ele.
 
 
 \subsubsubsection{CLIENTES}
@@ -525,7 +529,7 @@ Os clientes são de suma importância para qualquer empresa, conhecê-los é cru
 
 Na Cadaris seus Clientes são organizados numa forma de árvore hierárquica, isso porque a agência valoriza seus clientes de modo individualizado. O primeiro nível desta árvore é o conjunto de Empresas, o segundo nível são os Departamentos da Empresa e no terceiro, e último, nível trata-se dos Centros de Custos daquele Departamento. Conforme essa estrutura complexa, e por anteriormente a empresa já utilizar planilhas para armazenar cadastros, criou-se códigos definidos para indicar a hierarquia de cada item. Desta forma, o Cadastro dos Clientes deve manter essa estrutura e também os seus respectivos códigos, como exemplificado a seguir:
 
-\vspace{-1cm}
+\vspace{-10mm}
 \begin{singlespace}
 	\begin{description}
 		\item[$\bullet$~~~10] Empresa A
@@ -543,12 +547,13 @@ Na Cadaris seus Clientes são organizados numa forma de árvore hierárquica, is
 		\item[$\bullet$~~~30] Empresa C
 	\end{description}
 \end{singlespace}
+\vspace{-5mm}
 
 Na Empresa do Cliente é cadastrado todas suas unidades, e nestas Unidades há os seguintes dados: Nome Fantasia, Razão Social, CNPJ, Inscrição Estadual, Inscrição Municipal, Condição de Pagamento (utilizada no módulo Comercial), Informação Bancária e Endereço Completo.
 
 No Departamento da Empresa é cadastrado a Lista de Contatos, na qual cada item é composto por Nome, Telefone, Celular e E-mail.
 
-Dentro de cada Departamento é cadastrado o Centro de Custo sem dados adicionais. Deste modo, possibilita que cada \textit{Job} da Cadaris esteja associado à um Centro de Custo do seu Cliente, juntamente com os dados herdados dos itens anteriores auxiliando na formação da Proposta Comercial em que será entregue para o Cliente e executada pela Cadaris, como será relatado na seção~\hyperref[sec:2.3.2]{2.3.2 - Comercial}.
+Dentro de cada Departamento é cadastrado o Centro de Custo sem dados adicionais. Deste modo, possibilita que cada \textit{Job} da Cadaris esteja associado à um Centro de Custo do seu Cliente, juntamente com os dados herdados dos itens anteriores auxiliando na formação da Proposta Comercial em que será entregue para o Cliente e executada pela Cadaris, como será relatado na seção \hyperref[sec:2.3.2]{2.3.2 - Comercial}.
 
 
 \subsubsubsection{FORNECEDORES}
@@ -570,24 +575,60 @@ Cada item do Plano de Contas possui seu código e são agrupado em grupos. No M�
 
 \subsubsubsection{CENTROS DE CUSTO DA CADARIS}
 
-Centros de Custos da Cadaris é semelhante ao Plano de Contas, mas cadastrados separados pois são utilizados em relações deferentes no Módulo Financeiro.
+Centros de Custos da Cadaris tem a mesma finalidade do Plano de Contas, mas cadastrados separadamente, pois são utilizados em relações deferentes no Módulo Financeiro, que veremos a seguir.
 
 
-  \subsubsection{COMERCIAL}
-  \label{sec:2.3.2}
-  \noindent TODO p/ estagio 2: \\
-  - Listagem \\
-  - tipos de Create \\
-  - Briefing \\
-  - Cronograma \\
-  - Orçamento \\
-  - cond pgto \\
-  - PDFs \\
-  - Aprovação da Diretoria \\
-  - Aprovação do Cliente \\
-  - Produção
+\subsubsection{COMERCIAL}
+\label{sec:2.3.2}
+  
+Nesta seção será apresentada os resultados da implementação do Módulo Comercial do Sistema, que compreende todas as regras de negócio expostas na seção \hyperref[sec:2.1]{2.1 - Apresentação das Regras de Negócio}.
 
-  \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
+Este módulo deve prover a sustentação de todo o processo de criação da Proposta Comercial, ilustrado pela \autoref{fig:modProcess}, utilizando os recursos cadastrados e contribuindo para o Módulo Financeiro. 
+
+O Módulo Comercial foi subdividido em etapas, na qual em cada uma haverá interações exclusivas para cada tipo de funcionário e suas permissões de acesso. Em cada etapa é possível avançar a proposta comercial para a próxima etapa, salvar as alterações como rascunho e retroceder para a etapa anterior.
+
+
+\subsubsubsection{Criação da Proposta Comercial}
+
+Para iniciar um \textit{Job} primeiro é criado a sua Proposta Comercial, na qual são preenchidos suas informações básicas, como: Nome da Proposta Comercial, o funcionário que a criou, a Unidade da Empresa do Cliente, o Centro de Custo do Cliente, uma breve descrição deste \textit{Job}, o Código da Receita, a data da previsão de entrega desta proposta, e a data e a hora da previsão da entrega do material deste \textit{Job}.
+
+E somente o Administrador, Funcionário do Financeiro e do Planejamento por criar uma Proposta Comercial. Em seguida é disparado um e-mail para o Administrador e para o Funcionario do Financeiro avisando-os sobre um novo \textit{Job} que entrou na Etapa A.
+
+
+\subsubsubsection{Etapa A - Confecção do Briefing e do Cronograma}
+
+Nesta primeira etapa é confeccionado o \textit{Briefing} e o Cronograma da Proposta Comercial. O \textit{Briefing} trata-se das informações e instruções de como será o executado o \textit{Job}. O sistema possibilita para o usuário inserir o \textit{Briefing} por meio de cinco tipos de formulários:
+
+\begin{description}
+	\item[Livre] um editor de texto, que possui opções de formatações básicas para compor livremente todas as informações que desejar;
+	
+	\item[Cotação Gráfica] com o objetivo de compor informações pertinentes a materiais gráficos, como: medidas, tipo do material a ser impresso, acabamento, numero de páginas, tiragem, local de entrega, e outros;
+	
+	\item[Cotação Web] com o objetivo de compor informações pertinentes a materiais digitais para web, como: descrições, arquitetura de navegação, data para ir ao ar, pré-requisitos do servidor, domínio, tecnologias e linguagens envolvidas;
+	
+	\item[Cotação Brindes] com o objetivo de compor informações pertinentes a materiais ou objetos personalizados que serão utilizados como brindes, como: descrição, medidas, tipo de gravação, tiragem, referencias, local de entrega, e outros;
+	
+	\item[Anexos] conjunto de arquivos carregados no sistema a fim de contribuir com o \textit{briefing}, como por exemplo, materiais para referencia, artes gráficas, fotos, e outros.
+\end{description}
+
+Nesta etapa, somente tem permissão para editar o Administrador, Diretor, Funcionário do Financeiro e do Planejamento. E ao enviar esta proposta para a próxima etapa o Administrador e o Funcionário do Financeiro será avisado via e-mail.
+
+\subsubsubsection{Etapa B - Orçamento e Condição de Pagamento}
+
+Nesta etapa, o usuário poderá compor a Estimativa de Custo (ou orçamento) do \textit{Job} e cadastrar as condições de pagamento.
+
+A composição da Estimativa de Custo é um estágio muito importante, ela é essencialmente a Proposta Comercial a ser entregue ao Cliente com a finalidade dele comprar o \textit{Job} da Agência. E também é umas das etapas mais criticadas no sistema anteriormente contratado pela agência, como foi discutida na seção ~\hyperref[sec:2.1.1]{2.1.1 - Problemas Atuais e o Projeto de um Novo Sistema}. Assim houve grande atenção ao projetar e desenvolver essa ferramenta de criação de Estimativas de Custo, para atender eficientemente as necessidades da Cadaris.
+
+
+
+
+
+
+
+
+\clearpage
+
+\subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
   \noindent TODO p/ estagio 3: \\
   - Listagem \\
   - tipos de Create \\
