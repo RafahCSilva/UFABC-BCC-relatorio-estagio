@@ -532,10 +532,13 @@ Na Cadaris seus Clientes são organizados numa forma de árvore hierárquica, is
 \vspace{-10mm}
 \begin{singlespace}
 	\begin{description}
+		\itemsep0em 
 		\item[$\bullet$~~~10] Empresa A
 		\begin{description}
+			\itemsep0em 
 			\item[$\bullet$~~~10.01] Departamento A1
 			\begin{description}
+				\itemsep0em 
 				\item[$\bullet$~~~10.01.01] Centro de Custo A1-a
 				\item[$\bullet$~~~10.01.02] Centro de Custo A1-b
 				\item[$\bullet$~~~10.01.03] Centro de Custo A1-c
@@ -585,14 +588,16 @@ Nesta seção será apresentada os resultados da implementação do Módulo Come
 
 Este módulo deve prover a sustentação de todo o processo de criação da Proposta Comercial, ilustrado pela \autoref{fig:modProcess}, utilizando os recursos cadastrados e contribuindo para o Módulo Financeiro. 
 
-O Módulo Comercial foi subdividido em etapas, na qual em cada uma haverá interações exclusivas para cada tipo de funcionário e suas permissões de acesso. Em cada etapa é possível avançar a proposta comercial para a próxima etapa, salvar as alterações como rascunho e retroceder para a etapa anterior.
+O Módulo Comercial foi subdividido em etapas, na qual em cada uma haverá interações exclusivas para cada tipo de funcionário e suas permissões de acesso. Em cada etapa é possível avançar a proposta comercial para a próxima etapa, salvar as alterações como rascunho e retroceder para a etapa anterior. 
+
+O Usuário do tipo Administrador tem permissão para editar em todas as etapas e receberá notificação por e-mail em todos os casos.
 
 
 \subsubsubsection{Criação da Proposta Comercial}
 
 Para iniciar um \textit{Job} primeiro é criado a sua Proposta Comercial, na qual são preenchidos suas informações básicas, como: Nome da Proposta Comercial, o funcionário que a criou, a Unidade da Empresa do Cliente, o Centro de Custo do Cliente, uma breve descrição deste \textit{Job}, o Código da Receita, a data da previsão de entrega desta proposta, e a data e a hora da previsão da entrega do material deste \textit{Job}.
 
-E somente o Administrador, Funcionário do Financeiro e do Planejamento por criar uma Proposta Comercial. Em seguida é disparado um e-mail para o Administrador e para o Funcionario do Financeiro avisando-os sobre um novo \textit{Job} que entrou na Etapa A.
+E somente o Funcionário do Financeiro e do Planejamento por criar uma Proposta Comercial. Em seguida é disparado um e-mail para o Funcionário do Financeiro avisando-os sobre um novo \textit{Job} que entrou na Etapa A.
 
 
 \subsubsubsection{Etapa A - Confecção do Briefing e do Cronograma}
@@ -611,35 +616,125 @@ Nesta primeira etapa é confeccionado o \textit{Briefing} e o Cronograma da Prop
 	\item[Anexos] conjunto de arquivos carregados no sistema a fim de contribuir com o \textit{briefing}, como por exemplo, materiais para referencia, artes gráficas, fotos, e outros.
 \end{description}
 
-Nesta etapa, somente tem permissão para editar o Administrador, Diretor, Funcionário do Financeiro e do Planejamento. E ao enviar esta proposta para a próxima etapa o Administrador e o Funcionário do Financeiro será avisado via e-mail.
+Também nesta etapa é confeccionado um cronograma para a execução desta proposta comercial. Um diagrama de Gantt\footnote{O diagrama de Gantt é um gráfico usado para ilustrar o avanço das diferentes etapas de um projeto. Os intervalos de tempo representando o início e fim de cada fase aparecem como barras sobre o eixo horizontal do gráfico.} seria a melhor aplicação para este proposito, mas visto a sua grande complexidade, tanto de desenvolver um que atendar as requisitos, tanto de sua utilização pelos funcionários, foi utilizando um simples calendário em visão anual. Neste calendário é possível selecionar um período de dias e atribuir um evento para este período, com um departamento responsável e sua descrição. Atendendo de maneira mais simples e satisfatória os requisitos. 
+
+Nesta etapa, somente tem permissão para editar o Diretor, o Funcionário do Financeiro e do Planejamento. E ao enviar esta proposta para a próxima etapa o Funcionário do Financeiro será avisado via e-mail.
 
 \subsubsubsection{Etapa B - Orçamento e Condição de Pagamento}
 
-Nesta etapa, o usuário poderá compor a Estimativa de Custo (ou orçamento) do \textit{Job} e cadastrar as condições de pagamento.
+Nesta etapa, o usuário poderá compor a Estimativa de Custo do \textit{Job} e cadastrar as condições de pagamento que será realizada pela cliente após a entrega do mesmo.
 
 A composição da Estimativa de Custo é um estágio muito importante, ela é essencialmente a Proposta Comercial a ser entregue ao Cliente com a finalidade dele comprar o \textit{Job} da Agência. E também é umas das etapas mais criticadas no sistema anteriormente contratado pela agência, como foi discutida na seção ~\hyperref[sec:2.1.1]{2.1.1 - Problemas Atuais e o Projeto de um Novo Sistema}. Assim houve grande atenção ao projetar e desenvolver essa ferramenta de criação de Estimativas de Custo, para atender eficientemente as necessidades da Cadaris.
 
+Esta etapa possibilita a criação de inúmeras Estimativas de Custo, para na etapa seguinte serem analisadas pela diretória. O formulário para confeccionar as estimativas são divididas em 3 níveis, em telas diferentes. A primeira tela tem-se a listas de todas as Estimativas de Custo deste \textit{Job}, possibilitando criar uma nova estimativa, editar-la, duplica-la, e duplicar a estimativa a partir de outra estimativa de um \textit{Job} diferente.
+
+Editar uma estimativa, tem-se a segunda tela, na qual é listado os itens de Custo Interno da Agência e os Custos de Operacionalização relacionado a fornecedores. 
+
+Nos itens de Custos Interno é possível adicionar itens, editar e excluir. Ao editar tem-se uma terceira tela que lista os itens de custo relacionado a Agência, como: arte, atendimento, planejamento, programação e redação. Cada item com seu valor unitário multiplicado pela quantidade de horas para a execução deste item. A soma deste itens teremos um subtotal, na qual será aplicado porcentagens de comissão e impostos. Neste calculo também é considerado um pedido da diretora, na qual ela quer que o valor final seja arredondado, assim ao subtotal é somado os centavos necessários para após o taxamento o valor final ser inteiro.
+
+Nos itens de Custos de Operacionalização é possível adicionar itens, editar e excluir. Ao editar tem-se uma quarta tela que lista os itens de custo relacionado a fornecedores, na qual é possível selecionar o produto ou serviço dos Fornecedores cadastrados, é indicado o valor unitário e a quantidade para assim ter o valor do item, que serão somados em um subtotal, que será aplicado as porcentagens de taxamento, e também há o arrendondamento para estes itens.
+
+A condição de pagamento é a descrição de como será pago pelo cliente o \textit{Job} realizado pela agência. Este formulário obtêm do cadastro do Cliente um valor padrão, visto que cada cliente trabalha de um modo e isso facilita para preencher este formulário.
+
+Nesta etapa, somente tem permissão de editar o Diretor e o Funcionário do Financeiro. E ao avançar para a próxima etapa, o Diretor será avisado por e-mail.
+
+Formado o assim as possíveis Estimativas de Custo deste \textit{Job}, que junto com a condição de pagamento, será repassado para a diretoria aprovar e ser encaminhado para o cliente nas próximas etapas.
 
 
+\subsubsubsection{Etapa C - Aprovação do Diretor}
+
+Nesta etapa, a diretoria deve revisar cada Estimativa de Custo confeccionadas anteriormente e avalia-las como: 
+
+\begin{description}
+	\item[Aprovada] estimativa aprovada poderá seguir à diante para ser oferecia ao cliente;
+	\item[Não Aprovada] a estimativa deve ser ajustada e ser reavaliada novamente;
+	\item[Reprovada] a estimativa não será oferecida ao cliente e será arquivada.
+\end{description}
+
+E com base nesta avaliação descidir se deve reotrnar para a etapa anterior ajustar ou seguir para a proxima etapa.
+
+Nesta etapa somente o Diretor tem acesso, e ao retroceder para a etapa anterior, o Funcionário do Financeiro receberá uma notificação por e-mail, e se caso prosseguir para a próxima etapa o Diretor e o Funcionário do Planejamento serão notificados por e-mail.
 
 
+\subsubsubsection{Etapa D - Geração do PDF e Aprovação do Cliente}
+
+Mesta etapa, o Funcionário do Planejamento, que também faz o atendimento ao cliente, irá gerar um PDF\footnote{O PDF é um formato de arquivo, desenvolvido pela Adobe Systems em 1993, para representar documentos de maneira independente do aplicativo, do hardware e do sistema operacional usados para criá-los.} para cada Estimativa de Custo, selecionando os Contatos cadastrados no Departamento do Cliente que irá receber a proposta, a Estimativa aprovada, e dentre os seguintes modelos de PDF:
+
+\begin{itemize}
+	\item Descrição geral e o Custos Internos;
+	\item Descrição geral e o Custos de Operacionalização;
+	\item Descrição geral e Custo Total;
+	\item Descrição geral, Custos Interno e de Operacionalização e Custo Total;
+	\item Descrição geral e Custos Interno e de Operacionalização;
+\end{itemize}
+
+O atendente entrega estas propostas para o cliente analisar se a agência será contratada. Se o Cliente aprovar, o funcionário indica na estimativa se ela foi aprovada, e seguirá para o próxima etapa. Se não for aprovada, voltará para o Etapa B para ser ajustada. Mas se a proposta for rejeitada, esta proposta inteira irá para uma etapa onde ficará arquivada.
+
+Nesta etapa, somente o Funcionário do Planejamento tem permissão para editar, e ao encaminhar para a próxima etapa ou voltar para ajustes, o Diretor e Funcionário do Financeiro serão notificados por e-mail.
 
 
+\subsubsubsection{Etapa E - Produção}
 
-\clearpage
+Após a aprovação do Cliente, a Proposta Comercial se torna um \textit{Job} para a agência, na qual será produzido conforme o modelo atual da empresa. E o sistema somente mostra nesta etapa as informações básicas, os \textit{briefings}, o cronograma, a estimativa de custo aprovadas.
+
+Os Funcionário do Financeiro e do Planejamento tem permissão para acessar esta etapa e enviar este \textit{Job} para a próxima etapa, na qual o Diretor e o Funcionário do Financeiro serão notificados por e-mail.
+
+
+\subsubsubsection{Etapa F - Faturamento}
+
+Após o \textit{Job} ser finalizado e entregue ao cliente, ele se dirige para esta etapa, na qual ele será faturado, ou seja, a agência receberá o valor negociado na Proposta Comercial. E utiliza as Estimativas de Custo aprovadas para gerenciar este recebimento no Módulo Financeiro de Contas a Receber, que será melhor descrito nas seções subsequentes. 
+
+O Funcionário do Financeiro tema acesso a esta etapa. Ao finalizar o faturamento, o \textit{Job} é enviado para a \textbf{Etapa G - Finalizado}, na qual agrupa todos os \textit{Jobs} concluídos, e o Diretor, o Funcionário do Financeiro e da Produção são notificados via e-mail. 
+
+Há também outra etapa chamada \textbf{Etapa Z - Arquivado}, que persiste as Propostas Comerciais que foram rejeitadas, mas possibilita serem resgatados para voltarem para o início.
+
+Atendendo todos os requisitos necessário e descrito pelo diagrama do modelo de processo ilustrado na \autoref{fig:modProcess}, que foram amplamente debatido e projetado junto com a sócia-diretora da Agência Cadaris para melhor atender suas especificidades.
+
+
 
 \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
-  \noindent TODO p/ estagio 3: \\
-  - Listagem \\
-  - tipos de Create \\
-  - Briefing \\
-  - Cronograma \\
-  - Orçamento \\
-  - cond pgto \\
-  - PDFs \\
-  - Aprovação da Diretoria \\
-  - Aprovação do Cliente \\
-  - Produção
+
+
+
+
+\subsubsubsection{Contas Bancárias}
+
+\noindent 
+- Cadastro de Contas Bancárias \\
+- Transferências entre Contas \\
+- Investimentos
+
+
+\subsubsubsection{Contas a Receber}
+
+\noindent 
+- Faturamento de Jobs (Parcelas)
+
+
+\subsubsubsection{Contas a Pagar}
+
+\noindent 
+- Contas de Fornecedores \\
+- Contas de Consumo
+
+
+\subsubsubsection{Folhas de Pagamento}
+
+\noindent 
+- Folhas de Pagamento \\
+- Pagamento de Férias \\
+- Rescisão \\
+- Retirada de Sócios \\
+- 13º Salários
+
+
+\subsubsubsection{Fluxo de Caixa}
+
+\noindent 
+- Listagem \\
+- Relatório
+
+
 
 %\subsection{INTERFACE E EXPERIÊNCIA DE USUÁRIO}
 %  \noindent TODO p/ estagio 3: \\
