@@ -694,15 +694,20 @@ Atendendo todos os requisitos necessário e descrito pelo diagrama do modelo de 
 
 \subsubsection{RELATÓRIOS E CONTROLE FINANCEIRO}
 
+Nesta seção será descrito o Módulo Financeiro do Sistema desenvolvido. Controlar o financeiro da empresa é fundamental para manter saudável o equilíbrio do caixa, ajudar na gestão e no planejamento. Utilizar um sistema informatizado é a melhor solução para gerenciar e supervisionar todos os fluxos dos caixas, contas a pagar, contas a receber, e folhas de pagamento.
 
+Em todos os componentes do Financeiro, somente tem acesso o Administrador, o Diretor e o Funcionário do Financeiro. Nas subseções seguintes será apresentado cada componente do Financeiro.
 
 
 \subsubsubsection{Contas Bancárias}
 
-\noindent 
-- Cadastro de Contas Bancárias \\
-- Transferências entre Contas \\
-- Investimentos
+Inicialmente é cadastrado as Contas Bancárias da empresa, e seu valor inicial naquela data, para a partir desta data o sistema irá calcular todos os fluxo de entradas e saídas desta conta.
+
+Todo este módulo financeiro visa ser o mais flexível e abrangente para apoiar todos as atividades envolvidas na gestão da empresa. Uma das possibilidade é haver contas de investimento, que rendem com o tempo, entrando valores para a conta. Então, um componente para registar os rendimentos é conveniente. Nele é possível cadastrar o valor do rendimento, o impostos a serem recolhidos, a data e apontar qual a conta que será creditada o valor líquido.
+
+É possível também haver transferências monetárias entre estas contas bancárias cadastradas. Então tem disponível um formulário para o registro desta transação, na qual o usuário informa a data, a conta bancária de origem, a conta bancária de destino, o valor bruto e a taxa a ser debitada pelo envio na conta de origem.
+
+Assim como será detalhado mais a diante, o fluxo de caixa cuidará de gerenciar todas as entradas e saídas destas contas bancárias cadastradas.
 
 
 \subsubsubsection{Contas a Receber}
