@@ -492,7 +492,7 @@ Então, o primeiro desafio para o desenvolvimento deste sistema foi o levantamen
 A seguir é apresentado cada entidade e seus relacionamentos com os demais recursos do sistema. em todos há a funcionalidade de listar todos os itens, e também pesquisar por palavras, por valores em campos específicos e ordenar a lista de resultados com paginação. E é possível também criar um item, visualiza-lo, edita-lo e deleta-lo.
 
 
-\subsubsubsection{FUNCIONÁRIOS}
+\subsubsubsection{Funcionários}
 
 O primeiro cadastro a ser desenvolvido foi o gerenciamento de Funcionários. Neste deve contemplar a informação pessoal de cada funcionário e sua vida profissional dentro da Cadaris. 
 
@@ -505,7 +505,7 @@ O histórico do funcionário armazena os acontecimentos profissionais ordenados 
 Algumas tarefas administrativas foram implementadas sobre este módulo, como a adição em lote de eventos no histórico dos funcionários, para quando houver férias coletivas por exemplo, calculo do valor de dissídio, e controle de pontos do banco de horas para gestão de faltas e horas extras. E ainda a visualização de alguns relatórios como: a férias acumulada e a faixa salarial de cada funcionário.
 
 
-\subsubsubsection{DEPARTAMENTOS}
+\subsubsubsection{Departamentos}
 
 Todas empresas são subdivididas em departamentos, com suas próprias funções e organogramas, assim cada departamento desenvolve atividades e se inter-relaciona com outros departamentos.
 
@@ -514,7 +514,7 @@ Na Cadaris não é diferente, nela há departamentos que desempenham atividades 
 E no sistema cada Funcionário está relacionado a um Departamento, pois será necessário para relacionar uma funcionalidade  do sistema para os funcionários de um departamento. Por exemplo, no Módulo Comercial cada Departamento desempenha uma função em cada etapa da elaboração de uma Proposta Comercial.
 
 
-\subsubsubsection{USUÁRIOS}
+\subsubsubsection{Usuários}
 
 Um dos itens mais importante de qualquer sistema são os seus usuários. O sistema foi todo pensado e projetado para melhor suportar as necessidades dos funcionários, que o utilizará para apoiar as suas atividades. Cada Usuário é necessariamente um Funcionário, assim ao cadastrar um novo Funcionário é possível cadastrar junto um Usuário para ele. E por meio do e-mail corporativo o funcionário recebe as instruções de acesso.
 
@@ -523,7 +523,7 @@ Assim em conjuntos com o Cadastro de Usuários, o sistema deve permitir o acesso
 Ao longo sistema há verificações de Permissões enraizadas nas funcionalidades, provendo total segurança para um funcionário não acessar dados que não são permitidos serem visualizados ou editados por ele.
 
 
-\subsubsubsection{CLIENTES}
+\subsubsubsection{Clientes}
 
 Os clientes são de suma importância para qualquer empresa, conhecê-los é crucial para melhorar a qualidade de seus produtos e serviços que são comercializados, isso permite criar uma relação duradoura que melhor atendam os objetivos de ambos os lados.% A Cadaris é uma agência de comunicação e tratar bem o cliente é essencial, e todos artifícios para melhor compreende-los se faz necessário. 
 
@@ -559,7 +559,7 @@ No Departamento da Empresa é cadastrado a Lista de Contatos, na qual cada item 
 Dentro de cada Departamento é cadastrado o Centro de Custo sem dados adicionais. Deste modo, possibilita que cada \textit{Job} da Cadaris esteja associado à um Centro de Custo do seu Cliente, juntamente com os dados herdados dos itens anteriores auxiliando na formação da Proposta Comercial em que será entregue para o Cliente e executada pela Cadaris, como será relatado na seção \hyperref[sec:2.3.2]{2.3.2 - Comercial}.
 
 
-\subsubsubsection{FORNECEDORES}
+\subsubsubsection{Fornecedores}
 
 Os Fornecedores oferecem serviços, produtos e matérias-primas para apoiar todo e qualquer insumo da empresa, como por exemplo, telefonia, gráficas, confecção de brindes, servidores, \textit{freelancers}, e outros. Na Agência Cadaris, o cadastro de seus fornecedores e seu gerenciamento é substancial, já que contratar um fornecedor de qualidade irá garantir um trabalho mais satisfatório para seus clientes.
 
@@ -569,14 +569,14 @@ O item \textit{Classificação} é importante para avaliar a imagem do fornecedo
 
 O segundo nível trata-se dos produtos e serviços oferecidos pela empresa do fornecedor, formulário é cadastrado os contatos (como nome, telefone e e-mail) e \textit{Tags}, que auxiliam na realização de pesquisas, a fim dos funcionários realizarem cotações entre os produtos de seus fornecedores.
 
-\subsubsubsection{PLANO DE CONTAS}
+\subsubsubsection{Plano de Contas}
 
 Plano de Contas é o conjutno de contas que guia os trabalhos contáveis da empresa, ela forma uma estrutura para a elaboração do \textit{Balanço Patrimonial}\footnote{O Balanço Patrimonial (BP) é um documento que relata a situação financeira de uma empresa considerando um período específico, geralmente um ano, levando em conta tanto fatores quantitativos como qualitativos.} e da \textit{Demonstração do Resultado do Exercício}\footnote{A Demonstração do Resultado do Exercício (DRE) é uma peça contábil que tem por objetivo detalhar a formação do resultado de um exercício (lucro ou prejuízo), por meio da comparação das receitas com os custos e despesas de uma empresa.}.
 
 Cada item do Plano de Contas possui seu código e são agrupado em grupos. No Módulo Financeiro, cada despesa é relacionada a um item do Plano de Contas.
 
 
-\subsubsubsection{CENTROS DE CUSTO DA CADARIS}
+\subsubsubsection{Centros de Custo da Cadaris}
 
 Centros de Custos da Cadaris tem a mesma finalidade do Plano de Contas, mas cadastrados separadamente, pois são utilizados em relações deferentes no Módulo Financeiro, que veremos a seguir.
 
@@ -734,36 +734,41 @@ Para adicionar uma conta de consumo, é necessário indicar num formulário: a d
 
 \subsubsubsection{Folhas de Pagamento}
 
-\noindent 
-- Folhas de Pagamento \\
-- Pagamento de Férias \\
-- Rescisão \\
-- Retirada de Sócios \\
-- 13º Salários
+Outra rotina financeira muito importante em todas empresas é a folha de pagamento de seus funcionários. O Sistema deve prover automatização desta grande demanda que ocorre todos mês em um período.
+
+No cadastro de um funcionário é indicado o seu histórico na Cadaris, na qual está cadastrado o seu salário, vale refeição e vale transporte acordado. Deste modo é possível calcular o valor que aquele funcionário deve receber da empresa.
+
+O Funcionário do Financeiro acessa o Modulo de Folhas de Pagamento, na qual é possivel listar os salários lançados anteriores. Para lançar uma nova folha de pagamento com todos os funcionários ativos da empresa, basta somente clicar um botão e preencher qual o período referente e a data que será paga, que o sistema fará todo o calculo em lote do salários deles. Tornando-se muito rápido e prático para o Funcionário, evitando erros humanos.
+
+Além do salário, o Sistema deve lançar o Pagamento de Férias do seus funcionários, basta o Funcionário do Financeiro adicionar um laçamento de férias, indicando em um formulário: qual o funcionário, número de dias, a data de inicio e ter minio, a data de pagamento, a conta bancária, o centro de custo da Cadaris, o valor do salário mensal, o valor das férias, o valor do acréscimo, o valor retido, o valor líquido e o valor do bruto.
+
+Outro item que deve entrar na fluxo de saída é a Rescisão de um funcionário, neste formulário de cadastro é necessário: indicar o funcionário, a data de pagamento, a conta bancária, o centro de custo da Cadaris, o salário dos dias trabalhado, a hora extra, o DSR do salário, as férias, o terço de férias, a férias proporcionais, a férias paga, o aviso prévio, o 13º salário, o 13º salário proporcional, o previdência, a previdência do 13º salário, o INSS das férias, o desconto vale refeição e o desconto vale transporte.
+
+Outra saída é a retirado de Sócios, na qual um sócio pode retira um montante da conta da empresa para si, semelhante a sua comissão. Num formulário basta indicar o sócio, a data de pagamento, a conta bancária, o centro de custo da Cadaris e a forma de pagamento.
+
+O último item é o 13º Salário, que acontece a saída junto com a Folha de Pagamento, mas em duas parcelas ao final do ano. Somente é necessário indicar o funcionário, a data de pagamento, a conta bancária, o centro de custo da cadaris, o valor do 13º salário e o valor de desconto.
 
 
 \subsubsubsection{Fluxo de Caixa}
 
-\noindent 
-- Listagem \\
-- Relatório
+
+Por intermédio dos cadastros de entradas e saídas, o Sistema deve calcular todo o Fluxo de Caixa ocorrido. Este é o módulo mais importante do financeiro, já que é nele que fica registrado todo o cruzamento dos dados cadastrados e a demonstração do fluxo do caixa por completo em um certo período.
+
+A primeira tela é um calendário em que é possível selecionar o período, na tela seguinte é escolhido a Conta Bancária, assim o sistema retorna à todas atividades registradas da conta e neste período especificado.
+
+Na visualização do Fluxo de Caixa é separado em três seções. A primeira seção fica registrado as Contas a Receber onde constam em subseções a listagem de Faturamento dos Jobs, a Entrada de Transferências e o Rendimentos de Investimentos. Na segunda seção está registrado as Contas à Pagar, na qual suas subseções listam as Contas de Consumo, as Contas dos Fornecedores, a Saída de Transferências, a Folha de Pagamento, o Pagamento de Férias, a Retirada de Sócios, a Rescisão e o 13º Salários. Ao final de cada listagem é exibidor o seu subtotal, que é a soma simples dos itens que tiveram seus pagamentos efetuados, e o subtotal projetado, que é a soma simples de todos os itens pagos e com pagamento pendente. Por fim, na terceira seção é exibido o valor inicial deste período, a soma de todos os subtotais de saída, a soma de todos os subtotais de entrada, e finalmente, o saldo final deste período juntamente com a sua projeção.
+
+Na listagem de cada item consta um indicativo dinâmico que muda a cor de fundo da linha para indicar se o pagamento do item está atrasado e quais são os item que vencem nesse dia. Deste modo, auxilia o usuário a identificar os itens importantes no momento de supervisionar o fluxo de caixa.
+
+O registo completo deste fluxo pode ser exportado para uma planilha que lista todas as atividades neste período unificado de forma cronológica, possibilitando utilizar esses dados em filtros para extrair relatórios.
 
 
 
-%\subsection{INTERFACE E EXPERIÊNCIA DE USUÁRIO}
-%  \noindent TODO p/ estagio 3: \\
-%  Front-end
+\subsection{ENTREGA DO SISTEMA}
 
+O Sistema foi entregue em duas fases, a primeira foi no termino o Módulo Comercial e a segunda entrega foi na finalização o Módulo Financeiro. Conforme a necessidade de substituir o sistema contratado anteriormente, iniciando o seu uso pelo cadastro de todos os seus recursos e \textit{Jobs} feitos a partir no início do ano de 2017.
 
-%\subsection{HOMOLOGAÇÃO, E AJUSTE FINAIS}
-
-%\subsection{OUTRAS ÁREAS DA EMPRESA}
-
-%\subsubsection{Resultados}
-%\subsubsection{Conclusão}
-
-%\subsection{DIAGNÓSTICO DOS PRINCIPAIS PROBLEMAS OBSERVADOS E SUGESTÕES DE MELHORIA}
-
+Todo desenvolvimento do projeto foi o acompanhado pela diretora para validar e homologar funcionalidades, indicando as alterações e as melhorias necessárias. A utilização do Sistema foi de fácil adaptação e aprendizado por toda equipe, as ferramentas de trabalho e os dados necessários para realizar certas ações foram otimizados com relação ao sistema que era utilizado anteriormente.
 
 
 \clearpage
