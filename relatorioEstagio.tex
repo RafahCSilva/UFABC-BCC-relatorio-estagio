@@ -185,7 +185,7 @@ O presente relatório descreve as atividades realizadas durante o período de Es
 
 A justificativa para o projeto é que o sistema atual contratado pela organização é ineficiente, desta forma, há necessidade do desenvolvimento de um novo sistema exclusivo que possa suportar os novos moldes da empresa, a fim de substituir esta ferramenta defasada. O novo sistema será desenvolvido em PHP em conjunto com o \textit{framework} Laravel.
 
-Iniciou-se o estágio com reuniões periódicas com a intenção de apresentar todas as regras de negócio da empresa e projetar o novo sistema para apoiar os processos administrativos. Após isto, houve o estudo necessário para a implementação do sistema. E por fim, o desenvolvimento de uma melhor interface com o propósito de favorecer a experiência do usuário.
+Iniciou-se o estágio com reuniões periódicas com a intenção de apresentar todas as regras de negócio da empresa e projetar o novo sistema para apoiar os processos administrativos. Após isso, houve o estudo necessário para a implementação do sistema, implantação e treinamento de seus usuários na empresa.
 
 %TODO: update Resumo
 \end{titlepage}
@@ -202,7 +202,7 @@ This report describes how the developed activities during the period of Internsh
 
 The justification for the project is that the actual system hired by the organization is inefficient, thereby, there is a need of a new exclusive system that can be supported by the new molds of the company in order to replace this outdated tool. The new system will be developed in PHP in conjunction with the Laravel framework.
 
-It started the intership with periodic meetings with the intention of presenting all the company's business rules and design the new system to support the administrative processes. After this, there was the necessary study for the implementation of the system. And in conclusion, the development of a better interface with the purpose of improving the user experience
+It started the intership with periodic meetings with the intention of presenting all the company's business rules and design the new system to support the administrative processes. After this, there was the necessary study for the implementation of the system, deployment and training of its users in the company.
 
 %TODO: update ABSTRACT
 \end{titlepage}
@@ -310,7 +310,7 @@ Após este período, foi feito o estudo das tecnologias que seriam utilizadas pa
 
 Em seguida, iniciou-se a implementação do sistema com foco inicial no \textit{Back-end} que foram seguidas em três etapas: Desenvolvimento do Cadastro de Recursos e algumas rotinas administrativas; Processo Comercial; Geração de Relatórios e Controle Financeiro.
 
-Por fim, foi desenvolvido um \textit{Front-end} definitivo para o sistema, junto ao time de \textit{Front-end} da Cadaris, com todos os recursos necessários para uma melhor experiência do usuário.
+Por fim, foi realizado a implantação do sistema em duas etapas, também o trenamento de seus novos usuários e ajuste finais.
 
 
 
@@ -764,12 +764,24 @@ O registo completo deste fluxo pode ser exportado para uma planilha que lista to
 
 
 
+\subsection{PROVISIONAMENTO}
+
+Nas seções anteriores foram descritos os componentes do sistema, mas o provisionamento deste tem grande importância também. O sistema foi hospedado em um \textit{Amazon Elastic Compute Cloud} da \textit{Amazon Web Services}, que é uma plataforma de computação em nuvem, que permite rodar qualquer aplicação diretamente em computadores virtuais, com uma instância de configuração básicas para suportar o sistema.
+
+Na máquina virtual foi aplicada uma solução de contêineres com \textit{Docker}, provendo uma camada de abstração para automatizar a implantação em qualquer hospedagem. Deste modo, facilita uma rápida e automatizada configuração de todos os requisitos do sistema, como: PHP-FPM 7.0, MySQL, Nginx, \textit{daemon} para fila de execução assíncrona, e outros.
+
+O sistema provem backups do banco de dados duas vezes ao dia, pois em caso de falha, os contêineres do \textit{Docker} facilitarão a fácil reconfiguração do provisionamento, para que em menos de 5 minutos o sistema volte a estar \textit{online} com os dados restaurados. Com essa infraestrutura o sistema está bem condicionado para seu correto funcionamento e uma ótima performance .
+
+
 \subsection{ENTREGA DO SISTEMA}
 
-O Sistema foi entregue em duas fases, a primeira foi no termino o Módulo Comercial e a segunda entrega foi na finalização o Módulo Financeiro. Conforme a necessidade de substituir o sistema contratado anteriormente, iniciando o seu uso pelo cadastro de todos os seus recursos e \textit{Jobs} feitos a partir no início do ano de 2017.
+O Sistema foi entregue em duas fases, a primeira foi no termino o Módulo Comercial, conforme a necessidade de substituir o sistema contratado anteriormente, iniciando o seu uso pelo cadastro de todos os seus recursos e \textit{Jobs} feitos a partir no início do ano de 2017.
+
+A segunda entrega foi na finalização do Módulo Financeiro, possibilitando a migração dos dados financeiros de todas as contas pagas e recebidas desde o inicio do ano de 2017. E também a necessidade de adicionar novos componentes antes não ponderado, como a Rescisão e o 13º Salário. 
 
 Todo desenvolvimento do projeto foi o acompanhado pela diretora para validar e homologar funcionalidades, indicando as alterações e as melhorias necessárias. A utilização do Sistema foi de fácil adaptação e aprendizado por toda equipe, as ferramentas de trabalho e os dados necessários para realizar certas ações foram otimizados com relação ao sistema que era utilizado anteriormente.
 
+O Sistema foi muito bem recebido, pois demonstrou sua grande eficiência logo no inicio, quando houve a inserção de todo o histórico de transações no Módulo Financeiro, ao ponto dos valores calculado pelo sistema se tornarem síncronos com as Contas Bancárias reais da empresa.
 
 \clearpage
 \section{FUNDAMENTAÇÃO TEÓRICA}
