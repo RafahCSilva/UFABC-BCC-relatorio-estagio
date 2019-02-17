@@ -31,6 +31,7 @@
 \usepackage{amsmath}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
+\usepackage[raggedright]{titlesec}
 
 %\usepackage{biblatex}
 %\bibliography{relatorioEstagio}
@@ -44,11 +45,11 @@
 %% DEFINEs dos textos constantes da capa
 \newcommand{\defUFABC}{UNIVERSIDADE FEDERAL DO ABC}
 \newcommand{\defBCC}{BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
-\newcommand{\defRelatorio}{RELATÓRIO DO ESTÁGIO SUPERVISIONADO II} %%ESTÁGIO SUPERVISIONADO
-\newcommand{\defTitulo}{ESTÁGIO EM DESENVOLVIMENTO DE SISTEMA PARA USO INTERNO NA AGÊNCIA CADARIS}
+\newcommand{\defRelatorio}{RELATÓRIO DO ESTÁGIO SUPERVISIONADO III} %%ESTÁGIO SUPERVISIONADO
+\newcommand{\defTitulo}{ESTÁGIO EM DESENVOLVIMENTO DE SISTEMA PARA USO INTERNO NA AGÊNCIA CADARIS E AGILE MASTER NO TIME DE ATENDIMENTO EDITORIAL DA FTD EDUCAÇÃO}
 \newcommand{\defRafael}{RAFAEL CARDOSO DA SILVA}
 \newcommand{\defOrientador}{Orientador: Prof. Dr. Daniel Morgato Martin}
-\newcommand{\defLocaldata}{Santo André, 2017}
+\newcommand{\defLocaldata}{Santo André, 2019}
 
 %%%%% \subsubsubsection
 \usepackage{titlesec}
@@ -97,10 +98,10 @@
 \begin{center}
 \text{ \defUFABC }
 \text{ \defBCC }\\\vspace{5cm}
-\textbf{\large{ \defRelatorio }}\\\vspace{4cm}
+\textbf{\large{ \defRelatorio }}\\\vspace{3cm}
 \textbf{\Large{\defTitulo}}\\\vspace{4cm}
 % Nome do Autor
-\textbf{\large{ \defRafael }}\\\vspace{2cm}
+\textbf{\large{ \defRafael }}\\\vspace{1.5cm}
 % Orientador
 \textbf{\large{ \defOrientador }}\\\vspace{3cm}
 \textbf{\defLocaldata}
@@ -113,7 +114,7 @@
 \begin{titlepage}
 
 \begin{center}
-\textbf{\large{ \defRafael }}\\\vspace{6cm}
+\textbf{\large{ \defRafael }}\\\vspace{5cm}
 \textbf{\Large{ \defTitulo }}\\\vspace{5cm}
 \begin{raggedleft}{
 Relatório do Estágio apresentado ao Curso de\\
@@ -127,7 +128,7 @@ Bacharel em Ciência da Computação
 %  obtenção do título de Bacharel em Ciência da\\
 %  Computação pela Universidade Federal do ABC.\\
 \large{ \defOrientador }
-}\\\vspace{5cm}
+}\\\vspace{4cm}
 \end{raggedleft}
 \textbf{ \defLocaldata }
 \end{center}
@@ -157,6 +158,8 @@ Dedico este trabalho realizado aos meus familiares e amigos que depositaram conf
 Aos meus pais pela confiança e apoio nas dificuldades enfrentadas durante todo o período da graduação.
 
 Meus agradecimentos à agência Cadaris, principalmente a Diretora Comercial, que propôs essa oportunidade de alinhar meus conhecimentos obtidos na Universidade Federal do ABC no ambiente corporativo, além de crescimento pessoal e profissional.
+
+Meus agradecimentos também à FTD Educação, principalmente ao Coordenador de Desenvolvimento, pela confiança a mim depositado para liderar o time e melhor atender as necessidades do Editorial.
 
 A Ingrid Ferreira Costa pela paciência e força em sempre me ajudar a revisar este relatório.
 
@@ -191,7 +194,7 @@ A justificativa para o projeto é que o sistema atual contratado pela organizaç
 
 Iniciou-se o estágio com reuniões periódicas com a intenção de apresentar todas as regras de negócio da empresa e projetar o novo sistema para apoiar os processos administrativos. Após isso, houve o estudo necessário para a implementação do sistema, implantação e treinamento de seus usuários na empresa.
 
-%TODO: update Resumo
+%TODO: update Resumo FTD
 \end{titlepage}
 
 %%--ABSTRACT--%%
@@ -208,7 +211,7 @@ The justification for the project is that the actual system hired by the organiz
 
 It started the intership with periodic meetings with the intention of presenting all the company's business rules and design the new system to support the administrative processes. After this, there was the necessary study for the implementation of the system, deployment and training of its users in the company.
 
-%TODO: update ABSTRACT
+%TODO: update ABSTRACT FTD
 \end{titlepage}
 
 
@@ -250,11 +253,12 @@ Além de agregar a responsabilidade de ter uma profissão, o estágio permite qu
 
 O estágio é uma tarefa supervisionada por um orientador, e a descrição e avaliação do aluno quanto às suas atividades, conhecimentos adquiridos e habilidades desenvolvidas são relatados em um relatório.
 
-Este relatório tem por objetivo descrever as atividades e os produtos obtidos durante a disciplina de Estágio Supervisionado I. Nesta seção, apresenta-se a caracterização do estágio, da empresa, uma visão geral do estágio e a organização geral deste documento.
+Este relatório tem por objetivo descrever as atividades e os produtos obtidos durante a disciplina de Estágio Supervisionado em duas empresas. Nesta seção, apresenta-se a caracterização dos estágios, das empresas, uma visão geral do estágio e a organização geral deste documento.
 
 
+\subsection{ESTÁGIO NA AGÊNCIA CADARIS}
 
-\subsection{CARACTERÍSTICAS DO ESTÁGIO}
+\subsubsection{CARACTERÍSTICAS DO ESTÁGIO}
 
 A modalidade deste estágio foi realizado em \textit{Home Office}\footnote{Escritório em casa, em uma tradução livre do inglês, trabalho que é realizado em espaço alternativo ao escritório de uma empresa.}, que também pode ser definido como um trabalho remoto ou teletrabalho. O estágio foi realizado na Cadaris Comunicação~\cite{cadaris}. A jornada de trabalho é de segunda à sexta-feira, desempenhando 6 horas diárias, totalizando 30 horas semanais, com a gratificação de uma bolsa de R\$ 1.100,00 por mês.
 
@@ -263,9 +267,7 @@ Por se tratar de um \textit{Home Office}, proporcionou ao discente um horário f
 O objetivo geral deste estágio é o desenvolvimento de um projeto de uso interno para a empresa.
 
 
-
-
-\subsection{CARACTERIZAÇÃO E ANÁLISE DA EMPRESA}
+\subsubsection{CARACTERIZAÇÃO E ANÁLISE DA EMPRESA}
 
 %  A Cadaris é uma agência de publicidade com atuação nas áreas de marketing, editorial e comunicação. Aqui, trabalho em equipe é lei e surpreender o cliente, uma meta diária.
 %  Trabalhamos com ética e transparência, de forma responsável e comprometida. Produzimos com qualidade e criatividade, sempre com respeito aos prazos acordados.
@@ -288,7 +290,7 @@ O objetivo geral deste estágio é o desenvolvimento de um projeto de uso intern
 %    Levantamento de requisitos e necessidades, arquitetura da informação, design de projeto e desenvolvimento web.
 
 
-O estágio foi iniciado no dia 01 de Agosto de 2016, contratado pela Cadaris Comunicações, CNPJ 01.556.009/0001-46, que é uma agência de publicidade e está localizada na R. Dr. Thirso Martins, 100, cj 303, CEP:~04120-050, Vila Mariana, São Paulo~-~SP, telefone:~(11)~5571-9142.
+O estágio foi iniciado no dia 01 de agosto de 2016 até dia 31 de maio de 2017, contratado pela Cadaris Comunicações, CNPJ 01.556.009/0001-46, que é uma agência de publicidade e está localizada na R. Dr. Thirso Martins, 100, cj 303, CEP:~04120-050, Vila Mariana, São Paulo~-~SP, telefone:~(11)~5571-9142.
 
 Fundada em 11 de novembro de 1996, pelos sócios Maristela Harada e Frederico Pimenta, a Cadaris Comunicação é formada por profissionais de diferentes áreas da comunicação, o que proporciona mais eficácia e agilidade. Trabalhando com ética e transparência, de forma responsável e comprometida. Produzindo com qualidade e criatividade, sempre com respeito aos prazos acordados.
 
@@ -305,20 +307,72 @@ A Cadaris é uma agência de comunicação com atuação nas áreas de:
 Entre os principais clientes da Cadaris estão: Colgate-Palmolive, Biotropic, ABO, TAM e Mattel.
 
 
-\subsection{VISÃO GERAL DO ESTÁGIO}
+\subsubsection{VISÃO GERAL DO ESTÁGIO}
 
-
-Durante o primeiro mês, o estagiário foi introduzido ao funcionamento da agência com a familiarização das regras do negócio e foram apresentadas as ferramentas atuais utilizadas para apoiar a administração da empresa. A fim de desenvolver um \textit{software} de Sistema de Gestão Empresarial substituto para uso interno da Cadaris.
+Durante o primeiro mês, o estagiário foi introduzido com o funcionamento da agência enfatizando a familiarização das regras do negócio e foi apresentado as ferramentas atuais utilizadas para apoiar a administração da empresa. A fim de desenvolver um \textit{software} de Sistema de Gestão Empresarial substituto para uso interno da Cadaris. 
 
 Após este período, foi feito o estudo das tecnologias que seriam utilizadas para o desenvolvimento deste sistema proposto que já estavam sendo discutidas desde o início do estágio.
 
 Em seguida, iniciou-se a implementação do sistema com foco inicial no \textit{Back-end} que foram seguidas em três etapas: Desenvolvimento do Cadastro de Recursos e algumas rotinas administrativas; Processo Comercial; Geração de Relatórios e Controle Financeiro.
 
-Por fim, foi realizado a implantação do sistema em duas etapas, também o trenamento de seus novos usuários e ajuste finais.
+Por fim, foi realizado a implantação do sistema em duas etapas, incluindo também o  treinamento de seus novos usuários e ajustes finais.
 
 
 
-%\subsection{ORGANIZAÇÃO DESTE RELATÓRIO} %% {ORGANIZAÇÃODO TRABALHO}
+\subsection{EMPREGADO NA FTD EDUCAÇÃO}
+
+\subsubsection{CARACTERÍSTICAS DO EMPREGO}
+
+As atividades na empresa foram iniciadas com a contratação do discente como Pessoa Jurídica com o propósito de prestar serviços dentro das dependências da empresa que iniciaram a partir do dia 1 de junho de 2017. 
+
+O cargo atribuído foi de Analista de Desenvolvimento Júnior, dentre as responsabilidades propostas, a principal, foi atender atender as demandas de programação \textit{Back-end} de novos componentes a serem integrados no sistema \textit{Controle de Projetos} (codinome \textit{Vulcano}) do Editorial da FTD.
+
+%O \textit{Vulcano} é um sistema que mapeia os processos de diversos tipos de produtos digitais e físicos da FTD Educação e, com esse mapeamento, direciona as tarefas para cada um dos responsáveis.
+
+%Todos os dias úteis, meio dia e meia noite, o sistema dispara um e-mail com as pendências que cada grupo de usuários deve resolver naquele momento. Ao resolver essa pendência, o projeto vai para o próximo grupo que precisa atuar até a sua conclusão.
+
+Conforme a dedicação prestada e as habilidades desenvolvida do discente durante o desenvolvimento dos primeiros novos componentes, e por necessidade, foi formado um time para dar suporte exclusivo para o \textit{Vulcano}. Em que o discente se tornou o líder com a finalidade de conduzir um papel de metodologia ágil nesta equipe.
+
+Posteriormente, foi contratado em regime de CLT para atuar no setor Editorial. Desenvolvendo atividades de liderança, participando efetivamente de reuniões de time, sendo responsável pela programação junto aos outros desenvolvedores da equipe a fim de compartilhar conhecimentos e revisar as realizações da equipe de trabalho.
+
+O objetivo geral deste emprego é liderar a manutenção do \textit{Vulcano} e o desenvolvimento dos seus novos componentes.
+
+
+\subsubsection{CARACTERIZAÇÃO E ANÁLISE DA EMPRESA}
+
+% https://ftd.com.br/a-ftd/a-historia/
+% https://pt.wikipedia.org/wiki/Editora_FTD
+
+O vínculo empregatício na Editora FTD S/A iniciou-se no dia 5 de maio de 2018 e estende-se até atualmente. Empresa registrada pelo CNPJ: 61.186.490/0026-05, localizada na R. Manoel Dutra, 225, Bela Vista, São Paulo - SP, telefone: (11) 3596 – 6000.
+
+Fundada em 1902 pelos Irmãos Maristas, a FTD é uma editora brasileira referência no mercado pela produção e oferta de soluções educacionais.
+
+A nomeação ``FTD'' foi dada com o propósito de fazer uma homenagem a \textit{Frère Théophane Durand} que durante os anos de 1883 e 1907 esteve à frente da Congregação Marista como Superior Geral. Ele incentivou os Irmãos durante a sua gestão a escrever livros educacionais, obras que mais tarde vieram a pertencer a Coleção de Livros Didáticos FTD. Esse trabalho resultou em um enorme estímulo para a produção de mais obras didáticas e expansão deste negócio, marcando os Maristas como exemplos de educadores no nosso país~\cite{site_ftd}. 
+
+Os valores da FTD sempre estiveram correlacionados com a sua missão de transformar a sociedade a partir do conteúdo educacional e cultural adequado e inovador, por isso é uma organização que valoriza o espírito de família entre seus colaboradores e clientes, amor ao trabalho durante o desenvolvimento das atividades, espiritualidade, justiça, presença significativa no mercado como forma de inspirar os colaboradores e clientes, e simplicidade para manter a transparência e autenticidade do trabalho desenvolvido~\cite{site_ftd}.
+
+No século passado, a FTD foi a primeira editora de livros didáticos a cobrir todas as áreas de ensino. Além disto, grandes nomes da literatura tiveram suas primeiras obras publicadas pela editora, como por exemplo, Maurício de Sousa, referência da literatura infantil, que publicou os livros \textit{Piteco, Penadinho e Astronauta}~\cite{site_ftd}.
+
+A FTD atua no mercado com os seguintes segmentos:
+
+\begin{description}
+	\item[LIVROS DIDÁTICOS] Produção de obras interdisciplinares de caráter pedagógico para serem utilizados em instituições de ensino. 
+	\item[APOIO DIDÁTICO]   Produção de obras didáticas, pedagógicas e literárias, entre outros materiais de apoio à prática educativa de ensino formal e informal. 
+	\item[LITERATURA]       Produção de obras literárias compostas por histórias fictícias ou não, no formato de poesia, em versos e em prosa. Classificados conforme sua escrita: romances, contos, artigos, ensaios, relatos jornalísticos, peças de teatro, histórias infantis, entre outros.
+	\item[FTD DIGITAL]      A FTD oferece as suas obras em diferentes formatos digitais: PDFs, ePubs, LEDs, iBooks e Apps, com o propósito de facilitar a relação de jovens e adultos com os estudos e a literatura no geral. Além disto, oferece um ambiente online que permite que os alunos tenham acesso a provas e simulados para resolução, preparados pelos seus professores.
+\end{description}
+
+
+\subsubsection{VISÃO GERAL DO ESTÁGIO}
+
+Este relatório contempla o período do desenvolvimento de um novo componente para apoiar as Pesquisas Iconográficas, uma etapa muito importante durante o desenvolvimento de um livro.
+
+Foi iniciado realizando o levantamento de requisitos necessários a partir de uma entrevista com a Coordenadora da Iconográfia e o Coordenador do Fluxo Editorial. Na sequência, a equipe realizou o refinamento, planejamento, e por fim, o desenvolvimento do mesmo.
+
+Sendo assim, este novo componente permitiu que todo o processo fosse realizado pelo \textit{Controle de Projetos} obtendo como resultado um grande ganho durante o gerenciamento de processos, já que anteriormente, esse trabalho era feito manualmente por planilhas e compartilhamento de arquivos via rede.
+
+
+%\subsection{ORGANIZAÇÃO DESTE RELATÓRIO} %% {ORGANIZAÇÃO DO TRABALHO}
 %
 %As próximas seções estão organizadas como segue:
 %
@@ -333,6 +387,12 @@ Por fim, foi realizado a implantação do sistema em duas etapas, também o tren
 %A seção 6 apresenta a conclusão sobre o estágio desenvolvido.
 
 
+\clearpage
+\section{ATIVIDADES DESENVOLVIDAS NA AGÊNCIA CADARIS}
+
+%%--Descrever as atividades realizadas no estágio--%%
+
+Esta seção tem como objetivo detalhar as atividades desenvolvidas durante o estágio supervisionado. Apresentando as atividades de aprendizagem; o desenvolvimento do projeto; e sua aplicação.
 
 %  \noindent \texttt{Lista de trabalhos realizados:\\
 %    ESTÁGIO 1 \\
@@ -347,14 +407,6 @@ Por fim, foi realizado a implantação do sistema em duas etapas, também o tren
 %    - teste, homologacao, e ajuste finais \\
 %    - Outras áreas da empresa
 %  }
-
-
-\clearpage
-\section{ATIVIDADES DESENVOLVIDAS}
-
-%%--Descrever as atividades realizadas no estágio--%%
-
-Esta seção tem como objetivo detalhar as atividades desenvolvidas durante o estágio supervisionado. Apresentando as atividades de aprendizagem; o desenvolvimento do projeto; e sua aplicação.
 
 
 \subsection{APRESENTAÇÃO DAS REGRAS DE NEGÓCIO}
@@ -786,6 +838,31 @@ A segunda entrega foi na finalização do Módulo Financeiro, possibilitando a m
 Todo desenvolvimento do projeto foi acompanhado pela diretora para validar e homologar funcionalidades, indicando as alterações e as melhorias necessárias. A utilização do Sistema foi de fácil adaptação e aprendizado por toda equipe, as ferramentas de trabalho e os dados necessários para realizar certas ações foram otimizados com relação ao sistema que era utilizado anteriormente.
 
 O Sistema foi muito bem recebido, pois demonstrou sua grande eficiência logo no inicio, quando houve a inserção de todo o histórico de transações no Módulo Financeiro, ao ponto dos valores calculado pelo sistema se tornarem síncronos com as Contas Bancárias reais da empresa.
+
+
+
+
+
+
+\clearpage
+\section{ATIVIDADES DESENVOLVIDAS NA FTD EDUCAÇÃO}
+
+\subsection{PRODUTOS DA FTD}
+\subsubsection{METODOLOGIA ÁGIL NA FTD}
+
+\subsection{SOBRE O CONTROLE DE PROJETOS}
+\subsubsection{FERRAMENTAS DO VULCANO}
+
+\subsection{DESENVOLVIMENTO DO ICONR}
+\subsubsection{\textit{GROOMING}}
+\subsubsection{\textit{PLANNING}}
+\subsubsection{DESENVOLVIMENTO}
+\subsubsection{\textit{REVIEW}}
+
+
+
+
+
 
 \clearpage
 \section{FUNDAMENTAÇÃO TEÓRICA}
