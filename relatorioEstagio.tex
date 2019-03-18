@@ -853,7 +853,7 @@ Esta seção tem como objetivo detalhar as atividades desenvolvidas durante o de
 
 Nesta subseção é introduzido brevemente o histórico da produção digital da FTD, que tem o foco em complementar os produtos impressos.
 
-O \textit{Vulcano} tem foco primordial em atender as necessidades do \textit{SAE}~\footnote{SAE, sigla para Serviço de Atendimento ao Editorial.} que apoia os departamentos do editorial com as confecções de outros insumos, como: ilustrações, mapas, infográficos, processamento de conteúdo, construção de OEDs~\footnote{OED, sigla para Objetos Educacionais Digitais.}, e entre outros.
+O \textit{Vulcano} tem foco primordial em atender as necessidades do \textit{SAE}\footnote{SAE, sigla para Serviço de Atendimento ao Editorial.} que apoia os departamentos do editorial com as confecções de outros insumos, como: ilustrações, mapas, infográficos, processamento de conteúdo, construção de OEDs\footnote{OED, sigla para Objetos Educacionais Digitais.}, e entre outros.
 
 Objetos Educacionais Digitais são criados especialmente para complementar a experiência da aprendizagem de professores e alunos. Nas plataformas digitais da FTD, estes são integrados ao conteúdo de livros digitais, aplicativos, plataformas digitais de sistema de ensino, por exemplo. Os OEDs podem se caracterizarem em:
 
@@ -866,7 +866,7 @@ Objetos Educacionais Digitais são criados especialmente para complementar a exp
 \end{description}
 
 
-Desenvolvido em 2014, pelo extinto departamento de \textit{Novas Mídias}~\footnote{O departamento \textit{Novas Mídias} foi criado nos anos anteriores para atender as novas demandas de obras didáticas digitais do país.}, o \textit{Vulcano} possibilitou a automatização do controle do processo de criação de \textit{OEDs}, na qual seus desenvolvimento e controle eram manuais até aquele momento. 
+Desenvolvido em 2014, pelo extinto departamento de \textit{Novas Mídias}\footnote{O departamento \textit{Novas Mídias} foi criado nos anos anteriores para atender as novas demandas de obras didáticas digitais do país.}, o \textit{Vulcano} possibilitou a automatização do controle do processo de criação de \textit{OEDs}, na qual seus desenvolvimento e controle eram manuais até aquele momento. 
 
 O desenvolvimento de um OED inicia com sua concepção pelo Editorial, a fim de complementar um conteúdo por eles confeccionados. Todos os insumos necessários são produzidos ou licenciados, como: ilustrações, iconografias, mapas, áudios e locuções. Para ao final serem montadas ela equipe de desenvolvedores e homologadas nas plataformas digitais por testadores.
 
@@ -890,7 +890,7 @@ Com o sucesso do Vulcano para desenvolvimento dos materiais digitais, sua utiliz
 
 No início de 2017, foi implantado todo o processo de produção de ilustrações gerenciada pelo Vulcano. E na sequencia, para a utilização de outros processos.
 
-Em 2018 foi integrado ao Vulcano processamento de conversão de documentos para atender as novas demandas do PNLD~\footnote{PNLD, sigla para Programa Nacional do Livro e do Material Didático.} sobre materiais digitais. A cada ano o Controle de Projetos está crescendo e melhor atendendo a produção editorial.
+Em 2018 foi integrado ao Vulcano processamento de conversão de documentos para atender as novas demandas do PNLD\footnote{PNLD, sigla para Programa Nacional do Livro e do Material Didático.} sobre materiais digitais. A cada ano o Controle de Projetos está crescendo e melhor atendendo a produção editorial.
 
 O Vulcano é estruturado da seguinte forma:
 
@@ -928,7 +928,98 @@ A cada ciclo de desenvolvimento, o Vulcano é aperfeiçoado e a ele adicionado m
 
 
 \subsection{DESENVOLVIMENTO DO ICONR}
+
+Essa seção relata todos os passos para o desenvolvimento de uma nova ferramente para auxiliar o processo de pesquisa iconográfica dentro do Vulcano.
+
+
 \subsubsection{\textit{GROOMING}}
+
+Na reunião de \textit{Grooming} os clientes desta ferramenta são convidados, no caso a coordenadora de SAE Iconografia e o Coordenador de SAE Fluxo, a fim de relatarem para o time como é o processo de uma pesquisa iconográfica. Assim levantamos todos os requisitos para a concepção da ferramenta.
+
+Na editora, Iconografia é a pesquisa e seleção de imagens que vão ser publicados em livros ou outros meios, a fim de enriquecer ou ser o tema do conteúdo produzido.
+
+
+\subsubsubsection{PROCESSO DE PESQUISA ICONOGRÁFICA}
+
+Conforme relatado pelos presentes clientes, as iconógrafas\footnote{As iconógrafas são as colaboradoras que tem o papel de realizar pesquisas de iconografias.} recebem do editorial uma planilha eletrônica com numerosos pedidos de iconografias de uma determinada obra. Assim elas devem organizar e realizar as suas pesquisas.
+
+A pesquisa iconográfica trata-se de buscar em repositórios públicos ou privados imagens que representam o pedido. Por exemplo, um pedido do editor é uma imagem da bandeira do Brasil, então o pesquisador vai procura por imagens que represente como tal. E com o auxilio de uma ferramenta de mercado, nela armazena as imagens e cataloga as informações ao seu respeito, como tipo de licenciamento, créditos e valores à pagar ao autor pelo seu uso.
+
+Em sua pesquisa, a primeira imagem que o iconógrafo sempre armazena é de baixa resolução e com marca d'água do banco de imagens para a simples escolha do editor e das provas de diagramação do livro. Já a imagem de alta resolução somente será obtida após assinado o contrato de uso e seu pagamento, ao final do processo.
+
+O pacote de imagens candidatas é enviado ao editor, via rede interna de compartilhamento de arquivos, para ele realizar a sua escolha. Levando em conta o seu desejo e principalmente o valor que todas as iconografias desta obra se somaram. Assim devolvendo ao iconógrafo a imagem candidata aprovando ou pedido para a pesquisa ser refeita.
+
+Com a imagem aprovada, o iconógrafo libera a versão em baixa resolução para os diagramadores aplicar no livro que está sendo editado, a fim de realizar provas de conteúdo.
+
+Em paralelo é iniciado a negociação de Direitos Autorais\footnote{Direitos autorais são os direitos que todo criador de uma obra intelectual tem sobre a sua criação e sobre o uso dessa.}~\cite{SEBRAE_DA} para o uso da iconografia. Feito o pagamento para o direito de uso, então é liberado a imagem original em alta resolução, e caso necessário, esta imagem deve passar por um tratamento pelo departamento de Artes. Para o final substituir a sua versão em baixa no livro diagramado.
+
+
+Todo esse processo é gerenciado manualmente pela planilha citada no inicio, e compartilhando arquivos via rede. Demonstrando então ser custoso gerenciar por não haver nenhuma automatização. 
+
+Com a implantação deste processo no Vulcano, é esperado que proporcione maior ganho e agilidade para gerenciar em larga escala a pesquisa iconográfica, utilizando a automatização do Vulcano em repassar as tarefas entre os departamentos e com a nova ferramenta a ser desenvolvida o gerenciamento das imagens da pesquisa iconográfica.
+
+
+\subsubsubsection{CONCEPÇÃO DO ICONR}
+
+Entendido todo o processo de pesquisa iconográfica, nas reuniões de \textit{Grooming} seguintes, o time idealizou a nova ferramenta e validou com os Clientes.
+
+A ferramenta deve ser integrada dentro do Vulcano, acessível na tela de listagem de projetos do tipo iconografia e na tela de iconografias de uma obra.
+
+Há dois tipos de usuários: o pesquisador iconográfico e o editor do editorial. Eles tem papel diferente na ferramenta, o pesquisador deve poder armazenar as imagens em baixa e sua informações extras como:
+
+\vspace{-10mm}
+\begin{singlespace}
+	\begin{itemize}
+		\item Código da imagem;
+		\item Tipo de Licença;
+		\item Forma de Pagamento;
+		\item Valor Estimado;
+		\item Valor Pago;
+		\item Número do comprovante;
+		\item Fornecedor;
+		\item Fotógrafo;
+		\item Áudio descrição;
+		\item Tags;
+		\item Legenda;
+		\item Créditos;
+		\item Informações;
+		\item Restrições de uso;
+		\item Observações.
+	\end{itemize}
+\end{singlespace}
+\vspace{-5mm}
+
+O editor deve somente visualizar as imagens, algumas informações como: valor e legenda. E ao final aprovar uma delas. E esta imagem aprovada pode ser substituída pela sua em alta.
+
+Então uma pesquisa iconográfica é um projeto no Vulcano, e neste projeto contém a ferramente para dar apoio. Assim, foi identificado que esta ferramenta deve ter 3 telas:
+
+\begin{description}
+	\item[Galeria] Acessível por todos, nela é listado todas as imagens candidatas obtida pelos pesquisadores, e com o acesso ao botoes de ação como:
+	
+	\vspace{-10mm}
+	\begin{singlespace}
+		\begin{itemize}
+			\item Visualizar imagem;
+			\item Adicionar imagem;
+			\item Adicionar em lote;
+			\item Editar imagem;
+			\item Editar em lote;
+			\item Deletar image;
+			\item Aprovar imagem;
+		\end{itemize}
+	\end{singlespace}
+	\vspace{-5mm}
+
+	\item[Formulário] Acessível somente para o pesquisador, este formulário servirá para adicionar ou editar uma imagem candidata;
+	
+	\item[Carrossel] Acessível a todos, mas especialmente neste o editor irá poder visualizar as imagens em um formato de carrossel com suas informações, e um o botão de aprovar.
+\end{description}
+
+Outra necessidade é de que na listagem de iconografias da obra, o Vulcano deve somar o valor das iconografias, para assim o editor poder melhor administrar o valor de gastos da obra.
+
+Assim foi desenho as tela e aprovado com o cliente, para dar inicia a sua implementação pelo time.
+
+
 \subsubsection{\textit{PLANNING}}
 \subsubsection{DESENVOLVIMENTO}
 \subsubsection{\textit{REVIEW}}
