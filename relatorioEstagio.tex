@@ -886,6 +886,8 @@ Um Coordenador de Processo foi contratado afim de exercer o papel de \textit{Agi
 
 \subsection{O CONTROLE DE PROJETOS}
 
+O Vulcano é um sistema \textit{web} de fácil utilização do usuário pelo navegador. No \textit{back-end} utiliza do PHP 5.6 com o \textit{framework} Laravel na sua versão 4.1. No \textit{front-end} utiliza HTML5 com CSS e JavaScript, em conjunto com varias bibliotecas para apoiar a construção e interação com a interface. Mas suas tecnologias datam de 2013, que causa grande esforço para novas integrações.
+
 Com o sucesso do Vulcano para desenvolvimento dos materiais digitais, sua utilização foi expandida para o impresso também. Assim o Controle de Projetos se tornou um dos principais sistemas de controle de processo dos insumos editorial da FTD atualmente. 
 
 No início de 2017, foi implantado todo o processo de produção de ilustrações gerenciada pelo Vulcano. E na sequencia, para a utilização de outros processos.
@@ -931,12 +933,16 @@ A cada ciclo de desenvolvimento, o Vulcano é aperfeiçoado e a ele adicionado m
 
 Essa seção relata todos os passos para o desenvolvimento de uma nova ferramente para auxiliar o processo de pesquisa iconográfica dentro do Vulcano.
 
+Todos acontecimento segue no formato de rituais da Cultura Ágil, que é apresentada nas seções seguintes.
+
 
 \subsubsection{\textit{GROOMING}}
 
-Na reunião de \textit{Grooming} os clientes desta ferramenta são convidados, no caso a coordenadora de SAE Iconografia e o Coordenador de SAE Fluxo, a fim de relatarem para o time como é o processo de uma pesquisa iconográfica. Assim levantamos todos os requisitos para a concepção da ferramenta.
+A reunião de \textit{Grooming} é conduzido pelo \textit{Product Owner} e o \textit{Agile Master} para refinar todos os requisitos do projetos para atender as necessidades de um Cliente.
 
-Na editora, Iconografia é a pesquisa e seleção de imagens que vão ser publicados em livros ou outros meios, a fim de enriquecer ou ser o tema do conteúdo produzido.
+Nesta reunião foram convidados os clientes desta ferramenta, no caso a coordenadora de SAE Iconografia e o Coordenador de SAE Fluxo, a fim de relatarem para o time como é o processo de uma pesquisa iconográfica. Assim levantamos todos os requisitos para a concepção da ferramenta.
+
+Na Editora FTD, Iconografia é a pesquisa e seleção de imagens que vão ser publicados em livros ou outros meios, a fim de enriquecer ou ser o tema do conteúdo produzido.
 
 
 \subsubsubsection{PROCESSO DE PESQUISA ICONOGRÁFICA}
@@ -1017,15 +1023,41 @@ Então uma pesquisa iconográfica é um projeto no Vulcano, e neste projeto cont
 
 Outra necessidade é de que na listagem de iconografias da obra, o Vulcano deve somar o valor das iconografias, para assim o editor poder melhor administrar o valor de gastos da obra.
 
-Assim foi desenho as tela e aprovado com o cliente, para dar inicia a sua implementação pelo time.
+As interfaces foram desenhas e aprovadas com o cliente. O \textit{Product Owner} escreveu todas as histórias necessárias com seus respectivos aceites e prioridades. Assim, tudo pronto para dar inicio a sua implementação pelo time.
 
 
 \subsubsection{\textit{PLANNING}}
+
+A reunião de \textit{planning} é o ritual na qual todos os integrantes do time vão discutir as histórias concebidas nos \textit{grommings} em seus mínimos detalhes, para  planejar como será conduzida todo o desenvolvimento.
+
+A atual formação do time conta com:
+
+	\vspace{-10mm}
+\begin{singlespace}
+	\begin{itemize}
+		\item 2 \textit{Full-Stack Developers};
+		\item 1 \textit{Back-end Developer};
+		\item 1 \textit{Front-end Developer};
+		\item 2 Testadores de Qualidade;
+	\end{itemize}
+\end{singlespace}
+\vspace{-5mm}
+
+A primeira etapa da \textit{planning} é o \textit{estimation}, na qual é debatida todas as histórias pelo time, a fim de estimar o seu tamanho relativo para ser desenvolvida. O \textit{Agile Mastes}, discente deste relatório, apresenta para o time todo o levantamento de requisitos que estão em formato de \textit{histórias} em um \textit{backlog}. História por história, o time ouve do \textit{Agile Master} o que é esperado e quando todas as dúvidas forem sanadas, todos os integrantes votam, até chegarem em um comum acordo, sobre a estimativa de tempo para realizar as tarefas necessárias para a conclusão de tal história.
+
+Decisões técnicas também são debatidas e o time, em comum acordo, arquitetou que a ferramenta será integrada no \textit{front-end} utilizando a biblioteca \textit{VueJS}, enquanto o \textit{back-end} implementará toda a troca de informações via API REST.
+
+A segunda parte da reunião é a \textit{planning}, na qual o time organiza as histórias em tarefas e planejam a sequencia que estas tarefas serão realizadas. E será melhor relatada na seção seguinte.
+
+
+
 \subsubsection{DESENVOLVIMENTO}
 \subsubsection{\textit{REVIEW}}
 
 
+\subsubsection{ADAPTAÇÕES FINAIS}
 
+\subsubsection{\textit{DEPLOY}}
 
 
 
