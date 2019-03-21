@@ -1058,28 +1058,55 @@ De inicio os profissionais de \textit{back-end} se reuniram para determinar toda
 
 Ficou definido que para cada projeto de Iconografia do Vulcano contém muitas imagens, e cada imagem tem suas propriedades e relaciona com o seu fornecedor, tipo de licença e forma de pagamento, como pode ser visto no Diagrama de Entidade e Relacionamento a seguir.
 
-% TODO: Iconr > DER
-[[ TODO: Iconr > DER ]] 
+% TODO: print Iconr > DER
+[[ TODO: print Iconr > DER ]] 
 
 Em paralelo os \textit{front-ends} começaram a implementar a estrutura base do projeto utilizando a biblioteca \textit{Vue} para desenvolver a ferramenta Iconr. 
 
 Na interface do Vulcano deve apresentar o \emph{Botão de Lançamento}, para realizar o aparecimento da ferramenta. Esse botão deve ter a cor da borda conforme o \textit{status} das imagens do projeto. Os possíveis \textit{status} são:
 
-\begin{enumerate}
-	\item Cor \textbf{laranja} para imagem somente em \textbf{baixa}, mas \textbf{não aprovada};
-	\item Cor \textbf{amarela} para imagem em \textbf{alta}, mas \textbf{não aprovada};
-	\item Cor \textbf{azul} para imagem \textbf{aprovada}, mas ainda em \textbf{baixa};
-	\item Cor \textbf{verde} para imagem \textbf{aprovada}, mas já em \textbf{alta};
-\end{enumerate}
+\begin{singlespace}
+	\begin{enumerate}
+		\item Cor \textbf{laranja} para imagem somente em \textbf{baixa}, mas \textbf{não aprovada};
+		\item Cor \textbf{amarela} para imagem em \textbf{alta}, mas \textbf{não aprovada};
+		\item Cor \textbf{azul} para imagem \textbf{aprovada}, mas ainda em \textbf{baixa};
+		\item Cor \textbf{verde} para imagem \textbf{aprovada}, mas já em \textbf{alta};
+	\end{enumerate}
+\end{singlespace}
 
 O botão deve conter a miniatura da imagem considerada como principal, que é a de maior valor em seu \textit{status}, conforme a enumeração a cima. Em caso de empate é considerado a primeira imagem na ordem da sua criação.
 
 Este botão é acessível pela listagem de projetos de iconografia e no conjunto de iconografias de uma obra. A seguir, exemplo de como é apresentado o Botão de Lançamento.
 
-% TODO: Iconr > laucher
-[[ TODO: Iconr > laucher ]] 
+% TODO: print Iconr > laucher
+[[ TODO: print Iconr > laucher ]] 
 
-Ao lançar o Iconr surgi um quadro, na qual chamamos de \textit{Galeria}, ela deve listar todas as imagens catalogadas daquele projeto. Disposto em forma de grades, é exibido as imagem em miniaturas com as bordas referente ao seu \textit{status}. A direta estão as legendas de ações e do \textit{status}. Ao topo estão os botões para realizar as ações gerenciamento de cadastro das iconografias.
+Ao lançar o Iconr surgi um \textit{modal}\footnote{Quadro flutuante acima do conteúdo da tela com o fundo escurecido.}, na qual chamamos de \textit{Galeria}, ela deve listar todas as imagens catalogadas daquele projeto. Disposto em forma de grades, é exibido as imagem em miniaturas com as bordas referente ao seu \textit{status}. A direta estão as legendas de ações e do \textit{status}. Ao topo estão os botões para realizar as ações gerenciamento de cadastro das iconografias. Como é visto na imagem a seguir.
+
+% TODO: print Iconr > gallery
+[[ TODO: print Iconr > gallery ]] 
+
+Os itens da \textit{Galeria} são selecionáveis através do \textit{click} do \textit{mouse} e do teclado. Ao selecionar um item é possível deleta-lo, aprová-lo ou edita-lo, que é feito na tela do \textit{Formulário}. Ao selecionar mais de um item, é possível deleta-los em lote e edita-lo em lote pelo fomulário. No topo há dois botões,  para cadastrar somente uma imagem e para cadastrar varias imagens em lote pelo \textit{Formulário}.
+
+O \textit{Formulário} é onde se encontrar todas as informações catalogada daquela iconografia cadastrada. Ela tem o papel de de se adaptar quando se deseja: cadastrar somente uma iconografia ou em lote, editar uma iconografia ou em lote.
+
+No \textit{Formulário} é possível fazer o \textit{upload} da imagem em baixa ou em alta. Nos campos o usuário pode preencher com as informações obtida do banco de imagem, onde a iconografia foi encontrada. Em especial, o selecionador de Fornecedor pode ser filtrado e ao digitar um inexistem, este será criado ao salva o \textit{Formulário}. Ao realizar o \textit{upload} de uma imagem, as suas meta-informações presente nela será utilizada para preencher os campos do \textit{Formulário}, e caso for sobrepor um valor já cadastrado será solicitado a confirmação do usuário.
+
+Ao salva o \textit{Formulário} será retornado a \textit{Galeria}, agora atualizada com a alteração. Todas características descritas acima somente são permitidas aos pesquisadores iconográficos.
+
+No caso do editor, ele deve visualizar as iconografias pesquisadas e aprovar um. Assim para o seu tipo de usuário a Ferramente disponibiliza o botão de lançamento que leva para a \textit{Galeria}, porém sem nenhum botão para edição das imagens. Os únicos botões é para visualizar todas as imagens, ou somente as selecionadas, e aprovar a imagem selecionada.
+
+Ao visualizar uma imagem a tela de \textit{Carrossel} é exibida com as imagem em maior tamanho, navegável pelas laterais e somente com as informações pertinente a conhecimento do editor no rodapé, como o valor do licenciamento. A seguir um exemplo.
+
+% TODO: print Iconr > carrossel
+[[ TODO: print Iconr > carrossel ]] 
+
+Por meio do \textit{Carrossel} ou da \textit{Galeria} o editor pode aprovar a imagem em destaque ou selecionar, respectivamente. Somente uma iconografia do conjunto de iconografias candidatas pode ser aprovada, caso aprovar uma segunda imagem, a primeira será desaprovada.
+
+Mas para melhor apoiar a escolha do editor, ao listar todas as iconograficas de uma obra, a somatória dos valores das iconografias aprovadas será exibido no cabeçario da listagem, para seu facilitar sua decisão levando em conta o orçamento daquela obra.
+ 
+% TODO: print Iconr > checklist
+[[ TODO: print Iconr > checklist ]] 
 
 
 \subsubsection{\textit{REVIEW}}
