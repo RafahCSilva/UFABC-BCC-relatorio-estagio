@@ -1045,13 +1045,43 @@ A atual formação do time conta com:
 
 A primeira etapa da \textit{planning} é o \textit{estimation}, na qual é debatida todas as histórias pelo time, a fim de estimar o seu tamanho relativo para ser desenvolvida. O \textit{Agile Mastes}, discente deste relatório, apresenta para o time todo o levantamento de requisitos que estão em formato de \textit{histórias} em um \textit{backlog}. História por história, o time ouve do \textit{Agile Master} o que é esperado e quando todas as dúvidas forem sanadas, todos os integrantes votam, até chegarem em um comum acordo, sobre a estimativa de tempo para realizar as tarefas necessárias para a conclusão de tal história.
 
-Decisões técnicas também são debatidas e o time, em comum acordo, arquitetou que a ferramenta será integrada no \textit{front-end} utilizando a biblioteca \textit{VueJS}, enquanto o \textit{back-end} implementará toda a troca de informações via API REST.
+Decisões técnicas também são debatidas e o time, em comum acordo, arquitetou que a ferramenta será integrada no \textit{front-end} utilizando a biblioteca \textit{VueJS}, enquanto o \textit{back-end} implementará toda a troca de informações via \textit{API}\footnote{API, acrônimo inglês para \textit{Application Programming Interface}.} \textit{REST}\footnote{REST, acrônimo inglês para \textit{Representational State Transfer}.}.
 
-A segunda parte da reunião é a \textit{planning}, na qual o time organiza as histórias em tarefas e planejam a sequencia que estas tarefas serão realizadas. E será melhor relatada na seção seguinte.
-
+A segunda parte da reunião é a \textit{planning}, na qual o time organiza as histórias em tarefas e planejam a sequencia que estas tarefas serão realizadas. E os produto desta reunião, bem como as características da ferramenta, será melhor relatada na seção seguinte.
 
 
 \subsubsection{DESENVOLVIMENTO}
+
+O desenvolvimento é a implementação, teste e implantação das histórias combinada na \textit{planning} pelo time.
+
+De inicio os profissionais de \textit{back-end} se reuniram para determinar toda a estrutura da arquitetura da ferramenta. Foi definido a estrutura dos componentes dentro do Vulcano e como se interagem,  os \textit{endpoints} para a chamada via \textit{AJAX} e seu banco de dados.
+
+Ficou definido que para cada projeto de Iconografia do Vulcano contém muitas imagens, e cada imagem tem suas propriedades e relaciona com o seu fornecedor, tipo de licença e forma de pagamento, como pode ser visto no Diagrama de Entidade e Relacionamento a seguir.
+
+% TODO: Iconr > DER
+[[ TODO: Iconr > DER ]] 
+
+Em paralelo os \textit{front-ends} começaram a implementar a estrutura base do projeto utilizando a biblioteca \textit{Vue} para desenvolver a ferramenta Iconr. 
+
+Na interface do Vulcano deve apresentar o \emph{Botão de Lançamento}, para realizar o aparecimento da ferramenta. Esse botão deve ter a cor da borda conforme o \textit{status} das imagens do projeto. Os possíveis \textit{status} são:
+
+\begin{enumerate}
+	\item Cor \textbf{laranja} para imagem somente em \textbf{baixa}, mas \textbf{não aprovada};
+	\item Cor \textbf{amarela} para imagem em \textbf{alta}, mas \textbf{não aprovada};
+	\item Cor \textbf{azul} para imagem \textbf{aprovada}, mas ainda em \textbf{baixa};
+	\item Cor \textbf{verde} para imagem \textbf{aprovada}, mas já em \textbf{alta};
+\end{enumerate}
+
+O botão deve conter a miniatura da imagem considerada como principal, que é a de maior valor em seu \textit{status}, conforme a enumeração a cima. Em caso de empate é considerado a primeira imagem na ordem da sua criação.
+
+Este botão é acessível pela listagem de projetos de iconografia e no conjunto de iconografias de uma obra. A seguir, exemplo de como é apresentado o Botão de Lançamento.
+
+% TODO: Iconr > laucher
+[[ TODO: Iconr > laucher ]] 
+
+Ao lançar o Iconr surgi um quadro, na qual chamamos de \textit{Galeria}, ela deve listar todas as imagens catalogadas daquele projeto. Disposto em forma de grades, é exibido as imagem em miniaturas com as bordas referente ao seu \textit{status}. A direta estão as legendas de ações e do \textit{status}. Ao topo estão os botões para realizar as ações gerenciamento de cadastro das iconografias.
+
+
 \subsubsection{\textit{REVIEW}}
 
 
