@@ -1067,8 +1067,13 @@ De inicio os profissionais de \textit{back-end} se reuniram para determinar toda
 
 Para cada projeto de Iconografia do Vulcano contém suas inúmeras imagens, e cada imagem tem suas propriedades e relaciona com o seu fornecedor, tipo de licença e forma de pagamento, como pode ser visto no Diagrama de Entidade e Relacionamento a seguir.
 
-% TODO: print Iconr > DER
-[[ TODO: print Iconr > DER ]] 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{iconr_der}
+	\vspace{-10mm}
+	\caption{Diagrama de Entidade-Relacionamento dentro do \textit{Vulcano}.}
+	\label{fig:iconr:der}
+\end{figure}
 
 Em paralelo os \textit{front-ends} começaram a implementar a estrutura base do projeto utilizando a biblioteca \textit{Vue} para desenvolver a ferramenta Iconr. 
 
@@ -1093,7 +1098,8 @@ Este botão é acessível pela listagem de projetos de iconografia e no conjunto
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{iconr_launch_index}
+	\includegraphics[width=\linewidth]{iconr_launch_index}
+	\vspace{-10mm}
 	\caption{Listagem de Projetos de Pesquisa Iconográfica com o \textit{Botão de Lançamento}.}
 	\label{fig:iconr:index}
 \end{figure}
@@ -1102,7 +1108,7 @@ Ao lançar o Iconr, um \textit{modal}\footnote{Quadro flutuante acima do conteú
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{iconr_gallery}
+	\includegraphics[width=0.9\linewidth]{iconr_gallery}
 	\caption{\textit{Galeria} de iconografias candidatas.}
 	\label{fig:iconr:gallery}
 \end{figure}
@@ -1113,7 +1119,7 @@ O \textit{Formulário} é onde se encontrar todas as informações catalogada da
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{iconr_formulario}
+	\includegraphics[width=0.9\linewidth]{iconr_formulario}
 	\caption{\textit{Formulário} de cadastro de iconografias em lote.}
 	\label{fig:iconr:formulario}
 \end{figure}
@@ -1128,7 +1134,7 @@ As imagens ao serem visualizadas, são exibidas na tela de \textit{Carrossel} co
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{iconr_carrossel}
+	\includegraphics[width=0.9\linewidth]{iconr_carrossel}
 	\caption{\textit{Carrossel} para visualização de iconografias.}
 	\label{fig:iconr:carrossel}
 \end{figure}
@@ -1139,7 +1145,7 @@ Mas para melhor apoiar a escolha do editor, ao listar todas as iconográficas de
  
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{iconr_launch_checklist}
+	\includegraphics[width=0.9\linewidth]{iconr_launch_checklist}
 	\caption{Conjunto de Iconografia de uma obra com o \textit{Botão de Lançamento} e somatória do valor.}
 	\label{fig:iconr:checklist}
 \end{figure}
@@ -1172,15 +1178,20 @@ Foi mapeado todo o processo de pesquisa iconográfica a ser realizada no Vulcano
 \vspace{-5mm}
 
 E no diagrama a seguir demonstra a precedências entre as etapas.
- 
-% TODO: grafo das Etapas do LIC
-[[ TODO: grafo das Etapas do LIC ]] 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Iconr_etapas}
+	\vspace{-5mm}
+	\caption{Precedência entre as etapas de pesquisa iconográfica.}
+	\label{fig:iconr:etapas}
+\end{figure}
 
 O Editor entrega a \textit{Pauta de iconografia}\footnote{No Vulcano é o texto que resume o pedido de algo para ser confeccionado, nela pode constar imagens de exemplos.} na primeira etapa. Na sequência o iconógrafo realiza a \textit{Pesquisa Iconográfica} por imagens candidatas conforme definida na pauta.
 
 Neste momento se inicia o uso da ferramenta. A iconógrafa cadastra as iconografias candidatas em baixa resolução com suas informações básicas e valor. Após a pesquisa, em paralelo é realizado a \textit{Negociação de Direitos Autorais}, pois pode inviabilizar o uso da imagem, e complementa seu cadastro na ferramenta. 
 
-Na Etapa 4 o editor do editorial irá acessar a lista de iconográfica da obra, conforme pode ser vista na figura~\ref{fig:iconr:checklist}. Visualizar as imagens candidatas pelo \textit{Carrossel} da ferramenta, conforme a figura~\ref{fig:iconr:carrocel} e aprovará somente uma. A somatório do valor das aprovas será atualizada na listagem, conforme vemos também na figura~\ref{fig:iconr:checklist}.
+Na Etapa 4 o editor do editorial irá acessar a lista de iconográfica da obra, conforme pode ser vista na \autoref{fig:iconr:checklist}. Visualizar as imagens candidatas pelo \textit{Carrossel} da ferramenta, conforme a \autoref{fig:iconr:carrossel} e aprovará somente uma. A somatório do valor das aprovas será atualizada na listagem, conforme vemos também na \autoref{fig:iconr:checklist}.
 
 Com a imagem aprovada, na Etapa 5 é liberação para o departamento de Artes a versão em baixa da iconografia, a fim de dispo-la no conteúdo diagramado na Etapa 6. 
 
