@@ -32,6 +32,7 @@
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 \usepackage[raggedright]{titlesec}
+\usepackage{longtable}
 
 %\usepackage{biblatex}
 %\bibliography{relatorioEstagio}
@@ -1222,7 +1223,7 @@ O desenvolvimento da ferramenta pelo time foi muito bem recebida por todos, na q
 
 Para a formação integral do discente é necessário que o conhecimento abordado nas disciplinas que foram cursadas se alinhe com a vivência prática do estágio, isto porque, necessita ser um processo de aprendizagem e profissionalização mútua do meio acadêmico e ambiente corporativo.
 
-A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Universidade Federal do ABC e que foram necessárias para o desenvolvimento das atividades do estágio. Nas subseções seguintes é descrito também quais foram as ferramentas utilizadas.
+A \autoref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Universidade Federal do ABC e que foram necessárias para o desenvolvimento das atividades do estágio. Nas subseções seguintes é descrito também quais foram as ferramentas utilizadas.
 
 %   LISTA DE DISCIPLINAS E EMENTA
 %  Algoritmo e estrutura de dados
@@ -1285,14 +1286,11 @@ A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Unive
 %    ERP - Planejamento dos Recursos Empresariais
 
 
+{\small 
+\begin{longtable}{|l|l|}
+	\caption{{\normalsize Disciplinas cursadas com os suas respectivas abordagens praticadas no estágio.}} \label{tab:ementas} \\
 
-\begin{table}[!h] %[!htb]
-\centering
-\caption{Disciplinas cursadas com os suas respectivas abordagens praticadas no estágio.}
-\label{tab:ementas}
-
-\begin{tabular}{|c|l|}
-  \hline
+	\hline
 
   Algoritmo e Estrutura de Dados
   &
@@ -1308,6 +1306,14 @@ A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Unive
   &
   Custo de operações \\
   \hline
+
+	Análise de Projetos
+	&
+	\begin{tabular}[c]{@{}l@{}}
+		Metodologia de Desenvolvimento Orienta- \\da a Objetos \\
+		Aspectos de Arquitetura de Software
+	\end{tabular} \\
+	\hline
 
   Banco de dados
   &
@@ -1325,6 +1331,18 @@ A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Unive
     Planejamento \\
     Modelo Entidade-Relacionamento \\
     Padrão MVC
+  \end{tabular} \\
+  \hline
+  
+  Gestão de Projetos de Software
+  &
+  \begin{tabular}[c]{@{}l@{}}
+  	Processos de Desenvolvimento de Software \\
+  	Gestão de escopo e Requisitos \\
+  	Gestão de tempo e métricas de software \\
+  	Gestão de Custo \\
+  	Gestão de Qualidade \\
+  	Gestão de Pessoas
   \end{tabular} \\
   \hline
 
@@ -1384,9 +1402,8 @@ A Tabela~\ref{tab:ementas} apresenta as disciplinas cursadas pelo aluno na Unive
   \end{tabular} \\
   \hline
 
-\end{tabular}
-\end{table}
-
+\end{longtable}
+}
 
 
 \subsection{ENGENHARIA DE SOFTWARE E SISTEMAS DE INFORMAÇÃO}
@@ -1418,6 +1435,8 @@ Na disciplina \textbf{Análise de Algoritmos} é discutido conceitos básicos so
 Na disciplina \textbf{Banco de Dados} é apresentado conceitos sobre a arquitetura de um Sistema de Banco de Dados, modelagem de dados relacionais, linguagem de definição e manipulação de dados e SQL~\cite{BD}.
 
 A disciplina de \textbf{Segurança de Dados} também contribuiu para os conceitos referentes à segurança de um sistema~\cite{SegDados} que foram necessários para o desenvolvimento deste projeto.
+
+Na disciplina de \textbf{ Gestão de Projetos de Software} é apresentado conceitos e fundamentações teóricas sobre metodologias de desenvolvimento de software~\cite{kerzner2006gestao}\cite{vargas2005gerenciamento}.
 
 Nas subseções seguintes será descrito as tecnologias utilizadas.
 
