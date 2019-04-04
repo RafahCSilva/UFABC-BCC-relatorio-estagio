@@ -28,11 +28,13 @@
 \usepackage{epigraph}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
 \usepackage{amsmath}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 \usepackage[raggedright]{titlesec}
 \usepackage{longtable}
+\usepackage[num]{abntex2cite}
 
 %\usepackage{biblatex}
 %\bibliography{relatorioEstagio}
@@ -1532,14 +1534,31 @@ Também foi utilizada a mais popular biblioteca de funções JavaScript, chamada
 
 
 \subsubsubsection{VUE}
-
-O Vue.js é um \textit{framework} JavaScript progressivo e incrementalmente adotável para construir componente dinâmicos em uma pagina HTML \cite{vue_complete_guide}~\cite{vuejs_oreilly}. Cumprindo um papel essencial para a criação do \textit{Iconr} no \textit{front-end} do Vulcano.
-
+O Vue.js é um \textit{framework} JavaScript progressivo e incrementalmente adotável para construir componente dinâmicos em uma pagina HTML \cite{vue_complete_guide}~\cite{vuejs_oreilly}. Cumprindo um papel essencial para a criação do \textit{Iconr} no \textit{front-end} do Vulcano de maneira progressiva, por facilitar sua integração em outros ecossistemas.
 
 
 \subsection{METODOLOGIA ÁGIL}
-% TODO: Scrum
+A metodologia ágil de desenvolvimento de software supre a necessidade do mercado em atender às demandas de maneira mais dinâmica, flexível e com maior produtividade \cite{sutherland2016scrum}. Com uma abordagem de planejamento incremental e muito iterativa.
 
+Cada ciclo dura até 4 semanas, ao final deste um pequeno projeto ou componente é entregue, que inclui todas a fases, como: levantamento de requisitos, desenvolvimento, testes e documentação. Para ao final ser apresentado e entregue ao cliente uma nova versão do \textit{software}, e o ciclo se reinicia.
+
+Assim os clientes recebem regularmente novas funcionalidades, aproximando as áreas e reduzindo riscos por possibilitar mudanças no projeto de maneira ágil. 
+
+Diferente de metodologias anteriores, como o cascata descrito por Pressman~\cite{pressman}, na qual primeiro é detalhado toda a documentação, ocorre todas as fases de desenvolvimento e ao final é entregue, o tempo que decorre pode acarretar na perda do valor do produto entregue no mercado, não havendo mais utilizade ou gerando mudança de escopo.
+
+Em 2001, é assinado o ``Manifesto para o Desenvolvimento Ágil de Software'', em que seus 4 valores e 12 princípios podem serem lidos na integra no site oficial da referência \citeonline{manifesto_agil}.
+
+No desenvolvimento ágil há vários \textit{frameworks}, um dos mais famosos é o \textit{Scrum}, muito bem apresentado na referência \citeonline{sutherland2016scrum}. 
+
+Cada ciclo no \textit{Scrum} é chamado de \textit{Sprint}, na qual há um conjunto de atividades a serem executados. Todas as funcionalidades a serem desenvolvidas são armazenadas em um lista chamada \textit{Product Backlog}, na qual cada História, que representa uma funcionalidade, é refinada em rituais de \textit{Grooming}, a fim de discutir sua viabilidade e priorização pelo \textit{Product Owner}.
+
+O início da \textit{Sprint} é marcado pela \textit{Planning}, na qual a equipe seleciona as atividades que ela é capaz de implementar durante a \textit{Sprint}. 
+
+A equipe realiza uma reunião diária chamada \textit{Daily Scrum}, na qual tem o objetivo é disseminar conhecimento sobre o que foi feito no dia anterior, identificar impedimentos e priorizar o trabalho do dia.
+
+Ao final da \textit{Sprint} acontece o rito da \textit{Sprint Review}, na qual a equipe apresenta as funcionalidades implementadas para clientes e interessados. E por fim, é feito a \textit{Retrospective} para identificar o que funcionou bem, o que pode ser melhorado e que ações serão tomadas para melhorar.
+
+E assim o ciclo se reinicia.
 
 
 
